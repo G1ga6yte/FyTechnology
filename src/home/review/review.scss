@@ -1,0 +1,56 @@
+.ReviewCont{
+  margin: 150px auto;
+  max-width: 1160px;
+  .Review1{
+    display: flex;
+    justify-content: space-between;
+
+    .imageBlock{
+      .img{
+        border-radius: 10px;
+      }
+    }
+    .reviewTextBlock{
+      padding: 30px 70px;
+      .quotes{
+        font-family: 'Inter-Medium', sans-serif;
+        font-size: 152px;
+        color: #F9FB6C;
+        line-height: 130px;
+      }
+      .reviewPrg{
+        color: white;
+        line-height: 52px;
+        font-size: 37px;
+        font-family: 'Inter-Medium', sans-serif;
+      }
+      .name-buttons{
+        margin-top: 50px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .name-work{
+          .name{
+            font-size: 24px;
+            font-family: 'Inter-Medium', sans-serif;
+            color: white;
+            line-height: 32px;
+          }
+          .work{
+            font-size: 18px;
+            font-family: 'Inter-Medium', sans-serif;
+            color: rgba(255, 255, 255, 0.60);
+            line-height: 32px;
+          }
+        }
+        .buttons{
+          display: flex;
+          align-items: center;
+          .button{
+            margin: 20px;
+          }
+        }
+      }
+    }
+  }
+}

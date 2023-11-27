@@ -1,0 +1,157 @@
+.ClientsBlock {
+  max-width: 1440px;
+  padding: 50px 100px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+
+  .ClientsCont {
+    width: 45%;
+    border-radius: 24px;
+    background: linear-gradient(180deg, #F9FB6C 0%, rgba(47, 47, 8, 0.84) 100%);
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 0 20px;
+    position: relative;
+    .clientsLine{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 45%;
+
+      &:nth-child(1){
+        transform: translateY(30px);
+      }
+      &:nth-child(2){
+        transform: translateY(-30px);
+      }
+
+      .clientsItem{
+        position: relative;
+        margin:8px 15px;
+        width: 100%;
+        border-radius: 16px;
+        background: #213040;
+        box-shadow: 0 4px 14px 0 rgba(0, 0, 0, 0.10);
+        padding: 30px 25px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .moreDots{
+          width: 16px;
+          position: absolute;
+          top: 20px;
+          right: 20px;
+          cursor: pointer;
+        }
+        .clientImg{
+          border-radius: 50%;
+        }
+        .clientsName{
+          font-family: 'Inter-Medium', sans-serif;
+          font-size: 20px;
+          margin-top: 16px;
+          color: white;
+        }
+        .clientsMail{
+          color: #6A7183;
+          font-size: 16px;
+          margin-top: 10px;
+          font-family: 'Inter-Medium', sans-serif;
+          img{
+            margin-right: 5px;
+          }
+        }
+
+        .halfBlock{
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          .Value{
+            font-size: 21px;
+            font-family: 'Inter-Medium', sans-serif;
+            color: white;
+            margin-top: 10px;
+          }
+          .description{
+            font-size: 16px;
+            color: #6A7183;
+            margin-top: 3px;
+            font-family: 'Inter-Medium', sans-serif;
+          }
+        }
+        .headClients{
+          font-family: 'Inter-Medium', sans-serif;
+          font-size: 20px;
+          color: white;
+        }
+        .addClientButton{
+          cursor: pointer;
+          border-radius: 64px;
+          border: none;
+          padding: 12px 35px;
+          margin: 15px auto 0 auto;
+          font-family: 'Inter-Medium', sans-serif;
+          font-size: 16px;
+          color: white;
+          background:  rgba(255, 255, 255, 0.10);
+        }
+      }
+
+      .middleItem{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+      }
+
+
+    }
+  }
+
+  .ClientsTextCont {
+    width: 45%;
+    padding: 40px;
+
+  .clientsTextHeader{
+    font-family: 'Inter-Medium', sans-serif;
+    font-size: 38px;
+    color: white;
+    max-width: 400px;
+    display: block;
+  }
+    .ideasClients{
+      margin-top: 48px;
+
+      .ideaLine{
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        margin-bottom: 24px;
+        .circle{
+          width: 48px;
+          height: 48px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-radius: 50%;
+          background-color: #F9FB6C;
+          margin-right: 16px;
+        }
+      }
+    }
+    .letsTalkUsButton{
+      margin-top: 24px;
+      background-color: #F9FB6C;
+      font-family: 'Inter-Medium', sans-serif;
+      font-size: 18px;
+      padding: 10px 30px;
+      border-radius: 5px;
+      cursor: pointer;
+      border: none;
+    }
+
+  }
+}

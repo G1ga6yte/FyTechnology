@@ -1,0 +1,11 @@
+<svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="terminal-square">
+<path id="Icon" d="M16.3333 35L23.3333 28L16.3333 21M30.3333 35H39.6667M18.2 49H37.8C41.7204 49 43.6805 49 45.1779 48.237C46.4951 47.5659 47.5659 46.4951 48.237 45.1779C49 43.6805 49 41.7204 49 37.8V18.2C49 14.2796 49 12.3194 48.237 10.8221C47.5659 9.50493 46.4951 8.43407 45.1779 7.76295C43.6805 7 41.7204 7 37.8 7H18.2C14.2796 7 12.3194 7 10.8221 7.76295C9.50493 8.43407 8.43407 9.50493 7.76295 10.8221C7 12.3194 7 14.2796 7 18.2V37.8C7 41.7204 7 43.6805 7.76295 45.1779C8.43407 46.4951 9.50493 47.5659 10.8221 48.237C12.3194 49 14.2796 49 18.2 49Z" stroke="url(#paint0_linear_6_6280)" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<defs>
+<linearGradient id="paint0_linear_6_6280" x1="28" y1="7" x2="28" y2="49" gradientUnits="userSpaceOnUse">
+<stop stop-color="white"/>
+<stop offset="1" stop-color="white" stop-opacity="0.6"/>
+</linearGradient>
+</defs>
+</svg>

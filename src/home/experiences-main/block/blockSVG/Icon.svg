@@ -1,0 +1,15 @@
+<svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Icon">
+<circle id="Ellipse" cx="30" cy="30" r="29.5" fill="url(#paint0_linear_6_6388)" stroke="url(#paint1_linear_6_6388)"/>
+</g>
+<defs>
+<linearGradient id="paint0_linear_6_6388" x1="39.5" y1="41.5" x2="0" y2="0" gradientUnits="userSpaceOnUse">
+<stop stop-color="#161C21"/>
+<stop offset="1" stop-color="#281E38"/>
+</linearGradient>
+<linearGradient id="paint1_linear_6_6388" x1="0" y1="0" x2="60" y2="59" gradientUnits="userSpaceOnUse">
+<stop stop-color="#F9FB6C"/>
+<stop offset="1" stop-color="#39334A" stop-opacity="0"/>
+</linearGradient>
+</defs>
+</svg>

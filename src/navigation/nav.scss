@@ -1,0 +1,54 @@
+@import "./src/font/font.scss";
+.navBlock{
+  background-color: #161C21;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-top: 60px;
+  max-width: 1920px;
+  margin: 0 auto;
+  .logoName{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    .logo{
+      margin-right: 8px;
+    }
+    .name{
+      color: white;
+      font-family: 'Inter-SemiBold', sans-serif;
+      font-size: 22px;
+    }
+  }
+  .navigation-block{
+    width: 685px;
+    display: flex;
+    justify-content: space-between;
+    padding: 16px 40px;
+    border-radius: 56px;
+    border: 1px solid #222D35;
+    background: rgba(255, 255, 255, 0.05);
+    .nav-link{
+      text-decoration: none;
+      color: #7C7C7C;
+      text-align: center;
+      font-family: 'Inter-Medium', sans-serif;
+      font-size: 15px;
+      &:nth-child(1){
+        text-shadow: 0 1px 5.300000190734863px rgba(255, 255, 255, 0.25);
+        color: white;
+      }
+    }
+  }
+  .button-fyTrading{
+    padding: 16px 40px;
+    border-radius: 56px;
+    border: 1px solid #222D35;
+    background: rgba(255, 255, 255, 0.05);
+    color: #F9FB6C;
+    text-decoration: none;
+    text-align: center;
+    font-family: 'Inter-Medium', sans-serif;
+    font-size: 15px;
+  }
+}

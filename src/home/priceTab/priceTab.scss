@@ -1,0 +1,111 @@
+.priceCont{
+  position: relative;
+  .bigBall{
+    position: absolute;
+    right: 0;
+    top: -550px;
+  }
+  .overline{
+    height: 1px;
+    max-width: 1500px;
+    background: linear-gradient(90deg, rgba(215, 196, 255, 0.00) 25%, rgba(215, 196, 255, 0.24) 50%, rgba(215, 196, 255, 0.00) 75%);
+    margin: 0 auto;
+  }
+
+  .PriceContent{
+    max-width: 1440px;
+    margin: 70px auto;
+    .overHeader{
+      display: flex;
+      align-items: center;
+      max-width: 1440px;
+      color: #F9FB6C;
+      font-family: 'Inter-Medium', sans-serif;
+      font-size: 16px;
+    }
+    .priceHeader{
+      margin-top: 12px;
+      font-size: 42px;
+      font-family: Inter-SemiBold, sans-serif;
+      background: var(--Text-Gradient, linear-gradient(180deg, #FFF 0%, rgba(255, 255, 255, 0.60) 100%));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      max-width: 750px;
+    }
+
+    .PriceBlock{
+      margin-top: 100px;
+      display: flex;
+      justify-content: center;
+
+      .priceItem{
+        position: relative;
+        margin: 15px;
+        border-radius: 20px;
+        border: 1px solid rgba(57, 51, 74, 0.50);
+        background: rgba(255, 255, 255, 0.03);
+        width: 350px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .none{
+          display: none;
+        }
+
+        .checkedText{
+          position: absolute;
+          top: 15px;
+          right: 15px;
+          color: #F9FB6C;
+          font-family: Inter-Bold, sans-serif;
+          font-size: 14px;
+          text-shadow: 0 2px 19.799999237060547px rgba(249, 251, 108, 0.15);
+        }
+
+        .itemClass{
+          margin-top: 40px;
+          font-family: 'Inter-Medium', sans-serif;
+          color: white;
+          font-size: 18px;
+        }
+        .price{
+          font-family: 'Inter-Medium', sans-serif;
+          margin: 20px auto;
+          font-size: 42px;
+          color: white;
+          .month{
+            font-size: 18px;
+          }
+        }
+        .descLayout{
+          .itemDesc{
+            color: white;
+            font-family: Inter-Regular, sans-serif;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            margin-top: 20px;
+          }
+        }
+        .buttonPurchase{
+          border-radius: 50px;
+          border: 1px solid #C5C95C;
+          background: rgba(255, 255, 255, 0.03);
+          margin: 44px auto 32px auto;
+          padding: 12px 35px;
+          cursor: pointer;
+          color: #F9FB6C;
+          font-family: 'Inter-Medium', sans-serif;
+          font-size: 14px;
+        }
+
+      }
+      .checked{
+        border-radius: 20px;
+        border: 1px solid #C5C95C;
+        background: rgba(255, 255, 255, 0.03);
+      }
+    }
+  }
+}

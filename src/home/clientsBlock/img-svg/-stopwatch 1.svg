@@ -1,0 +1,16 @@
+<svg width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="-stopwatch 1" clip-path="url(#clip0_6_443)">
+<g id="Group">
+<path id="Vector" d="M16.5 13.4927V19.4927H22.5" stroke="#A3ADB1" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_2" d="M16.5 31.4927C23.1274 31.4927 28.5 26.1201 28.5 19.4927C28.5 12.8653 23.1274 7.49268 16.5 7.49268C9.87258 7.49268 4.5 12.8653 4.5 19.4927C4.5 26.1201 9.87258 31.4927 16.5 31.4927Z" stroke="#A3ADB1" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_3" d="M12.5 1.49268H20.5" stroke="#A3ADB1" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_4" d="M16.5 1.49268V4.49268" stroke="#A3ADB1" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_5" d="M26.5 7.49268L28.5 9.49268" stroke="#A3ADB1" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</g>
+<defs>
+<clipPath id="clip0_6_443">
+<rect width="32" height="32" fill="white" transform="translate(0.5 0.492676)"/>
+</clipPath>
+</defs>
+</svg>

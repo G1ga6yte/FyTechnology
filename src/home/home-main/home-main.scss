@@ -1,0 +1,86 @@
+@import "./src/font/font.scss";
+.homeMain{
+  max-width: 1700px;
+  margin: 0 auto;
+  .mainBlock{
+    margin-top: 85px;
+    position: relative;
+    display: flex;
+    .circle{
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 710px;
+      height: 710px;
+      z-index: 1;
+      border-radius: 50%;
+      background: linear-gradient(#161C21, #161C21) padding-box,
+      linear-gradient(to bottom, #D7D2FF25, rgba(215, 229, 255, 0)) border-box;
+      border: 2px solid transparent;
+    }
+    .circle-block{
+      z-index: 2;
+      width: 710px;
+      padding: 130px;
+
+      .header-circle{
+        color: #FFF;
+        font-family: 'Inter-ExtraBold', sans-serif;
+        font-size: 75px;
+      }
+      .prg-circle{
+        color: #9F9F9F;
+        font-family: 'Inter-Medium', sans-serif;
+        font-size: 20px;
+        width: 415px;
+        margin: 25px 0 35px 0;
+      }
+      .button-discover{
+        padding: 12px 140px;
+        box-shadow: 0 4px 11.8px 0 rgba(249, 251, 108, 0.25);
+        border-radius: 6px;
+        background: #F9FB6C;
+        text-decoration: none;
+        color: black;
+        font-family: 'Inter-Medium', sans-serif;
+        font-size: 18px;
+        text-align: center;
+      }
+    }
+    .header-img{
+      z-index: 2;
+      width: 50%;
+      position: relative;
+      .header-fyTechnology{
+        font-size: 120px;
+        font-family: 'Inter-ExtraBold', sans-serif;
+        color: white;
+        position: absolute;
+        top: 60px;
+        left: -50px;
+      }
+      .header-ball{
+        margin-top: 105px;
+        margin-left: 100px;
+        height: 485px;
+        filter: grayscale(100%);
+      }
+    }
+    .backgroundLines{
+      position: absolute;
+      bottom: 0;
+      height: 800px;
+      left: -120px;
+      width: 100%;
+      z-index: 1;
+      .line{
+        fill: rgba(138, 211, 255, 0.08);
+        position: absolute;
+        left: 0;
+        top: 0;
+        &:nth-child(2){top: 5px}
+        &:nth-child(3){top: 10px}
+      }
+    }
+  }
+}
