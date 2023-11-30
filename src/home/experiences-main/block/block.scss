@@ -4,69 +4,113 @@
   justify-content: center;
   max-width: 1500px;
   margin: 0 auto;
-  .block-item{
+  .GBlock{
     margin: 15px;
-    border-radius: 20px;
-    border: 1px solid rgba(57, 51, 74, 0.50);
-    background: rgba(255, 255, 255, 0.03);
-    padding-bottom: 45px;
-    position: relative;
-    .item-grid{
-      position: absolute;
-      right: 0;
-      top: 0;
-    }
-    .item-grid2{
-      position: absolute;
-      right: 0;
-      bottom: 0;
-    }
-    .item-grid3{
-      position: absolute;
-      left: 0;
-      top: 0;
-    }
-    .icons{
-      margin: 35px 165px;
-      .iconText{
-        font-size: 18px;
-        color: #F9FB6C;
-        font-family: 'Inter-Medium', sans-serif;
 
+    .block-item{
+      width: 370px;
+      height: 270px;
+      cursor: pointer;
+      padding: 20px;
+      border-radius: 20px;
+      border: 1px solid rgba(57, 51, 74, 0.50);
+      background: rgba(255, 255, 255, 0.03);
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      transition: 0.3s ease-in-out;
+      &:hover{
+        transition: 0.3s ease-in-out;
+        box-shadow: 0 20px 20px 0 rgba(8, 3, 16, 0.50);
+      }
+      .item-grid{
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+      .item-grid2{
+        position: absolute;
+        right: 0;
+        bottom: 0;
+      }
+      .item-grid3{
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
+      .icons{
+        margin: 35px 165px;
+        .iconText{
+          font-size: 18px;
+          color: #F9FB6C;
+          font-family: 'Inter-Medium', sans-serif;
+
+        }
+      }
+      .item-header{
+        display: block;
+        color: white;
+        font-size: 18px;
+        text-align: center;
+        letter-spacing: 0.5px;
+        font-family: 'Inter-Medium', sans-serif;
+      }
+      .item-prg{
+        text-align: center;
+        margin: 16px auto;
+        line-height: 24px;
+        font-size: 15px;
+        font-family: Inter-Regular, sans-serif;
+        color: #F9FB6C;
       }
     }
-    .item-header{
-      color: white;
-      font-size: 18px;
-      text-align: center;
-      letter-spacing: 0.5px;
-      font-family: 'Inter-Medium', sans-serif;
+    .flippedItem{
+      padding: 0 !important;
+      justify-content: space-between;
+      align-items: start;
+      .ItemIconHeader{
+        display: flex;
+        align-items: center;
+        .icons{
+          margin: 15px 25px;
+        }
+      }
+      .findPriceButton{
+        display: block;
+        position: relative;
+        z-index: 222;
+        cursor: pointer;
+        width: 90%;
+        margin: 15px auto;
+        border-radius: 6px;
+        background: #F9FB6C;
+        text-align: center;
+        font-family: 'Inter-Medium', sans-serif;
+        font-size: 18px;
+        padding: 13px 80px;
+        border: none;
+        box-shadow: 0 4px 11.8px 0 rgba(249, 251, 108, 0.25);
+      }
     }
-    .item-prg{
-      width: 290px;
-      text-align: center;
-      margin: 16px auto;
-      line-height: 24px;
-      font-size: 15px;
-      font-family: Inter-Regular, sans-serif;
-      color: #F9FB6C;
-    }
-    .none{
-      display: none;
-    }
-    .discoverButton{
-      cursor: pointer;
-      display: block;
-      margin: 0 auto;
-      padding: 6px 80px;
-      color: black;
-      font-family: Inter-Medium, sans-serif;
-      font-size: 18px;
-      text-align: center;
-      border: none;
-      border-radius: 40px;
-      background: #F9FB6C;
-      box-shadow: 0 4px 11.8px 0 rgba(249, 251, 108, 0.25);
-    }
+
   }
+  .discoverButton{
+     position: relative;
+     z-index: 111;
+     display: block !important;
+     margin: 0 30px;
+     padding: 6px 80px;
+     color: black;
+     font-family: Inter-Medium, sans-serif;
+     font-size: 18px;
+     text-align: center;
+     border: none;
+     border-radius: 40px;
+     background: #F9FB6C;
+     box-shadow: 0 4px 11.8px 0 rgba(249, 251, 108, 0.25);
+     cursor: pointer !important;
+     text-decoration: none;
+   }
 }

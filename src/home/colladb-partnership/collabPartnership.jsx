@@ -28,7 +28,7 @@ function CollabPartnership (){
                 <div className="header-prg">
                   <span className="item-header">{el.header}</span>
                   <p className="item-prg">{el.description}</p>
-                  <button className="item-button">{el.button}</button>
+                  <button className="item-button G-link-button">{el.button}</button>
                 </div>
               </div>
             </div>

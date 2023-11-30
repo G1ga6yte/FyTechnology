@@ -26,7 +26,7 @@ function Ideas (){
        <p className="description">
          We pride ourselves on transparency and teamwork. After implementing your personalized digital strategy, we enter a continuous review and refinement phase. Our dedicated team closely monitors the performance metrics, scrutinizes data, and generates regular reports.
        </p>
-       <button className="CallButton">Schedule a Call</button>
+       <button className="G-link-button">Schedule a Call</button>
   
   
        <svg style={{position:"absolute", top: 0}} xmlns="http://www.w3.org/2000/svg" width="1920" height="609" viewBox="0 0 1695 609" fill="none">

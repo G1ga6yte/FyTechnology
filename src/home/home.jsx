@@ -26,7 +26,6 @@ function Home(){
        <Portfolio/>
        <Review/>
        <ClientsBlock/>
-       <Footer/>
      </div>
   )
 }

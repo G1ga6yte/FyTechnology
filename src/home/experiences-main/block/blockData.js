@@ -38,9 +38,44 @@ export const BlockData = [
   },
   {
     id: 7,
-    icontext: "+6",
-    header: "More",
-    desc: "We are offering more for ur idea and Business",
-    button: "Discover"
+    icon: BlockSVGData.bank,
+    header: "Lawyer Support",
+    desc: "Our Proffesional team of lawyer gone open company and help on every step to ur dream."
+  },
+  {
+    id: 8,
+    icon: BlockSVGData.lineChart,
+    header: "Economic analysis ",
+    desc: "Get a detailed report on the market and competitors from our economic analysts."
+  },
+  {
+    id: 9,
+    icon: BlockSVGData.barChart,
+    header: "Business plan ",
+    desc: "Develop a successful business plan with our help and advice."
+  },
+  {
+    id: 10,
+    icon: BlockSVGData.passcode,
+    header: "Api connecting",
+    desc: "Integrate other services into your product using APIs with our assistance."
+  },
+  {
+    id: 11,
+    icon: BlockSVGData.user,
+    header: "Product Testing",
+    desc: "Ensure the quality of your product with our various testing methods."
+  },
+  {
+    id: 12,
+    icon: BlockSVGData.rocket,
+    header: "App Store/play market launching",
+    desc: "Launch your product on App Store and Play Market for increased visibility."
+  },
+  {
+    id: 13,
+    icon: BlockSVGData.package1,
+    header: "Ai",
+    desc: "Integrate AI into your product and improve its functionality with our AI development services."
   }
 ]

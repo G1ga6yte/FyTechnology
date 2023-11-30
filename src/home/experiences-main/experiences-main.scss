@@ -6,108 +6,156 @@
     justify-content: space-between;
   }
 
-  .experiencesMainBlock {
+
+}
+
+.experiencesMainBlock {
+  position: relative;
+  .topLine {
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(90deg, rgba(215, 196, 255, 0.00) 25%, rgba(215, 196, 255, 0.24) 50%, rgba(215, 196, 255, 0.00) 75%);
+  }
+  .vector-radialBlocksMain {
+    position: absolute;
+    width: 100%;
+    transform: translate(-50%, 0);
+    left: 50%;
+    top: 0;
+    height: 100%;
+
+    .vector {
+      position: absolute;
+      margin: 0 auto;
+
+      &:nth-child(1) {
+        left: 20px;
+        top: 20px;
+      }
+
+      &:nth-child(2) {
+        left: 300px;
+        top: 0;
+      }
+
+      &:nth-child(3) {
+        right: 200px;
+        top: 15px;
+      }
+
+      &:nth-child(4) {
+        left: 115px;
+        top: 315px;
+      }
+
+      &:nth-child(5) {
+        right: 120px;
+        top: 525px;
+      }
+
+      &:nth-child(6) {
+        left: 20px;
+        bottom: 280px;
+      }
+
+      &:nth-child(7) {
+        left: 460px;
+        bottom: 131px;
+      }
+
+      &:nth-child(8) {
+        right: 380px;
+        bottom: 315px;
+      }
+
+      &:nth-child(9) {
+        right: 115px;
+        bottom: 25px;
+      }
+    }
+
+  }
+  .vector-radialBlocksAll {
+    position: absolute;
+    width: 100%;
+    transform: translate(-50%, 0);
+    left: 50%;
+    top: 0;
+    height: 100%;
+
+    .vector {
+      position: absolute;
+      margin: 0 auto;
+
+      &:nth-child(1) {
+        left: 220px;
+        top: 110px;
+      }
+
+      &:nth-child(2) {
+        left: 50px;
+        top: 40%;
+      }
+
+      &:nth-child(3) {
+        right: 200px;
+        top: 140px;
+      }
+
+      &:nth-child(4) {
+        left: 0;
+        top: 50%;
+      }
+
+      &:nth-child(5) {
+        right: 120px;
+        top: 525px;
+      }
+
+      &:nth-child(6) {
+        left: 20px;
+        bottom: 280px;
+      }
+
+
+
+    }
+
+  }
+  .linear-background {
+    position: absolute;
+    top: -350px;
+  }
+  .header-text{
     position: relative;
-    .topLine {
-      width: 100%;
-      height: 1px;
-      background: linear-gradient(90deg, rgba(215, 196, 255, 0.00) 25%, rgba(215, 196, 255, 0.24) 50%, rgba(215, 196, 255, 0.00) 75%);
-    }
-    .vector-radialBlocks {
-      position: absolute;
-      width: 100%;
-      transform: translate(-50%, 0);
-      left: 50%;
-      top: 0;
-      height: 100%;
-
-      .vector {
-        position: absolute;
-        margin: 0 auto;
-
-        &:nth-child(1) {
-          left: 20px;
-          top: 20px;
-        }
-
-        &:nth-child(2) {
-          left: 300px;
-          top: 0;
-        }
-
-        &:nth-child(3) {
-          right: 200px;
-          top: 15px;
-        }
-
-        &:nth-child(4) {
-          left: 115px;
-          top: 315px;
-        }
-
-        &:nth-child(5) {
-          right: 120px;
-          top: 525px;
-        }
-
-        &:nth-child(6) {
-          left: 20px;
-          bottom: 280px;
-        }
-
-        &:nth-child(7) {
-          left: 460px;
-          bottom: 131px;
-        }
-
-        &:nth-child(8) {
-          right: 380px;
-          bottom: 315px;
-        }
-
-        &:nth-child(9) {
-          right: 115px;
-          bottom: 25px;
-        }
+    .first-header{
+      color: #F9FB6C;
+      text-align: center;
+      margin-top: 95px;
+      font-family: 'Inter-Medium', sans-serif;
+      font-size: 16px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .star{
+        margin-right: 5px;
       }
-
     }
-    .linear-background {
-      position: absolute;
-      top: -350px;
-    }
-    .header-text{
+    .experiencesHeader{
+      font-family: Inter-SemiBold, sans-serif;
+      font-size: 56px;
+      text-align: center;
+      margin-top: 15px;
+      color: white;
+      z-index: 111;
       position: relative;
-      .first-header{
-        color: #F9FB6C;
-        text-align: center;
-        margin-top: 95px;
-        font-family: 'Inter-Medium', sans-serif;
-        font-size: 16px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        .star{
-          margin-right: 5px;
-        }
-      }
-      .experiencesHeader{
-        font-family: Inter-SemiBold, sans-serif;
-        font-size: 56px;
-        text-align: center;
-        margin-top: 15px;
-        color: white;
-        z-index: 111;
-        position: relative;
-      }
-      .background-text{
-        font-family: Inter-SemiBold, sans-serif;
-        font-size: 120px;
-        text-align: center;
-        margin-top: -75px;
-        color: #24282A;
-      }
+    }
+    .background-text{
+      font-family: Inter-SemiBold, sans-serif;
+      font-size: 120px;
+      text-align: center;
+      margin-top: -75px;
+      color: #24282A;
     }
   }
-
 }

@@ -82,7 +82,7 @@ function ClientsBlock() {
               <span className="ideaText">Close with killer testimonials.</span>
             </div>
           </div>
-         <button className="letsTalkUsButton">Let’s Talk Us</button>
+         <button className="letsTalkUsButton G-square-button">Let’s Talk Us</button>
        </div>
      </div>
   );

@@ -36,7 +36,7 @@ function PriceTab (){
                    </span>
                    </div>
                    
-                   <button className="buttonPurchase">Purchase Now</button>
+                   <button className="buttonPurchase G-link-button">Purchase Now</button>
                    
                    <span className={`${el.checked ? "checkedText": "none"}`}>Most popular</span>
                  

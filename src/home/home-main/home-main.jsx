@@ -11,7 +11,7 @@ function HomeMain(){
           <div className="circle-block">
             <h2 className="header-circle">Let’s Create Your Story Together!</h2>
             <p className="prg-circle">Science or knowledge put into practical use to solve problems or invent useful tools.</p>
-            <div href="" className="button-discover">Discover</div>
+            <button className="G-square-button">Discover</button>
           </div>
           <div className="header-img">
             <h1 className="header-fyTechnology">FyTechnology</h1>

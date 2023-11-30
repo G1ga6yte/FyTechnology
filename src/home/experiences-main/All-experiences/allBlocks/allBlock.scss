@@ -1,0 +1,115 @@
+.allBlock{
+  position: relative;
+  z-index: 111;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 1400px;
+  margin: 0 auto;
+  .allBlocksCont{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    .GBlock{
+      margin: 15px;
+
+      .block-item{
+        width: 370px;
+        height: 270px;
+        cursor: pointer;
+        padding: 20px;
+        border-radius: 20px;
+        border: 1px solid rgba(57, 51, 74, 0.50);
+        background: rgba(255, 255, 255, 0.03);
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: 0.3s ease-in-out;
+        &:hover{
+          transition: 0.3s ease-in-out;
+          box-shadow: 0 20px 20px 0 rgba(8, 3, 16, 0.50);
+        }
+        .item-grid{
+          position: absolute;
+          right: 0;
+          top: 0;
+        }
+        .item-grid2{
+          position: absolute;
+          right: 0;
+          bottom: 0;
+        }
+        .item-grid3{
+          position: absolute;
+          left: 0;
+          top: 0;
+        }
+        .icons{
+          margin: 35px 165px;
+          .iconText{
+            font-size: 18px;
+            color: #F9FB6C;
+            font-family: 'Inter-Medium', sans-serif;
+
+          }
+        }
+        .item-header{
+          display: block;
+          color: white;
+          font-size: 18px;
+          text-align: center;
+          letter-spacing: 0.5px;
+          font-family: 'Inter-Medium', sans-serif;
+        }
+        .item-prg{
+          text-align: center;
+          margin: 16px auto;
+          line-height: 24px;
+          font-size: 15px;
+          font-family: Inter-Regular, sans-serif;
+          color: #F9FB6C;
+        }
+      }
+      .flippedItem{
+        padding: 0 !important;
+        justify-content: space-between;
+        align-items: start;
+        .ItemIconHeader{
+          display: flex;
+          align-items: center;
+          .icons{
+            margin: 15px 25px;
+          }
+        }
+        .findPriceButton{
+          margin: 15px auto;
+        }
+      }
+
+    }
+
+
+  }
+
+  .talkUsBlock{
+    width: 85%;
+    margin: 100px auto;
+    padding: 60px;
+    border-radius: 20px;
+    border: 1px solid rgba(57, 51, 74, 0.50);
+    background: rgba(255, 255, 255, 0.03);
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    .letsTalkUsText{
+      margin-left: 50px;
+      font-family: Inter-Regular, sans-serif;
+      color: #F9FB6C;
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+}

@@ -3,17 +3,19 @@ import {Route, Routes} from "react-router-dom";
 import './App.scss';
 import Home from "./home/home";
 import Navigation from "./navigation/nav";
+import AllExperiences from "./home/experiences-main/All-experiences/allExperiences";
+import Footer from "./home/footer/footer";
 
 function App() {
   return (
     <div className="App">
-      <div></div>
-      <div></div>
       <Navigation />
       <Routes>
         <Route path="/" element={<Home />}/>
         <Route path="/home" element={<Home />}/>
+        <Route path="/brand_experiences" element={<AllExperiences/>}/>
       </Routes>
+      <Footer/>
     </div>
   );
 }

@@ -8,6 +8,13 @@ import circle from "./Icon.svg"
 import background from "./bg.png"
 import grid from "./grid.png"
 import stars from "./stars.png"
+import bank from "./bank.svg"
+import lineChart from "./line-chart-up-02.svg"
+import barChart from "./bar-chart-square-01.svg"
+import passcode from "./passcode-lock.svg"
+import user from "./user-03.svg"
+import rocket from "./rocket-02.svg"
+import package1 from "./package.svg"
 
 export const BlockSVGData = {
   framer,
@@ -19,5 +26,12 @@ export const BlockSVGData = {
   circle,
   background,
   grid,
-  stars
+  stars,
+  bank,
+  lineChart,
+  barChart,
+  passcode,
+  user,
+  rocket,
+  package1
 }

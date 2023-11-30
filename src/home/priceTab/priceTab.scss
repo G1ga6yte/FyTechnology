@@ -48,6 +48,13 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        transition: 0.5s ease-in-out;
+
+        &:hover{
+          transition: 0.5s ease-in-out;
+          transform: scale(1.1);
+          margin: 15px 30px;
+        }
 
         .none{
           display: none;
@@ -89,15 +96,7 @@
           }
         }
         .buttonPurchase{
-          border-radius: 50px;
-          border: 1px solid #C5C95C;
-          background: rgba(255, 255, 255, 0.03);
           margin: 44px auto 32px auto;
-          padding: 12px 35px;
-          cursor: pointer;
-          color: #F9FB6C;
-          font-family: 'Inter-Medium', sans-serif;
-          font-size: 14px;
         }
 
       }
