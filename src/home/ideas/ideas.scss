@@ -1,10 +1,22 @@
 .ideasCont{
-  margin-top: 200px;
-  margin-bottom: 250px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   position: relative;
+  background-color: #161C21;
+  z-index: 56;
+  .bigBall{
+    position: absolute;
+    right: 0;
+    bottom: -70%;
+    z-index: 58;
+  }
+  .ideasContBck{
+    padding: 50px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.25);
+  }
+
   .over-header{
     font-family: 'Inter-Medium', sans-serif;
     font-size: 16px;

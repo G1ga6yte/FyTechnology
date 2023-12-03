@@ -1,7 +1,15 @@
 .ReviewCont{
-  margin: 150px auto;
-  max-width: 1160px;
+  z-index: 54;
+  position: relative;
+  background-color: #161C21;
+  .reviewContBck{
+    width: 100%;
+    padding: 150px 0;
+    background-color: rgba(0, 0, 0, 0.25);
+  }
   .Review1{
+    max-width: 1160px;
+    margin: 0 auto;
     display: flex;
     justify-content: space-between;
 

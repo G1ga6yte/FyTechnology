@@ -1,0 +1,17 @@
+.photosCont{
+    max-width: 1700px;
+  position: relative;
+  border-radius: 50px;
+  z-index: 22;
+  height: 1240px;
+  overflow: hidden;
+  margin: 150px auto 0 auto;
+  .png{
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+  }
+}

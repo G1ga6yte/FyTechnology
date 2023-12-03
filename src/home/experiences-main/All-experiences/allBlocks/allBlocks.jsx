@@ -5,32 +5,42 @@ import {BlockSVGData} from "../../block/blockSVG/blockSVGData.js";
 import EachBlock from "./eachBlock/eachBlock";
 
 
+
 function AllBlock() {
-  // const icon = BlockData[0].icon
-  // const header = BlockData[0].header
-  // const desc = BlockData[0].desc
-  
+  const settings1 = {
+    widthB: "0",
+    paddingB: "15px 0",
+    marginP: "100px"
+  }
+  const settings2 = {
+    widthB: "350px",
+    paddingB: "15px 100px",
+    marginP: "0"
+  }
+  const [settings, setSettings] = useState(settings1)
+  window.addEventListener("scroll", function(){
+    if(this.scrollY >= 1500){
+      setSettings(settings2)
+    }
+  })
   return (
      
      <div className="allBlock">
        <div className="allBlocksCont">
          {BlockData.map((el, index) => {
-           
-           
            return (
-            <EachBlock header={el.header} icon={el.icon} desc={el.desc} index={index} />
+            <EachBlock key={el.id} id={el.id} header={el.header} icon={el.icon} desc={el.desc} />
            );
          })}
-         
-         
-         
-
        </div>
        
   
        <div className="talkUsBlock">
-          <button className="letsTalkUsButton G-square-button">Let’s Talk Us</button>
-         <p className="letsTalkUsText">Whether you're looking for advice, inspiration, or simply want to connect with like-minded individuals</p>
+          <button style={{width: settings.widthB, padding: settings.paddingB}} className="letsTalkUsButton G-square-button">Let’s Talk Us</button>
+         <div className="prgBlock">
+           <p style={{marginTop: settings.marginP}} className="letsTalkUsText">Whether you're looking for advice, inspiration, or simply want to connect with like-minded individuals</p>
+
+         </div>
        </div>
      </div>
   );

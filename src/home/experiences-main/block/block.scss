@@ -7,6 +7,21 @@
   .GBlock{
     margin: 15px;
 
+    .line1{
+      .icons{
+        transform: rotate3d(0, 1, 0, 360deg) !important;
+        opacity: 1 !important;
+      }
+      .item-header{
+        margin-top: 0 !important;
+        opacity: 1 !important;
+      }
+      .item-prg{
+        margin-top: 15px !important;
+        opacity: 1 !important;
+      }
+    }
+
     .block-item{
       width: 370px;
       height: 270px;
@@ -20,9 +35,9 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      transition: 0.3s ease-in-out;
+      transition: 0.5s ease-in-out;
       &:hover{
-        transition: 0.3s ease-in-out;
+        transition: 0.5s ease-in-out;
         box-shadow: 0 20px 20px 0 rgba(8, 3, 16, 0.50);
       }
       .item-grid{
@@ -42,6 +57,7 @@
       }
       .icons{
         margin: 35px 165px;
+        transition: 1.5s ease-in-out;
         .iconText{
           font-size: 18px;
           color: #F9FB6C;
@@ -49,17 +65,27 @@
 
         }
       }
+      .itemHeaderBlock{
+        height: 40px;
+        overflow: hidden;
+      }
       .item-header{
+        transition: 1s ease-in-out;
         display: block;
-        color: white;
-        font-size: 18px;
-        text-align: center;
-        letter-spacing: 0.5px;
-        font-family: 'Inter-Medium', sans-serif;
+         color: white;
+         font-size: 18px;
+         text-align: center;
+         letter-spacing: 0.5px;
+         font-family: 'Inter-Medium', sans-serif;
+       }
+
+      .itemPrgBlock{
+        height: 70px;
+        overflow: hidden;
       }
       .item-prg{
+        transition: 1s ease-in-out;
         text-align: center;
-        margin: 16px auto;
         line-height: 24px;
         font-size: 15px;
         font-family: Inter-Regular, sans-serif;

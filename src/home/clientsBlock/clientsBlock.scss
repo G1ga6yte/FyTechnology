@@ -1,10 +1,29 @@
 .ClientsBlock {
-  max-width: 1440px;
-  padding: 50px 100px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
 
+  background-color: #161C21;
+  width: 100%;
+  position: relative;
+  z-index: 55;
+  overflow: hidden;
+  border-radius: 0 0 70px 70px;
+  .clientsBlockBck{
+     background-color: rgba(0, 0, 0, 0.25);
+    padding: 100px 100px 20px 100px;
+
+    .overline {
+      width: 224px;
+      height: 6px;
+      background-color: rgba(56, 56, 56, 0.4);
+      margin: 100px auto 0 auto;
+      border-radius: 10px;
+    }
+    .clientsCondM{
+      display: flex;
+      justify-content: space-between;
+      max-width: 1440px;
+      margin: 0 auto;
+    }
+  }
   .ClientsCont {
     width: 45%;
     border-radius: 24px;
@@ -130,6 +149,12 @@
         justify-content: start;
         align-items: center;
         margin-bottom: 24px;
+        .ideaText{
+          color: #7E8597;
+          font-size: 18px;
+          font-family: 'Inter-Medium', sans-serif;
+
+        }
         .circle{
           width: 48px;
           height: 48px;

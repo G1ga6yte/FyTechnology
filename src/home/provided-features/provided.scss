@@ -1,31 +1,49 @@
 .providedBlock{
   position: relative;
+  background-color: #161C21;
+  z-index: 54;
+  .ProvidedBlockBck{
+    background-color: rgba(0, 0, 0, 0.25);
+  }
   .overline{
     height: 1px;
     max-width: 1500px;
     background: linear-gradient(90deg, rgba(215, 196, 255, 0.00) 25%, rgba(215, 196, 255, 0.24) 50%, rgba(215, 196, 255, 0.00) 75%);
     margin: 0 auto;
   }
-  .overHeader{
-    justify-content: center;
+  .overHeaderBlock{
     margin-top: 30px;
-    display: flex;
-    align-items: center;
-    color: #F9FB6C;
-    font-family: 'Inter-Medium', sans-serif;
-    font-size: 16px;
+    height: 20px;
+    overflow: hidden;
+    .overHeader{
+      transition: 0.5s ease-in-out;
+      justify-content: center;
+      display: flex;
+      align-items: center;
+      color: #F9FB6C;
+      font-family: 'Inter-Medium', sans-serif;
+      font-size: 16px;
+    }
   }
-  .providedHeader{
-    text-align: center;
-    font-family: Inter-SemiBold, sans-serif;
-    font-size: 42px;
+  .providedHeaderBlock{
     margin-top: 15px;
-    background: var(--Text-Gradient, linear-gradient(180deg, #FFF 0%, rgba(255, 255, 255, 0.60) 100%));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    height: 50px;
+    overflow: hidden;
+    .providedHeader{
+      transition: 0.5s ease-in-out;
+      text-align: center;
+      font-family: Inter-SemiBold, sans-serif;
+      font-size: 42px;
+      background: var(--Text-Gradient, linear-gradient(180deg, #FFF 0%, rgba(255, 255, 255, 0.60) 100%));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
   }
+
+
   .features{
-    margin: 60px auto;
+    margin: 0 auto;
+    padding: 60px 0;
     max-width: 1440px;
     display: flex;
     flex-wrap: wrap;
@@ -36,17 +54,37 @@
       display: flex;
       justify-content: space-between;
       align-items: start;
+
+        .itemImg {
+          margin-right: 15px;
+        }
+
+
+
+
       .textBox{
         font-family: 'Inter-Medium', sans-serif;
-        .itemHeader{
-          font-size: 25px;
-          color: white;
+        .itemHeaderBlock{
+          height: 30px;
+          overflow: hidden;
+          .itemHeader{
+            font-size: 25px;
+            color: white;
+            transition: 0.5s ease-in-out;
+          }
         }
-        .itemPrg{
-          font-size: 16px;
-          color: #9B9B9B;
+        .itemPrgBlock{
+          height: 140px;
+          overflow: hidden;
           margin-top: 16px;
+
+          .itemPrg{
+            font-size: 16px;
+            color: #9B9B9B;
+            transition: 0.5s ease-in-out;
+          }
         }
+
       }
     }
   }

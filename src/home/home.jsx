@@ -10,7 +10,8 @@ import OurTeam from "./ourTeam/ourTeam";
 import Portfolio from "./portfolio/portfolio";
 import Review from "./review/review";
 import ClientsBlock from "./clientsBlock/clientsBlock";
-import Footer from "./footer/footer";
+import Photos from "./photos/photos";
+import BeInTouch from "./beInTouch/beInTouch";
 
 
 function Home(){
@@ -18,14 +19,19 @@ function Home(){
      <div className="home-cont">
        <HomeMain/>
        <ExperiencesMain/>
+       <Photos/>
        <CollabPartnership/>
-       <Ideas/>
+       
        <PriceTab/>
        <Provided/>
        <OurTeam/>
        <Portfolio/>
+       
        <Review/>
+       <Ideas/>
        <ClientsBlock/>
+       
+       <BeInTouch/>
      </div>
   )
 }

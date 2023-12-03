@@ -62,3 +62,26 @@
     background: white;
   }
 }
+
+.G-flex{
+  display: flex;
+}
+.G-justify-center{
+  justify-content: center;
+}
+.G-justify-around{
+  justify-content: space-around;
+}
+.G-justify-between{
+  justify-content: space-between;
+}
+.G-justify-start{
+  justify-content: start;
+}
+.G-justify-end{
+  justify-content: end;
+}
+.G-align-center{
+  align-items: center;
+}
+

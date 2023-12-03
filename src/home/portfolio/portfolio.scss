@@ -1,12 +1,18 @@
 .Portfolio{
-
+  position: relative;
+  background-color: #161C21;
+  z-index: 55;
+  .portfolioBck{
+    background-color: rgba(0, 0, 0, 0.25);
+  }
   .portfolioHeader{
     font-size: 42px;
     font-family: 'Inter-SemiBold', sans-serif;
     background: var(--Text-Gradient, linear-gradient(180deg, #FFF 0%, rgba(255, 255, 255, 0.60) 100%));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    margin: 60px 10%;
+    margin: 0 10%;
+    padding: 60px 0;
   }
 
   .sliderCont{

@@ -1,16 +1,10 @@
 .Footer {
   position: relative;
-  padding-top: 240px;
+  padding-top: 620px;
   max-width: 1920px;
   margin: 0 auto;
+  background: linear-gradient(180deg, #161C21 0%, #0A0D10 104.29%);
 
-
-  .backgroundFooter {
-    position: absolute;
-    top: -50px;
-    left: 0;
-    z-index: 1;
-  }
   .footerBall{
     z-index: 2;
     position: absolute;
@@ -77,10 +71,10 @@
     position: relative;
     z-index: 2;
     max-width: 1440px;
-    margin: 35px auto;
+    margin: 0 auto;
+    padding: 35px 20px;
     display: flex;
     justify-content: space-between;
-    padding: 0 20px;
     .rightsText{
       font-size: 16px;
       font-family: 'Inter-Medium', sans-serif;

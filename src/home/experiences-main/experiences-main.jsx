@@ -1,20 +1,67 @@
-import React from "react";
+import React, {useState} from "react";
 import "./experiences-main.scss"
 import {SvgsData} from "../../svgs/svgsData";
 import Block from "./block/block";
+import Slider from "react-slick";
 
 function ExperiencesMain (){
+  const [speed, setSpeed] = useState(0)
+  const [paddingTopS, setPaddingTopS] = useState("200px")
+  const [opcS, setOpcS] = useState("0")
+  const [paddingTopP, setPaddingTopP] = useState("100px")
+  const [opcP, setOpcP] = useState("0")
+  const [marginTopH, setMarginTopH] = useState("350px")
+  const [marginTopB, setMarginTopB] = useState("100px")
+  const [opcH, setOpcH] = useState("0")
+  var settings = {
+    infinite: true,
+    speed: speed,
+    slidesToShow: 7,
+    slidesToScroll: 14,
+    arrows        : false,
+    autoplay      : true,
+    autoplaySpeed : 0,
+    easing: "linear",
+    cssEase: "linear"
+  };
+
+  
+  
+  window.addEventListener('scroll', function(){
+    if (this.scrollY >= 200){
+      setPaddingTopS("0")
+      setOpcS("1")
+      setTimeout(()=>{
+        setSpeed(25000)
+      },1000)
+    }
+    if (this.scrollY >= 400){
+      setPaddingTopP("0")
+      setOpcS("1")
+    }
+    if (this.scrollY >= 550){
+      setMarginTopH("15px")
+      setMarginTopB("-75px")
+      setOpcH("1")
+    }
+  })
+  
+  
+  
   return(
      <div className="ExperiencesMain">
-        <div className="programs">
-          <span><img src={SvgsData.airbnb} alt=""/></span>
-          <span><img src={SvgsData.oracle} alt=""/></span>
-          <span><img src={SvgsData.binance} alt=""/></span>
-          <span><img src={SvgsData.aws} alt=""/></span>
-          <span><img src={SvgsData.tesla} alt=""/></span>
-          <span><img src={SvgsData.oppo} alt=""/></span>
-          <span><img src={SvgsData.vercel} alt=""/></span>
-          <span><img src={SvgsData.stripe} alt=""/></span>
+        <div style={{opacity: opcS}} className="programs">
+          <Slider style={{marginTop: paddingTopS, transition: "1s ease-in-out"}} {...settings}>
+            <span><img src={SvgsData.airbnb} alt=""/></span>
+            <span><img src={SvgsData.oracle} alt=""/></span>
+            <span><img src={SvgsData.binance} alt=""/></span>
+            <span><img src={SvgsData.aws} alt=""/></span>
+            <span><img src={SvgsData.tesla} alt=""/></span>
+            <span><img src={SvgsData.oppo} alt=""/></span>
+            <span><img src={SvgsData.vercel} alt=""/></span>
+            <span><img src={SvgsData.stripe} alt=""/></span>
+          </Slider>
+          
         </div>
        
        <div className="experiencesMainBlock">
@@ -66,14 +113,19 @@ function ExperiencesMain (){
            </svg>
          </div>
          <div className="header-text">
-           <p className="first-header">
-             <svg className="star" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
-               <path d="M16 8C10.3219 9.28244 9.28244 10.3232 8 16C6.71756 10.3232 5.67809 9.28244 0 8C5.67809 6.71756 6.71756 5.67809 8 0C9.28244 5.67809 10.3232 6.71756 16 8Z" fill="#F9FB6C"/>
-             </svg>
-             Outstanding Digital Products, and Experiences
-           </p>
-           <h1 className="experiencesHeader">We craft brand experiences</h1>
-           <p className="background-text">Creative technology</p>
+           <div className="first-header">
+             <p style={{paddingTop: paddingTopP}} className="first-header-prg">
+               <svg className="star" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                 <path d="M16 8C10.3219 9.28244 9.28244 10.3232 8 16C6.71756 10.3232 5.67809 9.28244 0 8C5.67809 6.71756 6.71756 5.67809 8 0C9.28244 5.67809 10.3232 6.71756 16 8Z" fill="#F9FB6C"/>
+               </svg>
+               Outstanding Digital Products, and Experiences
+             </p>
+           </div>
+           <div className="headerBlock">
+             <h1 style={{marginTop: marginTopH, opacity: opcH}} className="experiencesHeader">We craft brand experiences</h1>
+             <p style={{marginTop: marginTopB, opacity: opcH}} className="background-text">Creative technology</p>
+           </div>
+           
          </div>
          
          <div className="skill-block">

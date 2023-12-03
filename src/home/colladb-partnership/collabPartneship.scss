@@ -1,17 +1,33 @@
-
-.CollabPartnership{
+.CollabPartnershipBlock{
   position: relative;
+  min-height: 195vh;
+
+}
+.CollabPartnership {
   padding-top: 130px;
-  .collabHeader{
-    text-align: center;
-    font-family: Inter-SemiBold, sans-serif;
-    font-size: 56px;
-    color: white;
-    background: linear-gradient(180deg, #FFF 0%, rgba(255, 255, 255, 0.60) 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+  will-change: opacity;
+  pointer-events: all;
+  width: 100%;
+
+
+  .headerBlock {
+    height: 70px;
+    overflow: hidden;
+
+    .collabHeader {
+      margin-top: 100px;
+      transition: 1.5s ease-in-out;
+      text-align: center;
+      font-family: Inter-SemiBold, sans-serif;
+      font-size: 56px;
+      color: white;
+      background: linear-gradient(180deg, #FFF 0%, rgba(255, 255, 255, 0.60) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
   }
-  .collabBlock{
+
+  .collabBlock {
     z-index: 2;
     max-width: 1400px;
     margin: 50px auto;
@@ -22,105 +38,151 @@
     background: rgba(255, 255, 255, 0.03);
     box-shadow: 0 20px 20px 0 rgba(8, 3, 16, 0.50);
     position: relative;
-    .collabBlockStars{
+
+    .collabBlockStars {
       position: absolute;
       left: 10%;
       top: 10%;
-      &:nth-child(2){
+
+      &:nth-child(2) {
         left: 40%;
         bottom: 0;
       }
     }
-    .grid-img{
+
+    .grid-img {
       right: 0;
       top: 0;
       position: absolute;
     }
-    .CDE-block{
-    margin: 70px 0 35px 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 5px 12px;
-    border-radius: 20px;
-    max-width: 250px;
-    border: 1px solid rgba(255, 255, 255, 0.10);
-    background: radial-gradient(70.71% 70.71% at 50% 50%, #5C5C5B 0%, rgba(105, 106, 52, 0.00) 100%), rgba(255, 255, 255, 0.05);
-    box-shadow: 0 0 4px 3px rgba(168, 128, 255, 0.10) inset;
-    .CDE-text{
-      color: white;
-      font-family: Inter-Regular, sans-serif;
-      font-size: 14px;
-      line-height: 24px;
+
+    .CDE-block {
+      margin: 70px 0 35px 0;
+      display: flex;
+      justify-content: start;
+      align-items: center;
+      padding: 5px 12px;
+      border-radius: 20px;
+      max-width: 250px;
+      border: 1px solid rgba(255, 255, 255, 0.10);
+      background: radial-gradient(70.71% 70.71% at 50% 50%, #5C5C5B 0%, rgba(105, 106, 52, 0.00) 100%), rgba(255, 255, 255, 0.05);
+      box-shadow: 0 0 4px 3px rgba(168, 128, 255, 0.10) inset;
+
+      .CDE-text {
+        color: white;
+        font-family: Inter-Regular, sans-serif;
+        font-size: 14px;
+        line-height: 24px;
+        overflow: hidden;
+        margin-left: 5px;
+        transition: 1s ease-in-out;
+        white-space: nowrap;
+      }
     }
-  }
-    .reverse{
+
+    .reverse {
       flex-direction: row-reverse !important;
     }
-    .img-text-block{
-    display: flex;
-    justify-content: start;
-    .imageText{
-      position: relative;
-      width: 20%;
-      margin-right: 90px;
-      .imgText{
-        position: absolute;
-        top: 20px;
-        font-family: Inter-SemiBold, sans-serif;
-        font-size: 120px;
-        opacity: 0.4;
-        background: linear-gradient(270deg, #DDE064 5.05%, #B0B09E 52.41%, #BDC0A1 95.33%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-      }
-    }
-    .header-prg{
-      width: 60%;
-      margin-right: 90px;
-      .item-header{
-        color: white;
-        display: block;
-        font-size: 24px;
-        font-family: Inter-Medium, sans-serif;
-        margin-bottom: 30px;
-      }
-      .item-prg{
-        color: #F9FB6C;
-        font-size: 16px;
-        line-height: 24px;
-        font-family: Inter-Regular, sans-serif;
-        margin-bottom: 40px;
+
+    .img-text-block {
+      display: flex;
+      justify-content: start;
+
+      .imageText {
+        position: relative;
+        width: 20%;
+        margin-right: 90px;
+
+        .imgText {
+          transition: 1.5s ease-in-out;
+          position: absolute;
+          top: 20px;
+          font-family: Inter-SemiBold, sans-serif;
+          font-size: 120px;
+          opacity: 0.4;
+          background: linear-gradient(270deg, #DDE064 5.05%, #B0B09E 52.41%, #BDC0A1 95.33%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
       }
 
+      .header-prg {
+        width: 60%;
+        margin-right: 90px;
+
+        .itemHeaderBlock {
+          overflow: hidden;
+          height: 50px;
+          margin-bottom: 20px;
+
+          .item-header {
+
+            transition: 1.5s ease-in-out;
+            color: white;
+            display: block;
+            font-size: 24px;
+            font-family: Inter-Medium, sans-serif;
+          }
+        }
+
+        .itemPrgBlock {
+          overflow: hidden;
+          height: 100px;
+          margin-bottom: 40px;
+
+          .item-prg {
+            transition: 1.5s ease-in-out;
+            overflow: hidden;
+            color: #F9FB6C;
+            font-size: 16px;
+            line-height: 24px;
+            font-family: Inter-Regular, sans-serif;
+
+          }
+        }
+
+        .buttonBlock{
+          .item-button{
+            transition: 1.5s ease-in-out;
+
+          }
+
+        }
+
+      }
     }
   }
-  }
-  .ball1{
+
+  .ball1 {
     fill: lightgray;
     position: absolute;
     right: 0;
     top: 20%;
     z-index: 1;
   }
-  .ball2{
+
+  .ball2 {
     position: absolute;
     left: 0;
     top: 40%;
     z-index: 1;
   }
-  .ball3{
+
+  .ball3 {
     position: absolute;
     right: 0;
     top: 70%;
   }
-  .vector{
+
+  .vector {
     position: absolute;
-    &:nth-last-child(1){
+
+    &:nth-last-child(1) {
       top: 47%;
       left: 17%;
     }
-    &:nth-last-child(2){
+
+    &:nth-last-child(2) {
       left: 17%;
       transform: scale(1, -1);
     }

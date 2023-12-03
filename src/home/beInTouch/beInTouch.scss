@@ -1,0 +1,41 @@
+.beInTouch {
+  z-index: 50;
+  top: 0;
+  height: 100vh;
+  background-color: #161C21;
+  width: 100%;
+  transition: 1s ease-in-out;
+  .beInTouchCont{
+    max-width: 1700px;
+    margin: 0 auto;
+    padding: 50px 0;
+    .beInTouchHeader{
+      font-size: 320px;
+      font-family: 'Inter-Regular', sans-serif;
+      text-align: center;
+      color: white;
+    }
+    .circleCont{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .circle{
+        cursor: pointer;
+        height: 660px;
+        width: 660px;
+        border-radius: 50%;
+        filter: drop-shadow(0px -2px 21.6px rgba(250, 251, 122, 0.30));
+        background: #FAFB7A;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        &:hover{
+          transition: 0.5s ease-in-out;
+          filter: drop-shadow(0px -2px 50px rgba(250, 251, 122, 0.80));
+        }
+      }
+    }
+  }
+
+}

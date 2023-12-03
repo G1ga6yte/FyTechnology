@@ -6,7 +6,7 @@ import tesla from "./tesla.svg"
 import oppo from "./oppo.svg"
 import vercel from "./verce.svg"
 import stripe from "./stripe.svg"
-
+import logo from "./g20.svg"
 import radial from "./radial.svg"
 import vector from "./vector.svg"
 
@@ -20,5 +20,6 @@ export const SvgsData = {
   vercel,
   stripe,
   radial,
-  vector
+  vector,
+  logo
 }
