@@ -1,9 +1,25 @@
-import React from "react";
+import React, {useState} from "react";
 import "./review.scss"
 import {TopReviewData} from "./topReviewData";
 import {ReviewImgData} from "./img-svg/reviewImgData";
 
 function Review (){
+  const [settings, setSettings] = useState({
+    marginTopPrg: "300px",
+    opacity: "0",
+    marginTop: "200px"
+  })
+  
+  window.addEventListener('scroll', function(){
+    if (this.scrollY >= 7700){
+      setSettings({
+        marginTopPrg: "0",
+        opacity: "1",
+        marginTop: "0"
+      })
+    }
+  })
+  
   return(
      <div className="ReviewCont">
        <div className="reviewContBck">
@@ -11,13 +27,17 @@ function Review (){
            <div className="imageBlock">
              <img className="img" src={TopReviewData.img} alt=""/>
            </div>
+           
            <div className="reviewTextBlock">
              <span className="quotes">“</span>
-             <p className="reviewPrg">{TopReviewData.reviewText}</p>
+             <div className="reviewPrgBlock">
+               <p style={{marginTop: settings.marginTopPrg, opacity: settings.opacity}} className="reviewPrg">{TopReviewData.reviewText}</p>
+             </div>
+             
              <div className="name-buttons">
                <div className="name-work">
-                 <span className="name">{TopReviewData.name}</span>
-                 <p className="work">{TopReviewData.work}</p>
+                 <span style={{marginTop: settings.marginTop, opacity: settings.opacity}} className="name">{TopReviewData.name}</span>
+                 <p style={{marginTop: settings.marginTop, opacity: settings.opacity}} className="work">{TopReviewData.work}</p>
                </div>
                <div className="buttons">
                  <a className="button" href=""><img src={ReviewImgData.left} alt=""/></a>
@@ -25,6 +45,7 @@ function Review (){
                </div>
              </div>
            </div>
+           
          </div>
        </div>
        

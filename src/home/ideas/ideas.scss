@@ -16,43 +16,63 @@
     width: 100%;
     background-color: rgba(0, 0, 0, 0.25);
   }
-
-  .over-header{
-    font-family: 'Inter-Medium', sans-serif;
-    font-size: 16px;
-    color: #F9FB6C;
-    display: flex;
-    align-items: center;
-    line-height: 24px;
+  .overHeaderBlock{
+    height: 30px;
+    overflow: hidden;
+    .over-header{
+      transition: 0.5s ease-in-out;
+      font-family: 'Inter-Medium', sans-serif;
+      font-size: 16px;
+      color: #F9FB6C;
+      display: flex;
+      align-items: center;
+      line-height: 24px;
+    }
   }
-  .ideasHeader{
+  .ideasHeaderBlock{
     margin-top: 10px;
-    max-width: 750px;
-    font-size: 42px;
-    text-align: center;
-    font-family: Inter-SemiBold, sans-serif;
-    background: var(--Text-Gradient, linear-gradient(180deg, #FFF 0%, rgba(255, 255, 255, 0.60) 100%));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    overflow: hidden;
+    height: 120px;
+    .ideasHeader{
+      transition: 0.5s ease-in-out;
+      max-width: 750px;
+      font-size: 42px;
+      text-align: center;
+      font-family: Inter-SemiBold, sans-serif;
+      background: var(--Text-Gradient, linear-gradient(180deg, #FFF 0%, rgba(255, 255, 255, 0.60) 100%));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
   }
 
-  .description{
-    color: #9B9B9B;
-    font-family: Inter-Regular, sans-serif;
-    font-size: 16px;
-    line-height: 24px;
-    text-align: center;
-    max-width: 850px;
+  .descriptionBlock{
     margin-bottom: 50px;
+    height: 100px;
+    overflow: hidden;
+    .description{
+      transition: 0.5s ease-in-out;
+      color: #9B9B9B;
+      font-family: Inter-Regular, sans-serif;
+      font-size: 16px;
+      line-height: 24px;
+      text-align: center;
+      max-width: 850px;
+    }
   }
 
-  .smallHeader{
-    color: white;
-    font-family: 'Inter-Medium', sans-serif;
-    line-height: 24px;
-    text-align: center;
+  .smallHeaderBlock{
     margin-bottom: 20px;
-    font-size: 18px;
+    height: 20px;
+    overflow: hidden;
+    .smallHeader{
+      transition: 0.5s ease-in-out;
+      color: white;
+      font-family: 'Inter-Medium', sans-serif;
+      line-height: 24px;
+      text-align: center;
+      font-size: 18px;
+    }
+
   }
 
 

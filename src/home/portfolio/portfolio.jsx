@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import Slider from "react-slick";
 import "./portfolio.scss"
 import {PortfolioImgData} from "./img-svg/portfolioImgData";
@@ -15,10 +15,26 @@ function Portfolio (){
     autoplaySpeed : 0,
   };
   
+  const [header, setHeader] = useState({
+    marginTopH: "100px",
+    opacity: "0"
+  })
+  
+  window.addEventListener('scroll', function(){
+    if (this.scrollY >= 7000){
+    setHeader({
+      marginTopH: "0",
+      opacity: "1"
+    })
+    }
+  })
+  
   return(
      <div className="Portfolio">
        <div className="portfolioBck">
-         <h2 className="portfolioHeader">Our portfolio</h2>
+         <div className="portfolioHeaderBlock">
+           <h2 style={{marginTop: header.marginTopH, opacity: header.opacity}} className="portfolioHeader">Our portfolio</h2>
+         </div>
   
          <div className="sliderCont">
            <Slider {...settings}>

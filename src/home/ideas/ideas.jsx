@@ -1,35 +1,103 @@
-import React from "react";
+import React, {useState} from "react";
 import "./ideas.scss"
 import {SvgsData} from "../../svgs/svgsData";
 import {PriceTabImgData} from "../priceTab/img-svg/priceTabImgData";
 
 function Ideas (){
+    const [settings, setSettings] = useState([
+      {marginTop: "50px", opacity: "0"},
+      {marginTop: "150px", opacity: "0"},
+      {marginTop: "120px", opacity: "0"},
+      {marginTop: "40px", opacity: "0"},
+      {marginTop: "120px", opacity: "0"},
+      {marginTop: "40px", opacity: "0"},
+      {marginTop: "120px", opacity: "0"},
+      {marginTop: "40px", opacity: "0"},
+      {marginTop: "120px", opacity: "0"}
+    ])
+  
+  window.addEventListener('scroll', function(){
+    if (this.scrollY >= 8300){
+      setSettings(prevState => [{marginTop: "0", opacity: "1"}, {...settings[1]}, {...settings[2]}, {...settings[3]}, {...settings[4]}, {...settings[5]}, {...settings[6]}, {...settings[7]}, {...settings[8]} ])
+    }
+    if(this.scrollY >= 8400){
+      setSettings(prevState => [ {...settings[0]}, {marginTop: "0", opacity: "1"}, {...settings[2]}, {...settings[3]}, {...settings[4]}, {...settings[5]}, {...settings[6]}, {...settings[7]}, {...settings[8]} ])
+    }
+    if(this.scrollY >= 8500){
+      setSettings(prevState => [ {...settings[0]}, {...settings[1]}, {marginTop: "0", opacity: "1"}, {...settings[3]}, {...settings[4]}, {...settings[5]}, {...settings[6]}, {...settings[7]}, {...settings[8]} ])
+    }
+    if(this.scrollY>= 8550){
+      setSettings(prevState => [ {...settings[0]}, {...settings[1]},  {...settings[2]}, {marginTop: "0", opacity: "1"}, {...settings[4]}, {...settings[5]}, {...settings[6]}, {...settings[7]}, {...settings[8]} ])
+    }
+    if (this.scrollY >= 8650){
+      setSettings(prevState => [ {...settings[0]}, {...settings[1]},  {...settings[2]}, {...settings[3]}, {marginTop: "0", opacity: "1"}, {...settings[5]}, {...settings[6]}, {...settings[7]}, {...settings[8]} ])
+    }
+    if (this.scrollY >= 8700){
+      setSettings(prevState => [ {...settings[0]}, {...settings[1]},  {...settings[2]}, {...settings[3]}, {...settings[4]}, {marginTop: "0", opacity: "1"}, {...settings[6]}, {...settings[7]}, {...settings[8]} ])
+    }
+    if(this.scrollY >= 8800){
+      setSettings(prevState => [ {...settings[0]}, {...settings[1]},  {...settings[2]}, {...settings[3]}, {...settings[4]}, {...settings[5]}, {marginTop: "0", opacity: "1"}, {...settings[7]}, {...settings[8]} ])
+    }
+    if(this.scrollY >= 8900){
+      setSettings(prevState => [ {...settings[0]}, {...settings[1]},  {...settings[2]}, {...settings[3]}, {...settings[4]}, {...settings[5]}, {...settings[6]}, {marginTop: "0", opacity: "1"}, {...settings[8]} ])
+    }
+    if(this.scrollY >= 9000){
+      setSettings(prevState => [ {...settings[0]}, {...settings[1]},  {...settings[2]}, {...settings[3]}, {...settings[4]}, {...settings[5]}, {...settings[6]}, {...settings[7]}, {marginTop: "0", opacity: "1"} ])
+    }
+  })
+  
+  
   return(
      <div className="ideasCont">
        <div className="ideasContBck">
          <img className="bigBall" src={PriceTabImgData.bigball} alt=""/>
-         <p className="over-header">
-           <svg style={{marginRight: "5px"}} xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
-             <path d="M16 8C10.3219 9.28244 9.28244 10.3232 8 16C6.71756 10.3232 5.67809 9.28244 0 8C5.67809 6.71756 6.71756 5.67809 8 0C9.28244 5.67809 10.3232 6.71756 16 8Z" fill="#F9FB6C"/>
-           </svg>
-           Empowering Businesses to Enhance Their Online Exposure
-         </p>
-         <h2 className="ideasHeader">Discover our new ideas that evolves with your business</h2>
-         <p className="description">
-           Unlock the potential and identity of your brand with our innovative and ever-evolving concept. We pride ourselves on staying at the forefront of industry trends and continuously adapting our strategies to ensure your brand's success. Discover the power of our dynamic approach and watch your brand evolve to new heights, leaving a lasting impression on your audience
-         </p>
-         <h4 className="smallHeader">Select the plan that suits your requirements and budget</h4>
-         <p className="description">
-           Begin your digital journey by meticulously choosing the strategic plan that aligns perfectly with your business objectives. Our diverse range of plans is designed to cater to your specific needs, whether you're aiming to dominate the market, enhance brand recognition, or drive exceptional sales growth.
-         </p>
-         <h4 className="smallHeader">Share your vision, and we'll work tirelessly to bring it to life</h4>
-         <p className="description">
-           Our streamlined process makes submitting your request a breeze. Share crucial details about your business goals, and any unique preferences you have in mind. Our seasoned digital marketing professionals will swiftly channel your vision into an actionable strategy that leverages cutting-edge digital tools and trends.
-         </p>
-         <h4 className="smallHeader">We’ll refine the designs until you’re fully satisfied</h4>
-         <p className="description">
-           We pride ourselves on transparency and teamwork. After implementing your personalized digital strategy, we enter a continuous review and refinement phase. Our dedicated team closely monitors the performance metrics, scrutinizes data, and generates regular reports.
-         </p>
+         
+         <div className="overHeaderBlock">
+           <p style={{marginTop: settings[0].marginTop, opacity: settings[0].opacity}} className="over-header">
+             <svg style={{marginRight: "5px"}} xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+               <path d="M16 8C10.3219 9.28244 9.28244 10.3232 8 16C6.71756 10.3232 5.67809 9.28244 0 8C5.67809 6.71756 6.71756 5.67809 8 0C9.28244 5.67809 10.3232 6.71756 16 8Z" fill="#F9FB6C"/>
+             </svg>
+             Empowering Businesses to Enhance Their Online Exposure
+           </p>
+         </div>
+         
+         <div className="ideasHeaderBlock">
+           <h2 style={{marginTop: settings[1].marginTop, opacity: settings[1].opacity}} className="ideasHeader">Discover our new ideas that evolves with your business</h2>
+         </div>
+         <div className="descriptionBlock">
+           <p style={{marginTop: settings[2].marginTop, opacity: settings[2].opacity}} className="description">
+             Unlock the potential and identity of your brand with our innovative and ever-evolving concept. We pride ourselves on staying at the forefront of industry trends and continuously adapting our strategies to ensure your brand's success. Discover the power of our dynamic approach and watch your brand evolve to new heights, leaving a lasting impression on your audience
+           </p>
+         </div>
+         
+         <div className="smallHeaderBlock">
+           <h4 style={{marginTop: settings[3].marginTop, opacity: settings[3].opacity}} className="smallHeader">Select the plan that suits your requirements and budget</h4>
+         </div>
+         <div className="descriptionBlock">
+           <p style={{marginTop: settings[4].marginTop, opacity: settings[4].opacity}} className="description">
+             Begin your digital journey by meticulously choosing the strategic plan that aligns perfectly with your business objectives. Our diverse range of plans is designed to cater to your specific needs, whether you're aiming to dominate the market, enhance brand recognition, or drive exceptional sales growth.
+           </p>
+         </div>
+        
+         <div className="smallHeaderBlock">
+           <h4 style={{marginTop: settings[5].marginTop, opacity: settings[5].opacity}} className="smallHeader">Share your vision, and we'll work tirelessly to bring it to life</h4>
+         </div>
+         <div className="descriptionBlock">
+           <p style={{marginTop: settings[6].marginTop, opacity: settings[6].opacity}} className="description">
+             Our streamlined process makes submitting your request a breeze. Share crucial details about your business goals, and any unique preferences you have in mind. Our seasoned digital marketing professionals will swiftly channel your vision into an actionable strategy that leverages cutting-edge digital tools and trends.
+           </p>
+         </div>
+         
+         <div className="smallHeaderBlock">
+           <h4 style={{marginTop: settings[7].marginTop, opacity: settings[7].opacity}} className="smallHeader">We’ll refine the designs until you’re fully satisfied</h4>
+         </div>
+         <div className="descriptionBlock">
+           <p style={{marginTop: settings[8].marginTop, opacity: settings[8].opacity}} className="description">
+             We pride ourselves on transparency and teamwork. After implementing your personalized digital strategy, we enter a continuous review and refinement phase. Our dedicated team closely monitors the performance metrics, scrutinizes data, and generates regular reports.
+           </p>
+         </div>
+         
+         
          <button className="G-link-button">Schedule a Call</button>
   
   

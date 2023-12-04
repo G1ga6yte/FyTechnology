@@ -10,11 +10,11 @@ function BeInTouch (){
     height: "100vh"
   })
   window.addEventListener('scroll',function(){
-    if(this.scrollY > 9810){
+    if(this.scrollY >= 9810){
       setSettings({
         position: "fixed"
       })
-      if(this.scrollY >= 10800){
+      if(this.scrollY >= 10945){
         setSettings({
           position: "relative",
           height: "100%"

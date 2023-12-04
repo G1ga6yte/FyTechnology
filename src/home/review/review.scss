@@ -20,31 +20,42 @@
     }
     .reviewTextBlock{
       padding: 30px 70px;
+      width: 70%;
       .quotes{
         font-family: 'Inter-Medium', sans-serif;
         font-size: 152px;
         color: #F9FB6C;
         line-height: 130px;
       }
-      .reviewPrg{
-        color: white;
-        line-height: 52px;
-        font-size: 37px;
-        font-family: 'Inter-Medium', sans-serif;
+      .reviewPrgBlock{
+        overflow: hidden;
+        height: 220px;
+        .reviewPrg{
+          transition: 1s ease-in-out;
+          color: white;
+          line-height: 52px;
+          font-size: 37px;
+          font-family: 'Inter-Medium', sans-serif;
+        }
       }
+
       .name-buttons{
         margin-top: 50px;
         display: flex;
         justify-content: space-between;
         align-items: center;
         .name-work{
+          height: 60px;
+          overflow: hidden;
           .name{
+            transition: 1s ease-in-out;
             font-size: 24px;
             font-family: 'Inter-Medium', sans-serif;
             color: white;
             line-height: 32px;
           }
           .work{
+            transition: 1.2s ease-in-out;
             font-size: 18px;
             font-family: 'Inter-Medium', sans-serif;
             color: rgba(255, 255, 255, 0.60);

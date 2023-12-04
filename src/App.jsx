@@ -10,9 +10,9 @@ import Footer from "./footer/footer";
 
 
 function App() {
-// window.addEventListener('scroll', function(){
-//   console.log(this.scrollY);
-// })
+window.addEventListener('scroll', function(){
+  console.log(this.scrollY);
+})
 
   return (
     <div className="App">

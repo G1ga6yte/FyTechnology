@@ -1,9 +1,38 @@
-import React from "react";
+import React, {useState} from "react";
 import "./clientsBlock.scss";
 import {ClientsImgSvgData} from "./img-svg/clientsImgSvgData";
 import {ClientsData} from "./clientsData";
 
 function ClientsBlock() {
+  const [header, setHeader] = useState({
+    translate1 : "translateY(450px)",
+    translate2 : "translateY(450px)",
+    marginTopH: "200px",
+    opacity: "0"
+  })
+  
+  const [line, setLine] = useState({
+    marginTopL: "100px",
+    opacity: "0"
+  })
+  
+  window.addEventListener('scroll', function(){
+    if (this.scrollY>=9500){
+      setHeader({
+        translate1 : "translateY(30px)",
+        translate2 : "translateY(-30px)",
+        marginTopH: "0",
+        opacity: "1"
+      })
+    }
+    if (this.scrollY>=9700){
+      setLine({
+        marginTopL: "0",
+        opacity: "1"
+      })
+    }
+  })
+  
   return (
      <div className="ClientsBlock">
        <div className="clientsBlockBck">
@@ -11,7 +40,7 @@ function ClientsBlock() {
          <div className="clientsCondM">
            <div className="ClientsCont">
     
-             <div className="clientsLine">
+             <div style={{transform: header.translate1, opacity: header.opacity}} className="clientsLine">
                <div className="clientsItem" id={ClientsData[0].id}>
                  <img className="moreDots" src={ClientsImgSvgData.dots} alt=""/>
                  <img className="clientImg" width="64px" src={ClientsData[0].img} alt=""/>
@@ -40,7 +69,7 @@ function ClientsBlock() {
                </div>
              </div>
     
-             <div className="clientsLine">
+             <div style={{transform: header.translate2, opacity: header.opacity}} className="clientsLine">
                <div className="clientsItem" id={ClientsData[2].id}>
                  <img className="moreDots" src={ClientsImgSvgData.dots} alt=""/>
                  <img className="clientImg" width="64px" src={ClientsData[2].img} alt=""/>
@@ -64,25 +93,29 @@ function ClientsBlock() {
            </div>
   
            <div className="ClientsTextCont">
-             <span className="clientsTextHeader">We Create Ideas & Politicies for Your Company Future.</span>
+             
+             <div className="textHeaderBlock">
+               <span style={{marginTop: header.marginTopH, opacity: header.opacity}} className="clientsTextHeader">We Create Ideas & Politicies for Your Company Future.</span>
+             </div>
+             
              <div className="ideasClients">
                <div className="ideaLine">
-                 <div className="circle">
+                 <div style={{marginTop: line.marginTopL, opacity: line.opacity}} className="circle">
                    <img src={ClientsImgSvgData.wifi} alt=""/>
                  </div>
-                 <span className="ideaText">Explain your value prop as easily as possible.</span>
+                 <span style={{marginTop: line.marginTopL, opacity: line.opacity}} className="ideaText">Explain your value prop as easily as possible.</span>
                </div>
                <div className="ideaLine">
-                 <div className="circle">
+                 <div style={{marginTop: line.marginTopL, opacity: line.opacity}} className="circle">
                    <img src={ClientsImgSvgData.toggle} alt=""/>
                  </div>
-                 <span className="ideaText">Communicate your most important features.</span>
+                 <span style={{marginTop: line.marginTopL, opacity: line.opacity}} className="ideaText">Communicate your most important features.</span>
                </div>
                <div className="ideaLine">
-                 <div className="circle">
+                 <div style={{marginTop: line.marginTopL, opacity: line.opacity}} className="circle">
                    <img src={ClientsImgSvgData.quotes} alt=""/>
                  </div>
-                 <span className="ideaText">Close with killer testimonials.</span>
+                 <span style={{marginTop: line.marginTopL, opacity: line.opacity}} className="ideaText">Close with killer testimonials.</span>
                </div>
              </div>
              <button className="letsTalkUsButton G-square-button">Let’s Talk Us</button>

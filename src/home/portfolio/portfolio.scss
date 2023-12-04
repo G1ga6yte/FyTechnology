@@ -4,19 +4,29 @@
   z-index: 55;
   .portfolioBck{
     background-color: rgba(0, 0, 0, 0.25);
+    padding-top: 60px;
   }
-  .portfolioHeader{
-    font-size: 42px;
-    font-family: 'Inter-SemiBold', sans-serif;
-    background: var(--Text-Gradient, linear-gradient(180deg, #FFF 0%, rgba(255, 255, 255, 0.60) 100%));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    margin: 0 10%;
-    padding: 60px 0;
+  .portfolioHeaderBlock{
+    overflow: hidden;
+    height: 60px;
+    margin-bottom: 60px;
+
+    .portfolioHeader{
+      transition: 1s ease-in-out;
+      font-size: 42px;
+      font-family: 'Inter-SemiBold', sans-serif;
+      background: var(--Text-Gradient, linear-gradient(180deg, #FFF 0%, rgba(255, 255, 255, 0.60) 100%));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin: 0 10%;
+    }
   }
 
+
   .sliderCont{
+    overflow: hidden;
     width: 100%;
+
     .itemBlock{
       overflow: hidden;
       width: 95% !important;

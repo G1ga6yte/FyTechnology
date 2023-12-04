@@ -38,13 +38,10 @@
       flex-direction: column;
       align-items: center;
       width: 45%;
+      transition: 0.5s ease-in-out;
 
-      &:nth-child(1){
-        transform: translateY(30px);
-      }
-      &:nth-child(2){
-        transform: translateY(-30px);
-      }
+
+
 
       .clientsItem{
         position: relative;
@@ -134,13 +131,19 @@
     width: 45%;
     padding: 40px;
 
-  .clientsTextHeader{
-    font-family: 'Inter-Medium', sans-serif;
-    font-size: 38px;
-    color: white;
-    max-width: 400px;
-    display: block;
-  }
+    .textHeaderBlock{
+      height: 150px;
+      overflow: hidden;
+      .clientsTextHeader{
+        transition: 0.5s ease-in-out;
+        font-family: 'Inter-Medium', sans-serif;
+        font-size: 38px;
+        color: white;
+        max-width: 400px;
+        display: block;
+      }
+    }
+
     .ideasClients{
       margin-top: 48px;
 
@@ -149,13 +152,16 @@
         justify-content: start;
         align-items: center;
         margin-bottom: 24px;
+        height: 60px;
+        overflow: hidden;
         .ideaText{
           color: #7E8597;
           font-size: 18px;
           font-family: 'Inter-Medium', sans-serif;
-
+          transition: 0.5s ease-in-out;
         }
         .circle{
+          transition: 0.5s ease-in-out;
           width: 48px;
           height: 48px;
           display: flex;
