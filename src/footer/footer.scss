@@ -1,21 +1,14 @@
+@import "../styles/mixin.scss";
+
+.padding{
+  padding-top: 620px !important;
+}
 .Footer {
   position: relative;
-  padding-top: 620px;
+  padding-top: 50px;
   max-width: 1920px;
   margin: 0 auto;
   background: linear-gradient(180deg, #161C21 0%, #0A0D10 104.29%);
-
-  .footerBall{
-    z-index: 2;
-    position: absolute;
-    right: -200px;
-    top: -200px;
-    border-radius: 50%;
-    width: 600px;
-    height: 600px;
-    opacity: 0.05;
-    background: black;
-  }
 
   .footerCont{
     position: relative;
@@ -23,21 +16,72 @@
     display: flex;
     justify-content: space-around;
     padding: 0 15% 0 5%;
+    @include screen($tablet-w){
+      padding: 0 2%;
+    }
+    @include screen($tablet-m){
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+
+
+
+
     .footerLine{
       display: flex;
       flex-direction: column;
+      @include screen($tablet-m){
+        margin-top: 20px;
+        text-align: center;
+        align-items: center;
+        width: 45%;
+      }
+
+
 
       .lineHeader{
         font-family: 'Inter-Medium', sans-serif;
         font-size: 20px;
         color: white;
         margin-bottom: 30px;
+        @include screen($wide){
+          margin-bottom: 25px;
+          font-size: 18px;
+        }
+        @include screen($tablet-w){
+          font-size: 16px;
+          margin-bottom: 20px;
+        }
+        @include screen($tablet){
+          font-size: 15px;
+          margin-bottom: 15px;
+        }
+        @include screen($mobile-m){
+          font-size: 14px;
+          margin-bottom: 12px;
+        }
       }
       .lineItem{
         font-family: 'Inter-Medium', sans-serif;
         color: rgba(255, 255, 255, 0.64);
         font-size: 16px;
         margin-bottom: 15px;
+        @include screen($wide){
+          font-size: 15px;
+          margin-bottom: 12px;
+        }
+        @include screen($tablet-w){
+          font-size: 14px;
+          margin-bottom: 10px;
+        }
+        @include screen($tablet){
+          font-size: 13px;
+        }
+        @include screen($mobile-m){
+          font-size: 12px;
+          margin-bottom: 8px;
+        }
+
       }
 
       .logoHeader{
@@ -46,6 +90,19 @@
         color: white;
         font-family: 'Inter-SemiBold', sans-serif;
         font-size: 22px;
+        @include screen($wide){
+          font-size: 20px;
+        }
+        @include screen($tablet-w){
+          font-size: 18px;
+        }
+        @include screen($tablet){
+          font-size: 16px;
+        }
+        @include screen($mobile-m){
+          font-size: 14px;
+        }
+
       }
       .gps{
         margin-top: 15px;
@@ -54,6 +111,21 @@
         color: rgba(255, 255, 255, 0.60);
         font-size: 16px;
         font-family: 'Inter-Medium', sans-serif;
+        @include screen($wide){
+          font-size: 15px;
+          margin-top: 12px;
+        }
+        @include screen($tablet-w){
+          font-size: 14px;
+          margin-top: 10px;
+        }
+        @include screen($tablet){
+          font-size: 13px;
+        }
+        @include screen($mobile-m){
+          font-size: 12px;
+        }
+
       }
     }
   }
@@ -66,6 +138,12 @@
     opacity: 0.16;
     background: white;
     margin: 100px auto 0 auto;
+    @include screen($wide){
+      margin: 50px auto 0 auto;
+    }
+    @include screen($tablet-m){
+      margin: 30px auto 0 auto;
+    }
   }
   .rightLine{
     position: relative;
@@ -75,17 +153,61 @@
     padding: 35px 20px;
     display: flex;
     justify-content: space-between;
+    @include screen($wide){
+      padding:25px;
+    }
+    @include screen($tablet-w){
+      padding: 20px;
+    }
+    @include screen($tablet){
+      padding: 20px 20px 100px 20px;
+    }
+    @include screen($tablet-m){
+      flex-wrap: wrap;
+      padding: 20px 20px 80px 20px;
+
+    }
+
     .rightsText{
       font-size: 16px;
       font-family: 'Inter-Medium', sans-serif;
       color: rgba(255, 255, 255, 0.50);
       line-height: 32px;
       cursor: pointer;
+      @include screen($wide){
+        font-size: 15px;
+        line-height: 26px;
+      }
+      @include screen($tablet-w){
+        font-size: 14px;
+        line-height: 22px;
+      }
+      @include screen($tablet){
+        font-size: 13px;
+        line-height: 20px;
+      }
+      @include screen($tablet-m){
+        text-align: center;
+        line-height: 26px;
+        margin: 0 auto;
+        font-size: 12px;
+      }
+      @include screen($mobile-m){
+        font-size: 11px;
+        line-height: 20px;
+      }
+
     }
     .termsPrivacy{
       display: flex;
       justify-content: space-between;
       width: 25%;
+      @include screen($tablet){
+width: 35%;
+      }
+      @include screen($tablet-m){
+width: 100%;
+      }
     }
   }
 }

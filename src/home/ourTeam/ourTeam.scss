@@ -1,3 +1,4 @@
+@import "../../styles/mixin.scss";
 .ourTeamCont{
   position: relative;
   background-color: #161C21;
@@ -21,15 +22,28 @@
     position: relative;
     max-width: 1440px;
     margin: 0 auto;
-    padding: 30px 0;
+    padding: 30px;
     display: flex;
     justify-content: space-between;
+    @include screen($wide){
+      padding: 20px;
+    }
+
+
     .contentTextBlock{
       width: 30%;
 
       .ourTeamHeaderBlock{
         overflow: hidden;
         height: 120px;
+        @include screen($wide-m){
+          height: 100px;
+        }
+        @include screen($wide){
+          height: 80px;
+        }
+
+
         .ourTeamHeader{
           transition: 1s ease-in-out;
           font-family: 'Inter-Medium', sans-serif;
@@ -37,6 +51,18 @@
           background: linear-gradient(180deg, #FFF 0%, rgba(255, 255, 255, 0.60) 100%);
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
+          @include screen($wide-m){
+            font-size: 40px;
+          }
+          @include screen($wide){
+            font-size: 36px;
+          }
+          @include screen($wide-s){
+            font-size: 32px;
+          }
+
+
+
         }
       }
 
@@ -44,11 +70,21 @@
         margin-top: 24px;
         overflow: hidden;
         height: 140px;
+        @include screen($wide){
+          height: 150px;
+          margin-top: 15px;
+        }
+
         .ourTeamPrg{
           color: #9B9B9B;
           font-family: 'Inter-Medium', sans-serif;
           font-size: 16px;
           transition: 1s ease-in-out;
+          @include screen($wide){
+            font-size: 15px;
+          }
+
+
 
         }
       }
@@ -66,6 +102,10 @@
           color: #F9FB6C;
           font-family: 'Inter-Medium', sans-serif;
           font-size: 16px;
+          @include screen($wide){
+            font-size: 15px;
+          }
+
         }
       }
 
@@ -74,13 +114,16 @@
         margin-top: 40px;
         display: flex;
         justify-content: space-between;
+        @include screen($wide){
+          margin-top: 30px;
+        }
+
         .peopleImg{
           &:nth-child(1){
             border-radius: 16px 0 0 16px;
           }
           &:nth-child(6){
             border-radius: 0 16px 16px 0;
-
           }
           width: 16%;
           height: 300px;
@@ -89,6 +132,10 @@
           background-repeat: no-repeat;
          transform: translateY(400px);
           opacity: 0;
+          @include screen($wide){
+            height: 200px;
+          }
+
         }
       }
     }

@@ -1,3 +1,5 @@
+@import "../../styles/mixin.scss";
+
 .priceCont {
   position: relative;
   background-color: #161C21;
@@ -9,6 +11,14 @@
     background-color: rgba(0, 0, 0, 0.25);
     padding-top: 20px;
     height: 100%;
+  }
+
+  .vector{
+    @include screen($wide){
+      img{
+        height: 70px;
+      }
+    }
   }
 
   .overline {
@@ -27,6 +37,7 @@
     .overHeaderBlock{
       height: 30px;
       overflow: hidden;
+
     }
     .priceHeaderBlock{
       height: 120px;
@@ -41,6 +52,10 @@
       font-family: 'Inter-Medium', sans-serif;
       font-size: 16px;
       transition: 0.5s ease-in-out;
+      margin-left: 30px;
+      @include screen($wide){
+        font-size: 15px;
+      }
     }
 
     .priceHeader {
@@ -52,12 +67,21 @@
       -webkit-text-fill-color: transparent;
       max-width: 750px;
       transition: 0.5s ease-in-out;
+      margin-left: 30px;
+      @include screen($wide){
+        font-size: 36px;
+      }
+
     }
 
     .PriceBlock {
       margin-top: 100px;
       display: flex;
       justify-content: center;
+      @include screen($wide){
+        margin-top: 80px;
+      }
+
 
       .priceItem {
         position: relative;
@@ -70,6 +94,10 @@
         flex-direction: column;
         align-items: center;
         transition: 0.5s ease-in-out;
+        @include screen($wide){
+          width: 300px;
+        }
+
 
         &:hover {
           transition: 0.5s ease-in-out;
@@ -95,27 +123,47 @@
           margin-top: 40px;
           height: 30px;
           overflow: hidden;
+          @include screen($wide){
+            margin-top: 30px;
+          }
+
         }
         .itemClass {
           transition: 0.5s ease-in-out;
           font-family: 'Inter-Medium', sans-serif;
           color: white;
           font-size: 18px;
+          @include screen($wide){
+            font-size: 16px;
+          }
+
         }
 
         .priceBlock{
           height: 50px;
           overflow: hidden;
           margin: 20px auto;
+          @include screen($wide){
+            margin: 15px auto;
+          }
+
         }
         .price {
           font-family: 'Inter-Medium', sans-serif;
           font-size: 42px;
           color: white;
           transition: 0.5s ease-in-out;
+          @include screen($wide){
+            font-size: 36px;
+          }
+
 
           .month {
             font-size: 18px;
+            @include screen($wide){
+              font-size: 16px;
+            }
+
           }
         }
 
@@ -123,6 +171,10 @@
           .itemDescBlock{
             height: 50px;
             overflow: hidden;
+
+            @include screen($wide){
+              height: 40px;
+            }
 
           }
           .itemDesc {
@@ -132,12 +184,22 @@
             font-size: 16px;
             display: flex;
             align-items: center;
+            @include screen($wide){
+              font-size: 15px;
+            }
+
 
           }
         }
 
         .buttonPurchase {
           margin: 44px auto 32px auto;
+          @include screen($wide){
+            margin: 30px auto 25px auto;
+            padding: 15px 25px !important;
+            font-size: 14px;
+          }
+
         }
 
       }

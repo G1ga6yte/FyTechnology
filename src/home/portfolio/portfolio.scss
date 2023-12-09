@@ -1,3 +1,4 @@
+@import "../../styles/mixin.scss";
 .Portfolio{
   position: relative;
   background-color: #161C21;
@@ -6,10 +7,15 @@
     background-color: rgba(0, 0, 0, 0.25);
     padding-top: 60px;
   }
+
   .portfolioHeaderBlock{
     overflow: hidden;
     height: 60px;
     margin-bottom: 60px;
+    @include screen($wide){
+      height: 50px;
+      margin-bottom: 40px;
+    }
 
     .portfolioHeader{
       transition: 1s ease-in-out;
@@ -19,6 +25,9 @@
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       margin: 0 10%;
+      @include screen($wide){
+        font-size: 36px;
+      }
     }
   }
 
@@ -35,6 +44,20 @@
       border: 1px solid rgba(57, 51, 74, 0.50);
       background: rgba(255, 255, 255, 0.03);
       box-shadow: 0 20px 20px 0 rgba(8, 3, 16, 0.50);
+
+      @include screen($wide-l){
+        height: 240px;
+      }
+      @include screen($wide){
+        height: 200px;
+      }
+      @include screen($desktop){
+        height: 180px;
+      }
+
+      img{
+        height: 100%
+      }
     }
     .slick-arrow{
       display: none !important;

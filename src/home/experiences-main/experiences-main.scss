@@ -1,12 +1,17 @@
+@import "../../styles/mixin.scss";
 .ExperiencesMain {
 
 
   .programs{
     width: 100%;
-    height: 200px !important;
+    height: 200px ;
     padding-top: 70px;
     overflow: hidden;
     transition: 1.5s ease-in-out;
+    @include screen($wide){
+      padding-top: 30px;
+      height: 110px;
+    }
 
     .itemBlock{
       overflow: hidden;
@@ -54,6 +59,11 @@
     .vector {
       position: absolute;
       margin: 0 auto;
+      @include screen($wide){
+        img{
+          height: 70px;
+        }
+      }
 
       &:nth-child(1) {
         left: 20px;
@@ -114,6 +124,12 @@
       position: absolute;
       margin: 0 auto;
 
+      @include screen($wide){
+        img{
+          height: 70px;
+        }
+      }
+
       &:nth-child(1) {
         left: 220px;
         top: 110px;
@@ -152,6 +168,9 @@
   .linear-background {
     position: absolute;
     top: -350px;
+    @include screen($wide){
+    top: -500px;
+    }
   }
   .header-text{
     position: relative;
@@ -167,6 +186,11 @@
       height: 30px;
       overflow: hidden;
       transition: 1.5s ease-in-out;
+      @include screen($wide){
+        font-size: 15px;
+        margin-top: 60px;
+
+      }
       .first-header-prg{
         transition: 1.5s ease-in-out;
       }
@@ -191,6 +215,9 @@
       z-index: 111;
       position: relative;
       transition: 2s ease-in-out;
+      @include screen($wide){
+        font-size: 50px;
+      }
     }
     .background-text{
       overflow: hidden;
@@ -201,6 +228,10 @@
       text-align: center;
       color: #24282A;
       margin-top: -75px;
+      @include screen($wide){
+        font-size: 96px;
+        margin-top: -60px !important;
+      }
     }
   }
 

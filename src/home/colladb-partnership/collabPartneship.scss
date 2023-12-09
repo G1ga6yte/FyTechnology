@@ -1,6 +1,15 @@
+@import "../../styles/mixin.scss";
 .CollabPartnershipBlock{
   position: relative;
-  min-height: 195vh;
+  min-height: 200vh;
+
+  @include screen($wide-l){
+    min-height: 210vh;
+  }
+
+  @include screen($wide){
+    min-height: 180vh;
+  }
 
 }
 .CollabPartnership {
@@ -24,6 +33,10 @@
       background: linear-gradient(180deg, #FFF 0%, rgba(255, 255, 255, 0.60) 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
+      @include screen($wide){
+        font-size: 50px;
+        margin-top: 60px;
+      }
     }
   }
 
@@ -38,7 +51,10 @@
     background: rgba(255, 255, 255, 0.03);
     box-shadow: 0 20px 20px 0 rgba(8, 3, 16, 0.50);
     position: relative;
-
+    @include screen($wide){
+      padding: 0 80px;
+      height: 400px;
+    }
     .collabBlockStars {
       position: absolute;
       left: 10%;
@@ -67,7 +83,9 @@
       border: 1px solid rgba(255, 255, 255, 0.10);
       background: radial-gradient(70.71% 70.71% at 50% 50%, #5C5C5B 0%, rgba(105, 106, 52, 0.00) 100%), rgba(255, 255, 255, 0.05);
       box-shadow: 0 0 4px 3px rgba(168, 128, 255, 0.10) inset;
-
+      @include screen($wide){
+        margin: 35px 0;
+      }
       .CDE-text {
         color: white;
         font-family: Inter-Regular, sans-serif;
@@ -77,6 +95,10 @@
         margin-left: 5px;
         transition: 1s ease-in-out;
         white-space: nowrap;
+        @include screen($wide){
+          font-size: 13px;
+          line-height: 20px;
+        }
       }
     }
 
@@ -92,6 +114,9 @@
         position: relative;
         width: 20%;
         margin-right: 90px;
+        @include screen($wide){
+          margin-right: 70px;
+        }
 
         .imgText {
           transition: 1.5s ease-in-out;
@@ -103,18 +128,27 @@
           background: linear-gradient(270deg, #DDE064 5.05%, #B0B09E 52.41%, #BDC0A1 95.33%);
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
+          @include screen($wide){
+            font-size: 96px;
+            top: 40px;
+          }
         }
       }
 
       .header-prg {
         width: 60%;
         margin-right: 90px;
+        @include screen($desktop){
+          width: 70%;
+        }
 
         .itemHeaderBlock {
           overflow: hidden;
           height: 50px;
           margin-bottom: 20px;
-
+          @include screen($wide){
+height: 35px;
+          }
           .item-header {
 
             transition: 1.5s ease-in-out;
@@ -122,6 +156,9 @@
             display: block;
             font-size: 24px;
             font-family: Inter-Medium, sans-serif;
+            @include screen($wide){
+              font-size: 22px;
+            }
           }
         }
 
@@ -129,6 +166,10 @@
           overflow: hidden;
           height: 100px;
           margin-bottom: 40px;
+          @include screen($wide){
+            margin-bottom: 20px;
+            height: 140px;
+          }
 
           .item-prg {
             transition: 1.5s ease-in-out;
@@ -137,14 +178,24 @@
             font-size: 16px;
             line-height: 24px;
             font-family: Inter-Regular, sans-serif;
-
+            @include screen($wide){
+              font-size: 15px;
+              line-height: 22px;
+            }
+            @include screen($desktop){
+              font-size: 14px;
+              line-height: 20px;
+            }
           }
         }
 
         .buttonBlock{
           .item-button{
             transition: 1.5s ease-in-out;
-
+            @include screen($wide){
+              padding: 15px 25px !important;
+              font-size: 14px;
+            }
           }
 
         }
@@ -159,23 +210,37 @@
     right: 0;
     top: 20%;
     z-index: 1;
+    @include screen($wide){
+      width: 30%;
+    }
   }
 
   .ball2 {
     position: absolute;
     left: 0;
-    top: 40%;
+    top: 30%;
     z-index: 1;
+    @include screen($wide){
+width: 20%;
+    }
   }
 
   .ball3 {
     position: absolute;
     right: 0;
     top: 70%;
+    @include screen($wide){
+width: 20%;
+    }
   }
 
   .vector {
     position: absolute;
+    @include screen($wide){
+      img{
+        height: 70px;
+      }
+    }
 
     &:nth-last-child(1) {
       top: 47%;

@@ -1,3 +1,5 @@
+@import "../../styles/mixin.scss";
+
 .ClientsBlock {
 
   background-color: #161C21;
@@ -9,6 +11,9 @@
   .clientsBlockBck{
      background-color: rgba(0, 0, 0, 0.25);
     padding: 100px 100px 20px 100px;
+    @include screen($wide){
+      padding: 50px;
+    }
 
     .overline {
       width: 224px;
@@ -33,12 +38,19 @@
     flex-wrap: wrap;
     padding: 0 20px;
     position: relative;
+    @include screen($wide-l){
+      width: 50%;
+      padding: 0 10px;
+    }
     .clientsLine{
       display: flex;
       flex-direction: column;
       align-items: center;
       width: 45%;
       transition: 0.5s ease-in-out;
+      @include screen($wide-l){
+        width: 48%;
+      }
 
 
 
@@ -54,6 +66,12 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        @include screen($wide-l){
+          margin: 5px 10px;
+        }
+        @include screen($wide){
+          padding: 20px 15px;
+        }
 
         .moreDots{
           width: 16px;
@@ -64,18 +82,28 @@
         }
         .clientImg{
           border-radius: 50%;
+          @include screen($wide){
+            height: 50px;
+            width: 50px;
+          }
         }
         .clientsName{
           font-family: 'Inter-Medium', sans-serif;
           font-size: 20px;
           margin-top: 16px;
           color: white;
+          @include screen($wide){
+            font-size: 18px;
+          }
         }
         .clientsMail{
           color: #6A7183;
           font-size: 16px;
           margin-top: 10px;
           font-family: 'Inter-Medium', sans-serif;
+          @include screen($wide){
+            font-size: 15px;
+          }
           img{
             margin-right: 5px;
           }
@@ -85,23 +113,37 @@
           display: flex;
           flex-direction: column;
           align-items: center;
+          img{
+            @include screen($wide){
+              width: 30px;
+            }
+          }
           .Value{
             font-size: 21px;
             font-family: 'Inter-Medium', sans-serif;
             color: white;
             margin-top: 10px;
+            @include screen($wide){
+              font-size: 18px;
+            }
           }
           .description{
             font-size: 16px;
             color: #6A7183;
             margin-top: 3px;
             font-family: 'Inter-Medium', sans-serif;
+            @include screen($wide){
+              font-size: 15px;
+            }
           }
         }
         .headClients{
           font-family: 'Inter-Medium', sans-serif;
           font-size: 20px;
           color: white;
+          @include screen($wide){
+            font-size: 18px;
+          }
         }
         .addClientButton{
           cursor: pointer;
@@ -113,6 +155,10 @@
           font-size: 16px;
           color: white;
           background:  rgba(255, 255, 255, 0.10);
+          @include screen($wide){
+            padding: 10px 25px;
+            font-size: 15px;
+          }
         }
       }
 
@@ -130,6 +176,9 @@
   .ClientsTextCont {
     width: 45%;
     padding: 40px;
+    @include screen($wide){
+padding: 30px;
+    }
 
     .textHeaderBlock{
       height: 150px;
@@ -141,11 +190,17 @@
         color: white;
         max-width: 400px;
         display: block;
+        @include screen($wide){
+          font-size: 32px;
+        }
       }
     }
 
     .ideasClients{
       margin-top: 48px;
+      @include screen($wide){
+        margin-top: 35px;
+      }
 
       .ideaLine{
         display: flex;
@@ -154,11 +209,17 @@
         margin-bottom: 24px;
         height: 60px;
         overflow: hidden;
+        @include screen($wide){
+height: 50px;
+        }
         .ideaText{
           color: #7E8597;
           font-size: 18px;
           font-family: 'Inter-Medium', sans-serif;
           transition: 0.5s ease-in-out;
+          @include screen($wide){
+            font-size: 16px;
+          }
         }
         .circle{
           transition: 0.5s ease-in-out;
@@ -170,11 +231,15 @@
           border-radius: 50%;
           background-color: #F9FB6C;
           margin-right: 16px;
+          @include screen($wide){
+            margin-right: 12px;
+          }
         }
       }
     }
     .letsTalkUsButton{
       margin-top: 24px;
+      padding: 10px 80px;
     }
 
   }

@@ -20,6 +20,7 @@ function HomeMain(){
     rotate: "180deg"
   }
   
+  
   const def = {
     opc: "1",
     header: "0",
@@ -35,6 +36,12 @@ function HomeMain(){
     rotate: "0"
   }
   
+  let x = window.innerWidth
+  window.addEventListener("resize", (event) => {
+    x = window.innerWidth
+  });
+  
+  
   const [anim, setAnim] = useState(before)
   const [anim1, setAnim1] = useState(before1)
   const [anim2, setAnim2] = useState(before1)
@@ -44,7 +51,14 @@ function HomeMain(){
     setAnim(def)
   }, 1000)
   setTimeout(()=>{
-    setAnim1(def1)
+    if(x>1366){
+      setAnim1(def1)
+    } else if (x <= 1366){
+      setAnim1({
+        width: "500px"
+      })
+    }
+    
   }, 3000)
   setTimeout(()=>{
     setAnim2(def1)
@@ -55,6 +69,23 @@ function HomeMain(){
   
   
   
+//   document.addEventListener("mousemove", parallax);
+//   const [elem, setElem] = useState("")
+// // const elem = document.querySelector("#parallax");
+// // Magic happens here
+//   function parallax(e) {
+//     let _w = window.innerWidth/2;
+//     let _h = window.innerHeight/2;
+//     let _mouseX = e.clientX;
+//     let _mouseY = e.clientY;
+//     let _depth1 = `${50 + (_mouseX - _w) * 0.01}% ${50 + (_mouseY - _h) * 0.01}%`;
+//     let _depth2 = `${50 + (_mouseX - _w) * 0.02}% ${50 + (_mouseY - _h) * 0.02}%`;
+//     let _depth3 = `${50 + (_mouseX - _w) * 0.06}% ${50 + (_mouseY - _h) * 0.06}%`;
+//     let x = `${_depth3}, ${_depth2}, ${_depth1}`;
+//     setElem(x)
+//     // elem.style.backgroundPosition = x;
+//   }
+  
   document.addEventListener("mousemove", parallax);
   const [elem, setElem] = useState("")
 // const elem = document.querySelector("#parallax");
@@ -64,10 +95,9 @@ function HomeMain(){
     let _h = window.innerHeight/2;
     let _mouseX = e.clientX;
     let _mouseY = e.clientY;
-    let _depth1 = `${50 + (_mouseX - _w) * 0.01}% ${50 + (_mouseY - _h) * 0.01}%`;
-    let _depth2 = `${50 + (_mouseX - _w) * 0.02}% ${50 + (_mouseY - _h) * 0.02}%`;
-    let _depth3 = `${50 + (_mouseX - _w) * 0.06}% ${50 + (_mouseY - _h) * 0.06}%`;
-    let x = `${_depth3}, ${_depth2}, ${_depth1}`;
+    let wPosition = `${(_mouseX-_w)/10}px`
+    let hPosition = `${(_mouseY-_h)/10}px`
+    let x = `${wPosition}, ${hPosition}`;
     setElem(x)
     // elem.style.backgroundPosition = x;
   }
@@ -85,6 +115,7 @@ function HomeMain(){
               <div className="lineBlock">
                 <span style={{marginTop: anim.header2}} className="headerLine">Story Together!</span>
               </div>
+              
               <div className="prgBlock">
                 <p style={{marginTop: anim.prg}} className="header-prg">Science or knowledge put into practical use to solve problems or invent useful tools.</p>
               </div>
@@ -99,11 +130,12 @@ function HomeMain(){
   
               
             </div>
-            {/*<img src={Img.headerBall} className="header-ball" alt=""/>*/}
           </div>
-        <div  onMouseLeave={()=>{setElem("51.02% 39.98%, 50.34% 46.66%, 50.17% 48.33%")}} style={{transform: `translate(${logo.translate}) rotate(${logo.rotate})`, opacity: logo.opc}} className="logo-block">
-          <div className="logo" style={{backgroundImage: `url('${Img.logo2}')`, backgroundPosition: elem}}></div>
+         
+        <div style={{transform: `translate(${logo.translate}) rotate(${logo.rotate})`, opacity: logo.opc}} className="logo-block">
+          <div className="logo" style={{backgroundImage: `url('${Img.logo2}')`, transform: `translate(${elem})`}}></div>
         </div>
+         
          <div style={{opacity: anim.opc}} className="circle"></div>
          <div style={{opacity: anim.opc}} className="backgroundLines">
            <svg width="2000" height="775" viewBox="0 0 1695 775" fill="none" xmlns="http://www.w3.org/2000/svg">

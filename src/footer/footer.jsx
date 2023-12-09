@@ -1,10 +1,13 @@
 import React from "react";
 import "./footer.scss"
 import {FooterImgSvgData} from "./img-svg/footerImgSvgData";
+import {useCartContext} from "../CartContext";
 
 function Footer() {
+  const {Call} = useCartContext()
+  
   return (
-     <div className="Footer">
+     <div style={{display: `${Call("/pricing") ? "none" : "block"}`}} className={`${Call("/") ? "Footer padding" : "Footer"} ${Call("/home") ? "Footer padding" : "Footer"}`}>
        
        <div className="footerCont">
          <div className="footerLine">

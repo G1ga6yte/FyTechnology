@@ -19,7 +19,7 @@ function AllBlock() {
   }
   const [settings, setSettings] = useState(settings1)
   window.addEventListener("scroll", function(){
-    if(this.scrollY >= 1500){
+    if(this.scrollY >= 1300){
       setSettings(settings2)
     }
   })

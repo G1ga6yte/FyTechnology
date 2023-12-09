@@ -1,33 +1,72 @@
 @import "./src/font/font.scss";
+@import "../styles/mixin";
 
-.navCont{
+.navCont {
   background-color: #161C21;
   height: 100px;
-  .navBlock{
+  margin: 0 auto;
+  max-width: 1920px;
+  @include screen($tablet-l) {
+    height: 80px;
+  }
+  @include screen($tablet-w){
+    height: 60px;
+  }
+  @include screen($tablet-m){
+    height: 40px;
+  }
+
+  .navBlock {
     transition: 1.5s ease-in-out;
-    position: absolute;
+    position: relative;
     z-index: 999;
     display: flex;
     justify-content: space-around;
     align-items: center;
     padding-top: 60px;
-    max-width: 1920px;
     width: 100%;
     margin: 0 auto;
-    .logoName{
+    @include screen($tablet-l) {
+      padding-top: 40px;
+    }
+    @include screen($tablet-w){
+      padding-top: 30px;
+    }
+    @include screen($tablet-m){
+      padding-top: 20px;
+    }
+
+
+    .logoName {
       display: flex;
       align-items: center;
       text-decoration: none;
-      .logo{
-        margin-right: 8px;
-      }
-      .name{
-        color: white;
-        font-family: 'Inter-SemiBold', sans-serif;
-        font-size: 22px;
+
+      .logo {
+        @include screen($wide) {
+          height: 18px;
+        }
+        @include screen($tablet-l) {
+          height: 15px;
+        }
+        @include screen($tablet-w){
+          height: 13px;
+        }
+        @include screen($tablet){
+          height: 20px ;
+        }
+        @include screen($tablet-m){
+          height: 18px;
+        }
+        @include screen($mobile-m){
+          height: 15px;
+        }
+
+
       }
     }
-    .navigation-block{
+
+    .navigation-block {
       width: 685px;
       display: flex;
       justify-content: space-between;
@@ -35,22 +74,115 @@
       border-radius: 56px;
       border: 1px solid #222D35;
       background: rgba(255, 255, 255, 0.05);
-      .nav-link{
+
+      span{
+        display: none;
+      }
+      @include screen($wide) {
+        width: 600px;
+      }
+      @include screen($tablet-l){
+        width: 500px;
+        padding: 12px 30px;
+      }
+      @include screen($tablet-w){
+width: 400px;
+        padding: 10px 25px;
+      }
+      @include screen($tablet){
+        position: fixed;
+        z-index: 1999;
+        bottom: 0;
+        width: 100%;
+        background-color: #161C21;
+        border-radius: 0;
+        span{
+          display: block;
+          font-size: 25px;
+          margin-bottom: 5px;
+        }
+        padding-bottom: 20px;
+      }
+      @include screen($tablet-m){
+        span{
+          font-size: 16px;
+        }
+        padding: 10px 15px;
+      }
+      @include screen($mobile-m){
+        font-size: 14px;
+        padding: 10px;
+      }
+
+
+      .nav-link {
         text-decoration: none;
         color: #7C7C7C;
         text-align: center;
         font-family: 'Inter-Medium', sans-serif;
         font-size: 15px;
         transition: 0.3s ease-in-out;
-        &:hover{
+        @include screen($wide) {
+          font-size: 14px;
+        }
+        @include screen($tablet-l){
+          font-size: 13px;
+        }
+        @include screen($tablet-w){
+          font-size: 12px;
+        }
+        @include screen($tablet){
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          font-size: 14px;
+        }
+        @include screen($tablet-m){
+          font-size: 12px;
+        }
+        @include screen($mobile-m){
+          font-size: 11px;
+        }
+
+
+
+        &:hover {
           transition: 0.3s ease-in-out;
           text-shadow: 0 1px 5.300000190734863px rgba(255, 255, 255, 0.25);
           color: white;
         }
       }
-      .lighting{
+
+      .lighting {
         text-shadow: 0 1px 5.300000190734863px rgba(255, 255, 255, 0.25);
         color: white;
+      }
+    }
+
+    .G-link-button {
+      @include screen($wide) {
+        padding: 15px 25px !important;
+        font-size: 14px;
+      }
+      @include screen($tablet-l){
+        padding: 12px 20px !important;
+        font-size: 13px;
+      }
+      @include screen($tablet-w){
+        padding: 10px 15px !important;
+        font-size: 12px;
+      }
+      @include screen($tablet){
+        padding: 15px 20px !important;
+        font-size: 14px;
+      }
+      @include screen($tablet-m){
+        padding: 10px 15px;
+        font-size: 12px;
+      }
+      @include screen($mobile-m){
+        padding: 8px 12px;
+        font-size: 11px;
       }
     }
   }

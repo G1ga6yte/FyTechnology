@@ -1,3 +1,4 @@
+@import "../../styles/mixin.scss";
 .photosCont{
     max-width: 1700px;
   position: relative;
@@ -6,6 +7,16 @@
   height: 1240px;
   overflow: hidden;
   margin: 150px auto 0 auto;
+  @include screen($wide-l){
+    width: 100%;
+    height: 992px;
+  }
+  @include screen($wide){
+height: 876px;
+  }
+  @include screen($desktop){
+height: 665px;
+  }
   .png{
     height: 100%;
     width: 100%;

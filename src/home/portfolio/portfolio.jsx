@@ -38,11 +38,11 @@ function Portfolio (){
   
          <div className="sliderCont">
            <Slider {...settings}>
-             <div className="itemBlock"><img width="100%" height="280px" className="portfolioItem" src={PortfolioImgData.bg1} alt=""/></div>
-             <div className="itemBlock"><img width="100%" height="280px" className="portfolioItem" src={PortfolioImgData.bg2} alt=""/></div>
-             <div className="itemBlock"><img width="100%" height="280px" className="portfolioItem" src={PortfolioImgData.bg3} alt=""/></div>
-             <div className="itemBlock"><img width="100%" height="280px" className="portfolioItem" src={PortfolioImgData.bg4} alt=""/></div>
-             <div className="itemBlock"><img width="100%" height="280px" className="portfolioItem" src={PortfolioImgData.bg5} alt=""/></div>
+             <div className="itemBlock"><img width="100%" className="portfolioItem" src={PortfolioImgData.bg1} alt=""/></div>
+             <div className="itemBlock"><img width="100%" className="portfolioItem" src={PortfolioImgData.bg2} alt=""/></div>
+             <div className="itemBlock"><img width="100%" className="portfolioItem" src={PortfolioImgData.bg3} alt=""/></div>
+             <div className="itemBlock"><img width="100%" className="portfolioItem" src={PortfolioImgData.bg4} alt=""/></div>
+             <div className="itemBlock"><img width="100%" className="portfolioItem" src={PortfolioImgData.bg5} alt=""/></div>
            </Slider>
          </div>
        </div>

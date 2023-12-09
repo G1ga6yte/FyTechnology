@@ -5,6 +5,7 @@ import Home from "./home/home";
 import Navigation from "./navigation/nav";
 import AllExperiences from "./home/experiences-main/All-experiences/allExperiences";
 import Footer from "./footer/footer";
+import Pricing from "./pricing/Pricing";
 
 
 
@@ -18,9 +19,10 @@ window.addEventListener('scroll', function(){
     <div className="App">
       <Navigation />
       <Routes>
-        <Route path="/" element={<Home />}/>
-        <Route path="/home" element={<Home />}/>
-        <Route path="/brand_experiences" element={<AllExperiences/>}/>
+        <Route path="/" element={<Home />}/>  // home
+        <Route path="/home" element={<Home />}/> // home
+        <Route path="/brand_experiences" element={<AllExperiences/>}/> // services
+        <Route path="/pricing" element={<Pricing/>}/>
       </Routes>
       <Footer/>
     </div>

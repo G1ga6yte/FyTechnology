@@ -13,10 +13,17 @@ function ExperiencesMain (){
   const [marginTopH, setMarginTopH] = useState("350px")
   const [marginTopB, setMarginTopB] = useState("100px")
   const [opcH, setOpcH] = useState("0")
+  
+  const [x, setX] = useState(7)
+  window.addEventListener('resize', (event)=>{
+    if(window.innerWidth <= 1256){
+      setX(5)
+    }
+  })
   var settings = {
     infinite: true,
     speed: speed,
-    slidesToShow: 7,
+    slidesToShow: x,
     slidesToScroll: 14,
     arrows        : false,
     autoplay      : true,

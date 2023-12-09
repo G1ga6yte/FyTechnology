@@ -1,14 +1,24 @@
 @import "./src/font/font.scss";
+@import "../../styles/mixin";
+
 
 .homeMain {
   max-width: 1700px;
   margin: 0 auto;
   padding-top: 100px;
+  @include screen($wide-m) {
+    padding-top: 50px;
+  }
+
 
   .mainBlock {
     margin-top: 85px;
     position: relative;
     display: flex;
+
+    @include screen($wide-m) {
+      margin-top: 50px;
+    }
 
     .circle {
       transition: 2.5s ease-in-out;
@@ -22,27 +32,12 @@
       background: linear-gradient(#161C21, #161C21) padding-box,
       linear-gradient(to bottom, #D7D2FF25, rgba(215, 229, 255, 0)) border-box;
       border: 2px solid transparent;
-    }
-
-    .text-block {
-      z-index: 2;
-      width: 710px;
-      padding: 130px;
-
-      .header-circle {
-        color: #FFF;
-        font-family: 'Inter-ExtraBold', sans-serif;
-        font-size: 75px;
-      }
-
-      .prg-circle {
-        color: #9F9F9F;
-        font-family: 'Inter-Medium', sans-serif;
-        font-size: 20px;
-        width: 415px;
-        margin: 25px 0 35px 0;
+      @include screen($wide-m) {
+        width: 600px;
+        height: 600px;
       }
     }
+
 
     .header-img {
       z-index: 2;
@@ -51,10 +46,14 @@
       justify-content: center;
       margin-top: 55px;
       margin-bottom: 275px;
+      @include screen($wide-m) {
+        margin-top: 20px;
+      }
 
       .header {
         position: relative;
-        .prgBlock{
+
+        .prgBlock {
           width: 100%;
           height: 50px;
           margin-top: 35px;
@@ -62,14 +61,21 @@
           display: flex;
           justify-content: center;
           align-items: center;
+          @include screen($wide-l){
+            margin-top: 25px;
+          }
 
-          .header-prg{
+          .header-prg {
             color: #9F9F9F;
             font-family: 'Inter-Medium', sans-serif;
             font-size: 20px;
             transition: 2s ease-in-out;
+            @include screen($wide-l){
+              font-size: 18px;
+            }
           }
         }
+
         .lineBlock {
           width: 100%;
           justify-content: center;
@@ -77,16 +83,23 @@
           height: 130px;
           align-items: center;
           display: flex;
+          @include screen($wide-m){
+            height: 100px;
+          }
+
 
           .headerLine {
             font-size: 123px;
             font-family: 'Inter-Bold', sans-serif;
             color: white;
             transition: 2s ease-in-out;
-
+            @include screen($wide-m){
+              font-size: 100px;
+            }
           }
         }
-        .headerUnderLine{
+
+        .headerUnderLine {
           position: absolute;
           left: 50%;
           bottom: 70px;
@@ -94,27 +107,36 @@
           display: flex;
           flex-direction: column;
           justify-content: start;
-          .line{
+          @include screen($wide-m){
+            width: 500px;
+            bottom: 60px;
+          }
+
+          .line {
             height: 10px;
             background-color: #F9FB6C;
             border-radius: 15px;
             transition: 1s ease-in-out;
 
           }
-          .line1{
+
+          .line1 {
             width: 100%;
             transform: rotate(-2deg);
           }
-          .line2{
+
+          .line2 {
             margin-top: 8px;
             transform: rotate(-5deg);
             width: 100%;
             display: flex;
             justify-content: end;
+            @include screen($wide-l){
+              margin-top: 5px;
+            }
           }
         }
       }
-
 
 
       .header-fyTechnology {
@@ -159,7 +181,7 @@
       }
     }
 
-    .logo-block{
+    .logo-block {
       z-index: 22;
       position: absolute;
       bottom: -50px;
@@ -168,16 +190,28 @@
       display: flex;
       align-items: end;
       transition: 1s ease-in-out;
+      @include screen($wide){
+        bottom: 20px;
+      }
 
-      .logo{
+      .logo {
         position: relative;
         background-repeat: no-repeat;
+        background-size: contain;
         z-index: 222;
         width: 800px;
         height: 500px;
         display: block;
         margin: 0 auto;
-        background-position: 50% 50%;
+        background-position: center;
+        @include screen($wide-l){
+          width: 600px;
+          height: 375px;
+        }
+        @include screen($wide){
+          width: 400px;
+          height: 250px;
+        }
       }
     }
 

@@ -1,3 +1,4 @@
+@import "../../styles/mixin.scss";
 .ReviewCont{
   z-index: 54;
   position: relative;
@@ -6,16 +7,28 @@
     width: 100%;
     padding: 150px 0;
     background-color: rgba(0, 0, 0, 0.25);
+    @include screen($wide){
+      padding: 80px 0;
+    }
   }
   .Review1{
     max-width: 1160px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
+    @include screen($wide){
+        padding: 20px;
+    }
 
     .imageBlock{
       .img{
         border-radius: 10px;
+        @include screen($wide){
+            width: 350px;
+        }
+        @include screen($wide-s){
+width: 300px;
+        }
       }
     }
     .reviewTextBlock{
@@ -26,16 +39,34 @@
         font-size: 152px;
         color: #F9FB6C;
         line-height: 130px;
+        @include screen($wide){
+          font-size: 100px;
+          line-height: 100px;
+        }
+        @include screen($wide-s){
+          font-size: 80px;
+          line-height: 80px;
+        }
       }
       .reviewPrgBlock{
         overflow: hidden;
         height: 220px;
+        @include screen($wide){
+height: 180px;
+        }
+        @include screen($wide-s){
+height: 200px;
+        }
         .reviewPrg{
           transition: 1s ease-in-out;
           color: white;
           line-height: 52px;
           font-size: 37px;
           font-family: 'Inter-Medium', sans-serif;
+          @include screen($wide){
+            font-size: 32px;
+            line-height: 40px;
+          }
         }
       }
 
@@ -47,12 +78,19 @@
         .name-work{
           height: 60px;
           overflow: hidden;
+          @include screen($wide){
+height: 50px;
+          }
           .name{
             transition: 1s ease-in-out;
             font-size: 24px;
             font-family: 'Inter-Medium', sans-serif;
             color: white;
             line-height: 32px;
+            @include screen($wide){
+              font-size: 20px;
+              line-height: 26px;
+            }
           }
           .work{
             transition: 1.2s ease-in-out;
@@ -60,6 +98,10 @@
             font-family: 'Inter-Medium', sans-serif;
             color: rgba(255, 255, 255, 0.60);
             line-height: 32px;
+            @include screen($wide){
+              font-size: 16px;
+              line-height: 26px;
+            }
           }
         }
         .buttons{
@@ -67,6 +109,9 @@
           align-items: center;
           .button{
             margin: 20px;
+            @include screen($wide){
+margin: 15px;
+            }
           }
         }
       }

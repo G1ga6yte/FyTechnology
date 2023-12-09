@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import "./beInTouch.scss"
 import logo from"./svg/logo.svg"
 import logoName from "./svg/logoName.svg"
@@ -9,12 +9,40 @@ function BeInTouch (){
     position: "relative",
     height: "100vh"
   })
+  
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const [heightPx, setHeightPx] = useState(4700)
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+    
+    window.addEventListener('resize', handleResize);
+    
+    if(windowWidth <= 1920){
+      if(windowWidth <=1440){
+        if (windowWidth <=1256){
+         setHeightPx(9000)
+        }else {
+          setHeightPx(10600)
+        }
+      }else{
+        setHeightPx(10880)
+      }
+    
+    }
+    
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+  
   window.addEventListener('scroll',function(){
-    if(this.scrollY >= 9810){
+    if(this.scrollY >= 6810){
       setSettings({
         position: "fixed"
       })
-      if(this.scrollY >= 10945){
+      if(this.scrollY >= heightPx){ //10945 - 1920-1440
         setSettings({
           position: "relative",
           height: "100%"
@@ -51,8 +79,8 @@ function BeInTouch (){
 
           <div className="circleCont">
               <div style={{transform: `translate(${elem})`}} className="circle">
-                <img src={logo} alt=""/>
-                <img style={{marginTop: "30px"}} src={logoName} alt=""/>
+                <img className="logo" src={logo} alt=""/>
+                <img className="fytechnology" style={{marginTop: "30px"}} src={logoName} alt=""/>
               </div>
           </div>
         </div>

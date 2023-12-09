@@ -1,3 +1,4 @@
+@import "../../styles/mixin.scss";
 .ideasCont{
   position: relative;
   background-color: #161C21;
@@ -15,6 +16,16 @@
     align-items: center;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.25);
+    @include screen($wide){
+      padding: 30px 0;
+    }
+  }
+  .vector{
+    img{
+      @include screen($wide){
+        height: 70px;
+      }
+    }
   }
   .overHeaderBlock{
     height: 30px;
@@ -27,6 +38,10 @@
       display: flex;
       align-items: center;
       line-height: 24px;
+      @include screen($wide){
+        font-size: 15px;
+        line-height: 20px;
+      }
     }
   }
   .ideasHeaderBlock{
@@ -42,6 +57,10 @@
       background: var(--Text-Gradient, linear-gradient(180deg, #FFF 0%, rgba(255, 255, 255, 0.60) 100%));
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
+      @include screen($wide){
+        font-size: 36px;
+        max-width: 650px;
+      }
     }
   }
 
@@ -49,6 +68,9 @@
     margin-bottom: 50px;
     height: 100px;
     overflow: hidden;
+    @include screen($wide){
+      margin-bottom: 20px;
+    }
     .description{
       transition: 0.5s ease-in-out;
       color: #9B9B9B;
@@ -57,6 +79,11 @@
       line-height: 24px;
       text-align: center;
       max-width: 850px;
+      @include screen($wide){
+        max-width: 750px;
+        font-size: 15px;
+        line-height: 20px;
+      }
     }
   }
 
@@ -64,6 +91,9 @@
     margin-bottom: 20px;
     height: 20px;
     overflow: hidden;
+    @include screen($wide){
+margin-bottom: 15px;
+    }
     .smallHeader{
       transition: 0.5s ease-in-out;
       color: white;
@@ -71,6 +101,16 @@
       line-height: 24px;
       text-align: center;
       font-size: 18px;
+      @include screen($wide){
+        font-size: 16px;
+        line-height: 22px;
+      }
+    }
+    .G-link-button{
+      @include screen($wide){
+        padding: 15px 25px !important;
+        font-size: 14px;
+      }
     }
 
   }

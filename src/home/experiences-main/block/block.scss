@@ -1,28 +1,33 @@
-.block{
+@import "./src/styles/mixin";
+
+.block {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   max-width: 1500px;
   margin: 0 auto;
-  .GBlock{
+
+  .GBlock {
     margin: 15px;
 
-    .line1{
-      .icons{
+    .line1 {
+      .icons {
         transform: rotate3d(0, 1, 0, 360deg) !important;
         opacity: 1 !important;
       }
-      .item-header{
+
+      .item-header {
         margin-top: 0 !important;
         opacity: 1 !important;
       }
-      .item-prg{
+
+      .item-prg {
         margin-top: 15px !important;
         opacity: 1 !important;
       }
     }
 
-    .block-item{
+    .block-item {
       width: 370px;
       height: 270px;
       cursor: pointer;
@@ -36,74 +41,129 @@
       justify-content: center;
       align-items: center;
       transition: 0.5s ease-in-out;
-      &:hover{
+      @include screen($wide) {
+        width: 330px;
+        height: 250px;
+      }
+      @include screen($wide-s){
+        width: 280px;
+        height: 240px;
+      }
+
+      &:hover {
         transition: 0.5s ease-in-out;
         box-shadow: 0 20px 20px 0 rgba(8, 3, 16, 0.50);
       }
-      .item-grid{
+
+      .item-grid {
         position: absolute;
         right: 0;
         top: 0;
       }
-      .item-grid2{
+
+      .item-grid2 {
         position: absolute;
         right: 0;
         bottom: 0;
       }
-      .item-grid3{
+
+      .item-grid3 {
         position: absolute;
         left: 0;
         top: 0;
       }
-      .icons{
+
+      .icons {
         margin: 35px 165px;
         transition: 1.5s ease-in-out;
-        .iconText{
+        @include screen($wide) {
+          margin: 25px auto;
+        }
+        @include screen($wide-s){
+          margin: 20px auto;
+        }
+
+        .iconText {
           font-size: 18px;
           color: #F9FB6C;
           font-family: 'Inter-Medium', sans-serif;
 
         }
       }
-      .itemHeaderBlock{
+
+      .itemHeaderBlock {
         height: 40px;
         overflow: hidden;
+        @include screen($wide) {
+          height: 30px;
+        }
+        @include screen($wide-s){
+          height: 25px;
+        }
       }
-      .item-header{
+
+      .item-header {
         transition: 1s ease-in-out;
         display: block;
-         color: white;
-         font-size: 18px;
-         text-align: center;
-         letter-spacing: 0.5px;
-         font-family: 'Inter-Medium', sans-serif;
-       }
+        color: white;
+        font-size: 18px;
+        text-align: center;
+        letter-spacing: 0.5px;
+        font-family: 'Inter-Medium', sans-serif;
+        @include screen($wide) {
+          font-size: 16px;
+        }
+      }
 
-      .itemPrgBlock{
+      .itemPrgBlock {
         height: 70px;
         overflow: hidden;
+        @include screen($wide-s){
+height: 50px;
+        }
       }
-      .item-prg{
+
+      .item-prg {
         transition: 1s ease-in-out;
         text-align: center;
         line-height: 24px;
         font-size: 15px;
         font-family: Inter-Regular, sans-serif;
         color: #F9FB6C;
+        @include screen($wide) {
+          font-size: 14px;
+          line-height: 22px;
+        }
+        @include screen($wide-s){
+          line-height: 20px;
+          font-size: 13px;
+        }
       }
     }
-    .flippedItem{
+
+    .flippedItem {
       padding: 0 !important;
       justify-content: space-between;
       align-items: start;
-      .ItemIconHeader{
+
+      .ItemIconHeader {
         display: flex;
         align-items: center;
-        .icons{
+
+        .icons {
           margin: 15px 25px;
+          @include screen($wide-s){
+            margin: 10px 20px;
+          }
+        }
+        .item-header{
+          @include screen($wide-s){
+            font-size: 15px;
+          }
         }
       }
-      .findPriceButton{
+
+      .findPriceButton {
         display: block;
         position: relative;
         z-index: 222;
@@ -118,25 +178,34 @@
         padding: 13px 80px;
         border: none;
         box-shadow: 0 4px 11.8px 0 rgba(249, 251, 108, 0.25);
+        @include screen($wide-s){
+          font-size: 16px;
+          padding: 10px 40px;
+        }
       }
     }
 
   }
-  .discoverButton{
-     position: relative;
-     z-index: 111;
-     display: block !important;
-     margin: 0 30px;
-     padding: 6px 80px;
-     color: black;
-     font-family: Inter-Medium, sans-serif;
-     font-size: 18px;
-     text-align: center;
-     border: none;
-     border-radius: 40px;
-     background: #F9FB6C;
-     box-shadow: 0 4px 11.8px 0 rgba(249, 251, 108, 0.25);
-     cursor: pointer !important;
-     text-decoration: none;
-   }
+
+  .discoverButton {
+    position: relative;
+    z-index: 111;
+    display: block !important;
+    margin: 0 30px;
+    padding: 6px 80px;
+    color: black;
+    font-family: Inter-Medium, sans-serif;
+    font-size: 18px;
+    text-align: center;
+    border: none;
+    border-radius: 40px;
+    background: #F9FB6C;
+    box-shadow: 0 4px 11.8px 0 rgba(249, 251, 108, 0.25);
+    cursor: pointer !important;
+    text-decoration: none;
+    @include screen($wide-s){
+      font-size: 16px;
+      padding: 6px 40px;
+    }
+  }
 }
