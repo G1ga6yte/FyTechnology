@@ -17,6 +17,18 @@ height: 876px;
   @include screen($desktop){
 height: 665px;
   }
+  @include screen($tablet-w){
+    margin: 100px auto 0 auto;
+    height: 500px;
+  }
+  @include screen($tablet-m){
+    margin: 80px auto 0 auto;
+    height: 400px;
+  }
+  @include screen($mobile-m){
+    margin: 60px auto 0 auto;
+    height: 300px;
+  }
   .png{
     height: 100%;
     width: 100%;

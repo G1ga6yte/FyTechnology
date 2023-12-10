@@ -21,8 +21,8 @@ function EachBlock(props) {
            <img className="item-grid2" src={BlockSVGData.stars} alt=""/>
            <img className="item-grid3" src={BlockSVGData.stars} alt=""/>
            <div style={{position: "relative", transform: line1.transform, opacity: line1.opacity}} className="icons">
-             <img src={BlockSVGData.circle} alt=""/>
-             <img style={{position: "absolute", left: "50%", top: "45%", transform: "translate(-50%, -50%)"}}
+             <img className="iconBck" src={BlockSVGData.circle} alt=""/>
+             <img className="itemIcon" style={{position: "absolute", left: "50%", top: "45%", transform: "translate(-50%, -50%)"}}
                   src={props.icon} alt=""/>
            </div>
            
@@ -39,8 +39,8 @@ function EachBlock(props) {
            
            <div className="ItemIconHeader">
              <div style={{position: "relative"}} className="icons">
-               <img src={BlockSVGData.circle} alt=""/>
-               <img style={{position: "absolute", left: "50%", top: "45%", transform: "translate(-50%, -50%)"}}
+               <img className="iconBck" src={BlockSVGData.circle} alt=""/>
+               <img className="itemIcon" style={{position: "absolute", left: "50%", top: "45%", transform: "translate(-50%, -50%)"}}
                     src={props.icon} alt=""/>
              </div>
              

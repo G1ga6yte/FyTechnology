@@ -32,8 +32,39 @@ function CollabPartnership() {
     if (windowWidth <= 1920) {
       if (windowWidth <= 1440) {
         if (windowWidth <= 1256) {
-          
-          setHeightPx(3700);
+          if (windowWidth <= 1024){
+            if (windowWidth <=992){
+              if (windowWidth <= 950){
+                if (windowWidth <= 876){
+                  if (windowWidth <= 665){
+                    if (windowWidth <=576){
+                      if (windowWidth <= 375){
+                        if (windowWidth <= 350){
+                          setHeightPx(4300)
+                        }else {
+                          setHeightPx(4200)
+                        }
+                      }else {
+                        setHeightPx(4250)
+                      }
+                    }else {
+                      setHeightPx(3000)
+                    }
+                  }else {
+                    setHeightPx(2750)
+                  }
+                }else {
+                  setHeightPx(3100)
+                }
+              }else {
+                setHeightPx(2900)
+              }
+            }else{
+              setHeightPx(3580)
+            }
+          }else{
+            setHeightPx(3700);
+          }
         } else {
           setHeightPx(4500);
         }
@@ -87,17 +118,30 @@ function CollabPartnership() {
     
     
     if (this.scrollY >= heightPx) {
-      setMatrix({
-        position: "fixed", bottom: "0",
-      });
-      if (this.scrollY >= 7000) {
+      if (windowWidth <= 665){
         setMatrix({
-          position: "relative", bottom: "0",
+          position: "fixed", bottom: "50px",
         });
       } else {
         setMatrix({
           position: "fixed", bottom: "0",
         });
+      }
+      
+      if (this.scrollY >= 7000) {
+        setMatrix({
+          position: "relative", bottom: "0",
+        });
+      } else {
+        if (windowWidth <= 665){
+          setMatrix({
+            position: "fixed", bottom: "50px",
+          });
+        } else {
+          setMatrix({
+            position: "fixed", bottom: "0",
+          });
+        }
       }
     } else {
       setMatrix({

@@ -9,6 +9,19 @@
   @include screen($wide-m) {
     padding-top: 50px;
   }
+  @include screen($tablet-l) {
+    padding-top: 60px;
+  }
+  @include screen($tablet){
+    padding-top: 50px;
+  }
+  @include screen($tablet-m){
+    padding-top: 20px;
+  }
+  @include screen($mobile-m){
+    padding-top: 50px;
+  }
+
 
 
   .mainBlock {
@@ -19,6 +32,16 @@
     @include screen($wide-m) {
       margin-top: 50px;
     }
+    @include screen($tablet-l) {
+      margin-top: 50px;
+      padding-bottom: 100px;
+    }
+    @include screen($tablet){
+      margin-top: 50px;
+      padding-bottom: 50px;
+    }
+
+
 
     .circle {
       transition: 2.5s ease-in-out;
@@ -36,6 +59,46 @@
         width: 600px;
         height: 600px;
       }
+      @include screen($tablet-l) {
+        width: 400px;
+        height: 400px;
+      }
+      @include screen($tablet){
+        width: 300px;
+        height: 300px;
+      }
+      @include screen($tablet-m){
+        width: 250px;
+        height: 250px;
+      }
+      @include screen($tablet-m){
+        width: 200px;
+        height: 200px;
+        bottom: 10%;
+      }
+      @include screen($mobile-m){
+        bottom: 15%;
+      }
+      @include screen($mobile-m){
+        bottom: 10%;
+      }
+
+
+
+
+
+    }
+
+    .backgroundLines {
+      svg {
+        width: 120%;
+        @include screen($wide) {
+          width: 150% !important;
+        }
+        @include screen($tablet-l){
+          width: 120%;
+        }
+      }
     }
 
 
@@ -49,6 +112,22 @@
       @include screen($wide-m) {
         margin-top: 20px;
       }
+      @include screen($tablet-l) {
+        margin-top: 0;
+      }
+      @include screen($tablet-w){
+        margin-bottom: 200px;
+      }
+      @include screen($tablet){
+        margin-bottom: 230px;
+      }
+      @include screen($tablet-m){
+        margin-bottom: 180px;
+      }
+
+
+
+
 
       .header {
         position: relative;
@@ -61,7 +140,16 @@
           display: flex;
           justify-content: center;
           align-items: center;
-          @include screen($wide-l){
+          @include screen($wide-l) {
+            margin-top: 25px;
+          }
+          @include screen($tablet-w){
+            height: 30px;
+            margin-top: 15px;
+          }
+          @include screen($tablet-m){
+            text-align: center;
+            padding: 0 15px;
             margin-top: 25px;
           }
 
@@ -70,8 +158,24 @@
             font-family: 'Inter-Medium', sans-serif;
             font-size: 20px;
             transition: 2s ease-in-out;
-            @include screen($wide-l){
+            @include screen($wide-l) {
               font-size: 18px;
+            }
+            @include screen($tablet-l) {
+              font-size: 16px;
+            }
+            @include screen($tablet-w){
+              font-size: 15px;
+            }
+            @include screen($tablet){
+              font-size: 13px;
+            }
+            @include screen($tablet-m){
+              font-size: 12px;
+              text-align: center;
+            }
+            @include screen($mobile-m){
+              font-size: 11px;
             }
           }
         }
@@ -83,8 +187,23 @@
           height: 130px;
           align-items: center;
           display: flex;
-          @include screen($wide-m){
+          @include screen($wide-m) {
             height: 100px;
+          }
+          @include screen($tablet-l) {
+            height: 80px;
+          }
+          @include screen($tablet-w){
+            height: 65px;
+          }
+          @include screen($tablet){
+            height: 50px;
+          }
+          @include screen($tablet-m){
+            height: 40px;
+          }
+          @include screen($mobile-m){
+            height: 30px;
           }
 
 
@@ -93,9 +212,26 @@
             font-family: 'Inter-Bold', sans-serif;
             color: white;
             transition: 2s ease-in-out;
-            @include screen($wide-m){
+            @include screen($wide-m) {
               font-size: 100px;
             }
+            @include screen($tablet-l) {
+              font-size: 80px;
+            }
+            @include screen($tablet-w){
+              font-size: 60px;
+            }
+            @include screen($tablet){
+              font-size: 46px;
+            }
+            @include screen($tablet-m){
+              font-size: 36px;
+            }
+            @include screen($mobile-m){
+              font-size: 28px;
+            }
+
+
           }
         }
 
@@ -107,16 +243,51 @@
           display: flex;
           flex-direction: column;
           justify-content: start;
-          @include screen($wide-m){
+          @include screen($wide-m) {
             width: 500px;
             bottom: 60px;
           }
+          @include screen($tablet-l) {
+            width: 350px;
+            bottom: 60px;
+          }
+          @include screen($tablet-w){
+            width: 300px;
+            bottom: 30px;
+          }
+          @include screen($tablet){
+            width: 250px;
+          }
+          @include screen($tablet-m){
+            left: 40%;
+            bottom: 40px;
+          }
+          @include screen($mobile-m){
+            width: 180px;
+          }
+
+
+
+
+
 
           .line {
             height: 10px;
             background-color: #F9FB6C;
             border-radius: 15px;
             transition: 1s ease-in-out;
+            @include screen($tablet-l) {
+              height: 6px;
+            }
+            @include screen($tablet-w){
+              height: 5px;
+            }
+            @include screen($tablet-m){
+              height: 4px;
+            }
+            @include screen($mobile-m){
+              height: 3px;
+            }
 
           }
 
@@ -131,28 +302,15 @@
             width: 100%;
             display: flex;
             justify-content: end;
-            @include screen($wide-l){
+            @include screen($wide-l) {
               margin-top: 5px;
             }
+            @include screen($tablet-l) {
+              margin-top: 3px;
+            }
+
           }
         }
-      }
-
-
-      .header-fyTechnology {
-        font-size: 120px;
-        font-family: 'Inter-ExtraBold', sans-serif;
-        color: white;
-        position: absolute;
-        top: 60px;
-        left: -50px;
-      }
-
-      .header-ball {
-        margin-top: 105px;
-        margin-left: 100px;
-        height: 485px;
-        filter: grayscale(100%);
       }
     }
 
@@ -164,6 +322,29 @@
       left: -120px;
       width: 100%;
       z-index: 1;
+      @include screen($tablet-l){
+        bottom: -50px;
+      }
+      @include screen($tablet-w){
+        width: 100%;
+        bottom: -100px;
+      }
+      @include screen($tablet){
+        bottom: -35%;
+        width: 120%;
+      }
+      @include screen($tablet-m){
+        width: 150%;
+        bottom: -150px;
+      }
+      @include screen($mobile-m){
+        bottom: -200px;
+      }
+
+
+
+
+
 
       .line {
         fill: rgba(138, 211, 255, 0.08);
@@ -190,9 +371,21 @@
       display: flex;
       align-items: end;
       transition: 1s ease-in-out;
-      @include screen($wide){
+      @include screen($wide) {
         bottom: 20px;
       }
+      @include screen($tablet-l) {
+        bottom: 80px;
+      }
+      @include screen($tablet-w){
+        bottom: 50px;
+      }
+      @include screen($tablet){
+        bottom: 80px;
+      }
+
+
+
 
       .logo {
         position: relative;
@@ -204,14 +397,28 @@
         display: block;
         margin: 0 auto;
         background-position: center;
-        @include screen($wide-l){
+        @include screen($wide-l) {
           width: 600px;
           height: 375px;
         }
-        @include screen($wide){
+        @include screen($wide) {
           width: 400px;
           height: 250px;
         }
+        @include screen($tablet){
+          width: 300px;
+          height: 180px;
+        }
+        @include screen($tablet-m){
+          width: 200px;
+          height: 125px;
+        }
+
+
+
+
+
+
       }
     }
 

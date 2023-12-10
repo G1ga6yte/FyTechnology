@@ -12,16 +12,15 @@
       padding-top: 30px;
       height: 110px;
     }
-
-    .itemBlock{
-      overflow: hidden;
-      width: 95% !important;
-      height: 280px;
-      border-radius: 20px;
-      border: 1px solid rgba(57, 51, 74, 0.50);
-      background: rgba(255, 255, 255, 0.03);
-      box-shadow: 0 20px 20px 0 rgba(8, 3, 16, 0.50);
+    @include screen($tablet-l){
+      height: 100px;
     }
+    @include screen($tablet-w){
+      height: 90px;
+    }
+
+
+
     .slick-arrow{
       display: none !important;
     }
@@ -30,6 +29,15 @@
       .slick-list{
         width: 100% !important;
         .slick-track{
+          img{
+            @include screen($tablet-w){
+              width: 80px;
+              max-height: 40px;
+            }
+            @include screen($tablet-m){
+              width: 60px;
+            }
+          }
           display: flex;
           justify-content: space-around !important;
           align-items: center;
@@ -64,6 +72,12 @@
           height: 70px;
         }
       }
+      @include screen($mobile-m){
+        img{
+          height: 40px;
+        }
+      }
+
 
       &:nth-child(1) {
         left: 20px;
@@ -73,21 +87,33 @@
       &:nth-child(2) {
         left: 300px;
         top: 0;
+        @include screen($tablet){
+left: 150px;
+        }
       }
 
       &:nth-child(3) {
         right: 200px;
         top: 15px;
+        @include screen($tablet){
+          right: 100px;
+        }
       }
 
       &:nth-child(4) {
         left: 115px;
         top: 315px;
+        @include screen($tablet){
+left: 50px;
+        }
       }
 
       &:nth-child(5) {
         right: 120px;
         top: 525px;
+        @include screen($tablet){
+right: 60px;
+        }
       }
 
       &:nth-child(6) {
@@ -98,16 +124,25 @@
       &:nth-child(7) {
         left: 460px;
         bottom: 131px;
+        @include screen($tablet){
+left: 200px;
+        }
       }
 
       &:nth-child(8) {
         right: 380px;
         bottom: 315px;
+        @include screen($tablet){
+right: 200px;
+        }
       }
 
       &:nth-child(9) {
         right: 115px;
         bottom: 25px;
+        @include screen($tablet){
+left: 50px;
+        }
       }
     }
 
@@ -129,6 +164,12 @@
           height: 70px;
         }
       }
+      @include screen($mobile-m){
+        img{
+          height: 40px;
+        }
+      }
+
 
       &:nth-child(1) {
         left: 220px;
@@ -171,6 +212,9 @@
     @include screen($wide){
     top: -500px;
     }
+    @include screen($tablet-w){
+      top: -1000px;
+    }
   }
   .header-text{
     position: relative;
@@ -189,13 +233,36 @@
       @include screen($wide){
         font-size: 15px;
         margin-top: 60px;
-
+      }
+      @include screen($tablet-l){
+        font-size: 14px;
+        margin-top: 50px;
+        height: 25px;
+      }
+      @include screen($tablet-w){
+        font-size: 13px;
+        margin-top: 40px;
+      }
+      @include screen($tablet){
+        font-size: 12px;
+        margin-top: 30px;
+      }
+      @include screen($mobile-m){
+        font-size: 11px;
+        margin-top: 25px;
       }
       .first-header-prg{
         transition: 1.5s ease-in-out;
       }
       .star{
         margin-right: 5px;
+        @include screen($tablet-l){
+          height: 12px;
+        }
+        @include screen($tablet){
+height: 10px;
+        }
+
       }
     }
     .headerBlock{
@@ -205,6 +272,15 @@
       flex-direction: column;
       justify-content: center;
       overflow: hidden;
+      @include screen($tablet-w){
+height: 120px;
+      }
+      @include screen($tablet){
+height: 100px;
+      }
+      @include screen($tablet-m){
+        height: 80px;
+      }
 
     }
     .experiencesHeader{
@@ -218,6 +294,24 @@
       @include screen($wide){
         font-size: 50px;
       }
+      @include screen($tablet-l){
+        font-size: 42px;
+      }
+      @include screen($tablet-w){
+        font-size: 36px;
+      }
+      @include screen($tablet){
+        font-size: 28px;
+      }
+      @include screen($tablet-m){
+        font-size: 24px;
+      }
+      @include screen($mobile-m){
+        font-size: 20px;
+      }
+
+
+
     }
     .background-text{
       overflow: hidden;
@@ -232,6 +326,29 @@
         font-size: 96px;
         margin-top: -60px !important;
       }
+      @include screen($tablet-l){
+        font-size: 72px;
+        margin-top: -50px !important;
+      }
+      @include screen($tablet-w){
+        font-size: 60px;
+        margin-top: -40px !important;
+      }
+      @include screen($tablet){
+        font-size: 42px;
+        margin-top: -30px !important;
+      }
+      @include screen($tablet-m){
+        font-size: 35px;
+        margin-top: -20px !important;
+      }
+      @include screen($mobile-m){
+        font-size: 28px;
+        margin-top: -20px !important;
+      }
+
+
+
     }
   }
 

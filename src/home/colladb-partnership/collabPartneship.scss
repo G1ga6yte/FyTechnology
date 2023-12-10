@@ -10,18 +10,60 @@
   @include screen($wide){
     min-height: 180vh;
   }
-
+  @include screen($desktop){
+    min-height: 215vh;
+  }
+  @include screen($tablet-l){
+    min-height: 170vh;
+  }
+  @include screen(950px){
+    min-height: 160vh;
+  }
+  @include screen($tablet-w){
+    min-height: 190vh;
+  }
+  @include screen($tablet){
+    min-height: 180vh;
+  }
+  @include screen($tablet-m){
+    min-height: 290vh;
+  }
+  @include screen($mobile-m){
+    min-height: 295vh;
+  }
+@include screen(350px){
+  min-height: 350vh;
+}
 }
 .CollabPartnership {
   padding-top: 130px;
   will-change: opacity;
   pointer-events: all;
   width: 100%;
+  @include screen($tablet-l){
+    padding: 100px 10px 10px 10px;
+  }
+  @include screen($tablet){
+    padding: 80px 10px 10px 10px;
+  }
+
 
 
   .headerBlock {
     height: 70px;
     overflow: hidden;
+    @include screen($tablet-l){
+      height: 60px;
+    }
+    @include screen($tablet-w){
+      height: 50px;
+    }
+    @include screen($tablet-m){
+      height: 60px;
+    }
+
+
+
 
     .collabHeader {
       margin-top: 100px;
@@ -37,6 +79,25 @@
         font-size: 50px;
         margin-top: 60px;
       }
+      @include screen($tablet-l){
+        font-size: 40px;
+        margin-top: 40px;
+      }
+      @include screen($tablet-w){
+        font-size: 32px;
+        margin-top: 30px;
+      }
+      @include screen($tablet){
+        font-size: 26px;
+        margin-top: 20px;
+      }
+      @include screen($tablet-m){
+        font-size: 22px;
+      }
+
+
+
+
     }
   }
 
@@ -55,6 +116,21 @@
       padding: 0 80px;
       height: 400px;
     }
+    @include screen($tablet-l){
+      height: auto;
+      margin: 40px auto;
+      padding: 0 40px;
+    }
+    @include screen($tablet-w){
+      padding: 10px 30px;
+      margin: 30px auto;
+    }
+    @include screen($tablet){
+      margin: 20px auto;
+      padding: 10px;
+    }
+
+
     .collabBlockStars {
       position: absolute;
       left: 10%;
@@ -70,6 +146,10 @@
       right: 0;
       top: 0;
       position: absolute;
+      @include screen($tablet){
+        width: 200px;
+      }
+
     }
 
     .CDE-block {
@@ -86,6 +166,19 @@
       @include screen($wide){
         margin: 35px 0;
       }
+      @include screen($tablet-l){
+        margin: 25px;
+        max-width: 200px;
+      }
+      @include screen($tablet){
+        margin: 15px;
+        padding: 4px 10px;
+      }
+      @include screen($mobile-m){
+        margin: 10px;
+      }
+
+
       .CDE-text {
         color: white;
         font-family: Inter-Regular, sans-serif;
@@ -99,6 +192,15 @@
           font-size: 13px;
           line-height: 20px;
         }
+        @include screen($tablet-l){
+          font-size: 12px;
+        }
+        @include screen($tablet){
+          font-size: 11px;
+          line-height: 14px;
+        }
+
+
       }
     }
 
@@ -109,6 +211,11 @@
     .img-text-block {
       display: flex;
       justify-content: start;
+      @include screen($tablet-m){
+        flex-direction: column !important;
+        align-items: center;
+      }
+
 
       .imageText {
         position: relative;
@@ -117,6 +224,34 @@
         @include screen($wide){
           margin-right: 70px;
         }
+        @include screen($tablet-l){
+          margin-right: 50px;
+        }
+        @include screen($tablet){
+          width: 25%;
+        }
+        @include screen($tablet-m){
+          width: 60%;
+        }
+
+
+        img{
+          @include screen($tablet-l){
+            width: 180px;
+            height: 180px;
+            margin-top: 20px;
+          }
+          @include screen($tablet){
+            width: 150px;
+          }
+          @include screen($tablet-m){
+            width: 100%;
+          }
+
+
+
+        }
+
 
         .imgText {
           transition: 1.5s ease-in-out;
@@ -132,6 +267,20 @@
             font-size: 96px;
             top: 40px;
           }
+          @include screen($tablet-l){
+            font-size: 72px;
+          }
+          @include screen($tablet){
+            font-size: 60px;
+            margin: 10px 0 0 10px;
+          }
+          @include screen($tablet-m){
+            font-size: 72px;
+            left: 20%;
+          }
+
+
+
         }
       }
 
@@ -141,6 +290,21 @@
         @include screen($desktop){
           width: 70%;
         }
+        @include screen($tablet-w){
+          margin-right: 40px;
+        }
+        @include screen($tablet){
+          margin-right: 30px;
+        }
+        @include screen($tablet-m){
+          width: 90%;
+          margin: 0 auto;
+        }
+
+
+
+
+
 
         .itemHeaderBlock {
           overflow: hidden;
@@ -149,6 +313,14 @@
           @include screen($wide){
 height: 35px;
           }
+          @include screen($tablet-l){
+            height: 30px;
+          }
+          @include screen($tablet){
+            height: 25px;
+          }
+
+
           .item-header {
 
             transition: 1.5s ease-in-out;
@@ -159,6 +331,22 @@ height: 35px;
             @include screen($wide){
               font-size: 22px;
             }
+            @include screen($tablet-l){
+              font-size: 20px;
+            }
+            @include screen($tablet){
+              font-size: 18px;
+            }
+            @include screen($tablet-m){
+              font-size: 22px;
+            }
+            @include screen($mobile-m){
+              font-size: 20px;
+            }
+
+
+
+
           }
         }
 
@@ -170,6 +358,21 @@ height: 35px;
             margin-bottom: 20px;
             height: 140px;
           }
+          @include screen($tablet-l){
+            height: 100px;
+          }
+          @include screen($tablet-w){
+            height: 130px;
+          }
+          @include screen($tablet){
+            height: 160px;
+          }
+          @include screen($tablet-m){
+            height: 160px;
+          }
+
+
+
 
           .item-prg {
             transition: 1.5s ease-in-out;
@@ -186,6 +389,23 @@ height: 35px;
               font-size: 14px;
               line-height: 20px;
             }
+            @include screen($tablet-l){
+              font-size: 13px;
+              line-height: 16px;
+            }
+            @include screen($tablet){
+              font-size: 12px;
+            }
+            @include screen($tablet-m){
+              font-size: 14px;
+            }
+            @include screen($mobile-m){
+              font-size: 12px;
+            }
+
+
+
+
           }
         }
 
@@ -196,6 +416,19 @@ height: 35px;
               padding: 15px 25px !important;
               font-size: 14px;
             }
+            @include screen($tablet-l){
+              margin: 15px;
+            }
+            @include screen($tablet){
+              font-size: 12px !important;
+              padding: 10px 20px !important;
+            }
+            @include screen($mobile-m){
+              margin: 15px auto !important;
+            }
+
+
+
           }
 
         }

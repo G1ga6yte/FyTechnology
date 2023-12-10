@@ -31,8 +31,9 @@ function Block() {
          <img className="item-grid" src={BlockSVGData.grid} alt=""/>
          <img className="item-grid2" src={BlockSVGData.stars} alt=""/>
          <img className="item-grid3" src={BlockSVGData.stars} alt=""/>
+         
          <div style={{position: "relative", transform: line1.transform, opacity: line1.opacity}} className="icons">
-           <img src={BlockSVGData.circle} alt=""/>
+           <img className="iconBck" src={BlockSVGData.circle} alt=""/>
            <span className="iconText" style={{position:"absolute", left: "50%", top: "50%", transform: "translate(-50%, -50%)"}}>+6</span>
          </div>
          <div className="itemHeaderBlock">
@@ -41,7 +42,7 @@ function Block() {
          <div className="itemPrgBlock">
            <p style={{marginTop: line1.prg, opacity: line1.opacity}} className="item-prg">We are offering more for ur idea </p>
          </div>
-         <Link onClick={scrollToTop}  to="/brand_experiences" className="G-round-button">Discover</Link>
+         <Link onClick={scrollToTop}  to="/brand_experiences" className="discoverButton G-round-button">Discover</Link>
        </div>
        </div>
        

@@ -9,6 +9,20 @@
 
   .GBlock {
     margin: 15px;
+    @include screen($tablet-w){
+margin: 5px;
+    }
+    @include screen($tablet){
+      margin: 10px;
+      width: 45%;
+    }
+    @include screen($tablet-m){
+      width: 80%;
+    }
+    @include screen($mobile-m){
+      width: 90%;
+    }
+
 
     .line1 {
       .icons {
@@ -49,6 +63,21 @@
         width: 280px;
         height: 240px;
       }
+      @include screen($tablet-l){
+        width: 210px;
+        height: 200px;
+        padding: 10px;
+      }
+      @include screen($tablet){
+        width: 100%;
+        height: 220px;
+      }
+      @include screen($tablet-m){
+        height: 240px;
+      }
+
+
+
 
       &:hover {
         transition: 0.5s ease-in-out;
@@ -59,18 +88,42 @@
         position: absolute;
         right: 0;
         top: 0;
+        @include screen($tablet-l){
+          width: 150px;
+        }
+        @include screen($tablet-m){
+          width: 200px;
+        }
+
+
       }
 
       .item-grid2 {
         position: absolute;
         right: 0;
         bottom: 0;
+        @include screen($tablet-l){
+          width: 150px;
+        }
+        @include screen($tablet-m){
+          width: 200px;
+        }
+
+
       }
 
       .item-grid3 {
         position: absolute;
         left: 0;
         top: 0;
+        @include screen($tablet-l){
+          width: 150px;
+        }
+        @include screen($tablet-m){
+          width: 200px;
+        }
+
+
       }
 
       .icons {
@@ -82,7 +135,50 @@
         @include screen($wide-s){
           margin: 20px auto;
         }
+        @include screen($tablet-l){
+          margin: 10px auto;
+        }
+        @include screen($tablet){
+margin: 15px auto;
+        }
+        @include screen($tablet-m){
+          margin: 20px auto;
+        }
+        @include screen($mobile-m){
+          margin: 10px auto;
+        }
 
+
+
+        .iconBck{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          @include screen($tablet-l){
+            width: 50px;
+          }
+          @include screen($tablet-m){
+            width: 70px;
+          }
+          @include screen($mobile-m){
+            width: 50px;
+          }
+
+
+        }
+        .itemIcon{
+          @include screen($tablet-l){
+            width: 30px;
+          }
+          @include screen($tablet-m){
+            width: 40px;
+          }
+          @include screen($mobile-m){
+            width: 30px;
+          }
+
+
+        }
         .iconText {
           font-size: 18px;
           color: #F9FB6C;
@@ -100,6 +196,12 @@
         @include screen($wide-s){
           height: 25px;
         }
+        @include screen($tablet-m){
+          height: 35px;
+        }
+
+
+
       }
 
       .item-header {
@@ -113,6 +215,21 @@
         @include screen($wide) {
           font-size: 16px;
         }
+        @include screen($tablet-l){
+          font-size: 15px;
+        }
+        @include screen($tablet){
+          font-size: 16px;
+        }
+        @include screen($tablet-m){
+          font-size: 18px;
+        }
+        @include screen($mobile-m){
+          font-size: 16px;
+        }
+
+
+
       }
 
       .itemPrgBlock {
@@ -121,6 +238,14 @@
         @include screen($wide-s){
 height: 50px;
         }
+        @include screen($tablet-l){
+          height: 90px;
+        }
+        @include screen($tablet-m){
+          height: 80px;
+        }
+
+
       }
 
       .item-prg {
@@ -138,6 +263,18 @@ height: 50px;
           line-height: 20px;
           font-size: 13px;
         }
+        @include screen($tablet-l){
+          font-size: 12px;
+          line-height: 14px;
+        }
+        @include screen($tablet){
+          font-size: 14px;
+        }
+        @include screen($mobile-m){
+          line-height: 16px;
+        }
+
+
       }
     }
 
@@ -155,11 +292,30 @@ height: 50px;
           @include screen($wide-s){
             margin: 10px 20px;
           }
+          @include screen($tablet-l){
+            margin: 10px;
+          }
+
+          .itemIcon{
+            @include screen($tablet-l){
+              width: 30px;
+            }
+          }
         }
         .item-header{
           @include screen($wide-s){
             font-size: 15px;
           }
+          @include screen($tablet-l){
+            font-size: 14px;
+          }
+          @include screen($tablet){
+            font-size: 16px;
+          }
+          @include screen($tablet-m){
+            font-size: 18px;
+          }
+
         }
       }
 
@@ -182,30 +338,29 @@ height: 50px;
           font-size: 16px;
           padding: 10px 40px;
         }
+        @include screen($tablet-l){
+          padding: 10px 20px;
+          font-size: 15px;
+        }
+
       }
     }
 
   }
 
   .discoverButton {
-    position: relative;
-    z-index: 111;
-    display: block !important;
-    margin: 0 30px;
-    padding: 6px 80px;
-    color: black;
-    font-family: Inter-Medium, sans-serif;
-    font-size: 18px;
-    text-align: center;
-    border: none;
-    border-radius: 40px;
-    background: #F9FB6C;
-    box-shadow: 0 4px 11.8px 0 rgba(249, 251, 108, 0.25);
-    cursor: pointer !important;
-    text-decoration: none;
     @include screen($wide-s){
       font-size: 16px;
-      padding: 6px 40px;
+      padding: 6px 60px;
     }
+    @include screen($tablet-l){
+      padding: 6px 40px;
+      font-size: 15px;
+    }
+    @include screen($tablet-m){
+      padding: 6px 60px;
+    }
+
+
   }
 }
