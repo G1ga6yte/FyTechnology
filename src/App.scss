@@ -2,3 +2,20 @@
   background:#161C21;
   overflow: hidden;
 }
+.pageUp{
+  display: block;
+  border: none;
+  width: 60px;
+  height: 60px;
+  position: fixed;
+  right: 100px;
+  z-index: 2999;
+  background: rgba(255, 255, 255, 0.10);
+  border-radius: 50%;
+  padding: 5px;
+  cursor: pointer;
+  transition: 0.5s ease-in-out;
+  &:hover{
+    background: rgba(255, 255, 255, 0.20);
+  }
+}

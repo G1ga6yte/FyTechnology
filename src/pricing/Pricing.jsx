@@ -412,6 +412,52 @@ function PricingCont() {
     });
   };
   
+  
+  
+  const [count, setCount] = useState(0)
+  let price = 0
+  const [startSettings, setStartSettings] = useState({
+    display1: "block",
+    display2: "flex",
+    display3: "none"
+  })
+  
+  function numberWithCommas() {
+    setCount(count => count.toString().replace(/\B(?=(\d{3})+(?!\d))/g, "."))
+  }
+  
+  
+  function finishOptions (){
+    setStartSettings({
+      display1: "none",
+      display2: "none",
+      display3: "flex"
+    })
+    
+      setTimeout(()=>{
+        price = 15000
+        let x = price/200
+        let z = 0
+        let y = setInterval(()=>{
+            if (z < price){
+              z = z+x
+              setCount(z)
+              numberWithCommas()
+            } else {
+              clear()
+            }
+        }, 10)
+        
+        function clear (){
+          clearInterval(y)
+        }
+      }, 500)
+    
+  }
+  
+ 
+  
+  
   return (
      <div className="Pricing">
        
@@ -430,7 +476,7 @@ function PricingCont() {
          </div>
        </div>
        
-       <div className="priceOverPrg">
+       <div style={{display: startSettings.display1}} className="priceOverPrg">
          <p className="overPrg">
            The calculator allows you to estimate the cost of developing a mobile application based on basic
            requirements. If you don't understand any of the mandatory parameters, hover your mouse cursor over the
@@ -439,7 +485,7 @@ function PricingCont() {
          </p>
        </div>
        
-       <div className="priceContentPrice">
+       <div style={{display: startSettings.display2}} className="priceContentPrice">
          <div className="priceContentCont">
            <div className="priceContent">
              
@@ -799,7 +845,7 @@ function PricingCont() {
                <button style={{display: prevBtn}} onClick={backFromStep}><img src={SvgImgData.arrowLeft} alt=""/>
                </button>
                <button className="G-link-button" style={{display: nextBtn}} onClick={nextFromStep}>Next</button>
-               <button className="G-link-button" style={{display: finishBtn}}>Finish</button>
+               <button onClick={finishOptions} className="G-link-button" style={{display: finishBtn}}>Finish</button>
              </div>
   
   
@@ -822,6 +868,15 @@ function PricingCont() {
            <span className="questionPrg">Any questions?</span>
            <button className="G-square-button">Let’s Talk Us</button>
          </div>
+       </div>
+       
+       <div style={{display: startSettings.display3}} className="finalPriceCont">
+          <p className="PriceHeader">Estimate of the project</p>
+         <div className="counter">{count}<span> $</span></div>
+          <p className="pricePrg">
+            The cost of the project is not final, it may be more or less, depending on the final calculation
+          </p>
+         <p className="messagePrg">Our manager will be in touch with you shortly </p>
        </div>
        
        <div className="vectors">
