@@ -16,23 +16,13 @@ function ExperiencesMain (){
   
   const [x, setX] = useState(null)
   
-  // window.addEventListener('resize', (event)=>{
-  //   if(window.innerWidth <= 1256){
-  //     if (window.innerWidth <= 876){
-  //       if (window.innerWidth < 576){
-  //         setX(3)
-  //       }else{
-  //         setX(4)
-  //       }
-  //     }else{
-  //       setX(5)
-  //     }
-  //   }
-  // })
   
   let y
+  let widthSet = [200, 400, 550]
   if(window.innerWidth <= 1256){
+    widthSet = [100, 150, 250]
     if (window.innerWidth <= 876){
+      widthSet = [50, 100, 150]
       if (window.innerWidth <= 576){
         y = 3
       }else{
@@ -41,6 +31,8 @@ function ExperiencesMain (){
     }else{
       y = 5
     }
+  } else{
+   y = 7
   }
   
   
@@ -60,18 +52,18 @@ function ExperiencesMain (){
   
   
   window.addEventListener('scroll', function(){
-    if (this.scrollY >= 200){
+    if (this.scrollY >= widthSet[0]){
       setPaddingTopS("0")
       setOpcS("1")
       setTimeout(()=>{
         setSpeed(25000)
       },1000)
     }
-    if (this.scrollY >= 400){
+    if (this.scrollY >= widthSet[1]){
       setPaddingTopP("0")
       setOpcS("1")
     }
-    if (this.scrollY >= 550){
+    if (this.scrollY >= widthSet[2]){
       setMarginTopH("15px")
       setMarginTopB("-75px")
       setOpcH("1")

@@ -45,7 +45,11 @@ function CollabPartnership() {
                           setHeightPx(4200)
                         }
                       }else {
-                        setHeightPx(4250)
+                        if (window.innerHeight > 700){
+                          setHeightPx(4100)
+                        }else{
+                          setHeightPx(4350)
+                        }
                       }
                     }else {
                       setHeightPx(3000)
@@ -60,57 +64,51 @@ function CollabPartnership() {
                 setHeightPx(2900)
               }
             }else{
-              setHeightPx(3580)
+              setHeightPx(3800)
             }
           }else{
             setHeightPx(3700);
           }
         } else {
-          setHeightPx(4500);
+          setHeightPx(4700);
         }
       } else {
-        setHeightPx(4700);
+        setHeightPx(4800);
       }
     }
     
-    // if(windowWidth > 1256){
-    //   setHeightPx(4700)
-    // } else if(windowWidth <= 1256){
-    //   setHeightPx(3700)
-    // }
     
     return () => {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
   
+  let widthSet = [3100, 3400, 3900, 4300]
+  if(window.innerWidth <= 1256){
+    widthSet = [2200, 2500, 2900, 3100]
   
-  // window.addEventListener('resize', (event)=>{
-  //   x = window.innerWidth
-  //   if(x > 1256){
-  //     setFixedH(4630)
-  //   } else if(x<=1256){
-  //     setFixedH(3750)
-  //   }
-  // })
-  
+    if (window.innerWidth <= 876){
+      widthSet = [1500, 1700, 1900, 2100]
+      
+    }
+  }
   window.addEventListener("scroll", function () {
-    if (this.scrollY >= 3100) {
+    if (this.scrollY >= widthSet[0]) {
       setHeader({
         marginTopHbefore: "0", opacity: "1",
       });
     }
-    if (this.scrollY >= 3400) {
+    if (this.scrollY >= widthSet[1]) {
       setBlock1({
         width: "initial", opacity: "1", imgOpacity: "0.4", marginTopH: "0", widthPrg: "initial", marginLeftB: "0",
       });
     }
-    if (this.scrollY >= 3900) {
+    if (this.scrollY >= widthSet[2]) {
       setBlock2({
         width: "initial", opacity: "1", imgOpacity: "0.4", marginTopH: "0", widthPrg: "initial", marginLeftB: "0",
       });
     }
-    if (this.scrollY >= 4300) {
+    if (this.scrollY >= widthSet[3]) {
       setBlock3({
         width: "initial", opacity: "1", imgOpacity: "0.4", marginTopH: "0", widthPrg: "initial", marginLeftB: "0",
       });
@@ -215,6 +213,9 @@ function CollabPartnership() {
       </div>
     </div>
   
+    <div onScroll={ ()=>{
+      console.log(window.scrollY);
+    }}></div>
   </div>);
 }
 

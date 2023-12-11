@@ -6,6 +6,14 @@
   background-color: #161C21;
   width: 100%;
   transition: 1s ease-in-out;
+  @include screen($tablet-m){
+    height: 80vh;
+  }
+  @include screen($mobile-m){
+    height: 60vh;
+  }
+
+
   .beInTouchCont{
     max-width: 1700px;
     margin: 0 auto;
@@ -26,6 +34,16 @@
       @include screen($wide-s){
         font-size: 150px;
       }
+      @include screen($tablet-w){
+        font-size: 100px;
+      }
+      @include screen($tablet-m){
+        font-size: 70px;
+      }
+      @include screen($mobile-m){
+        font-size: 50px;
+      }
+
     }
     .circleCont{
       display: flex;
@@ -46,14 +64,34 @@
           height: 500px;
           width: 500px;
         }
+        @include screen($tablet-w){
+          width: 400px;
+          height: 400px;
+        }
+        @include screen($tablet-m){
+          width: 300px;
+          height: 300px;
+        }
+        @include screen($mobile-m){
+          width: 250px;
+          height: 250px;
+        }
+
+
         .logo{
           @include screen($wide){
             width: 80px;
+          }
+          @include screen($tablet-w){
+            width: 60px;
           }
         }
         .fytechnology{
           @include screen($wide){
             height: 30px;
+          }
+          @include screen($tablet-w){
+            height: 25px;
           }
         }
         &:hover{

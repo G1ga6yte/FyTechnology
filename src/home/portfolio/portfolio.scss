@@ -16,6 +16,12 @@
       height: 50px;
       margin-bottom: 40px;
     }
+    @include screen($desktop){
+      margin-bottom: 20px;
+    }
+    @include screen($tablet-w){
+      margin-bottom: 0;
+    }
 
     .portfolioHeader{
       transition: 1s ease-in-out;
@@ -27,6 +33,18 @@
       margin: 0 10%;
       @include screen($wide){
         font-size: 36px;
+      }
+      @include screen($desktop){
+        font-size: 32px;
+      }
+      @include screen($tablet-w){
+        font-size: 28px;
+      }
+      @include screen($tablet-m){
+        font-size: 24px;
+      }
+      @include screen($mobile-m){
+        font-size: 20px;
       }
     }
   }

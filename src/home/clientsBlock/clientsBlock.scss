@@ -8,11 +8,24 @@
   z-index: 55;
   overflow: hidden;
   border-radius: 0 0 70px 70px;
+  @include screen($tablet){
+    border-radius: 0 0 40px 40px;
+  }
+
   .clientsBlockBck{
      background-color: rgba(0, 0, 0, 0.25);
     padding: 100px 100px 20px 100px;
     @include screen($wide){
       padding: 50px;
+    }
+    @include screen($desktop){
+      padding: 30px;
+    }
+    @include screen($tablet-m){
+      padding: 30px 20px;
+    }
+    @include screen($mobile-m){
+      padding: 20px 10px;
     }
 
     .overline {
@@ -27,6 +40,10 @@
       justify-content: space-between;
       max-width: 1440px;
       margin: 0 auto;
+      @include screen($tablet-w){
+        flex-wrap: wrap;
+        justify-content: center;
+      }
     }
   }
   .ClientsCont {
@@ -42,6 +59,22 @@
       width: 50%;
       padding: 0 10px;
     }
+    @include screen($desktop){
+      width: 60%;
+    }
+    @include screen($tablet-w){
+      width: 80%;
+    }
+    @include screen($tablet){
+      width: 90%;
+    }
+    @include screen($tablet-m){
+      width: 95%;
+    }
+
+
+
+
     .clientsLine{
       display: flex;
       flex-direction: column;
@@ -51,6 +84,18 @@
       @include screen($wide-l){
         width: 48%;
       }
+      @include screen($tablet-w){
+        width: 42%;
+      }
+      @include screen($tablet){
+        width: 46%;
+      }
+      @include screen($tablet-m){
+        width: 48%;
+      }
+
+
+
 
 
 
@@ -72,6 +117,18 @@
         @include screen($wide){
           padding: 20px 15px;
         }
+        @include screen($tablet){
+          padding: 15px 10px;
+        }
+        @include screen($tablet-m){
+          padding: 10px 5px;
+        }
+        @include screen($mobile-m){
+          margin: 5px 10px;
+        }
+
+
+
 
         .moreDots{
           width: 16px;
@@ -79,6 +136,16 @@
           top: 20px;
           right: 20px;
           cursor: pointer;
+          @include screen($tablet){
+            top: 15px;
+            right: 15px;
+          }
+          @include screen($mobile-m){
+            top: 10px;
+            right: 10px;
+          }
+
+
         }
         .clientImg{
           border-radius: 50%;
@@ -86,6 +153,16 @@
             height: 50px;
             width: 50px;
           }
+          @include screen($tablet){
+            width: 40px;
+            height: 40px;
+          }
+          @include screen($mobile-m){
+            width: 30px;
+            height: 30px;
+          }
+
+
         }
         .clientsName{
           font-family: 'Inter-Medium', sans-serif;
@@ -95,6 +172,17 @@
           @include screen($wide){
             font-size: 18px;
           }
+          @include screen($tablet){
+            font-size: 16px;
+          }
+          @include screen($tablet-m){
+            font-size: 15px;
+          }
+          @include screen($mobile-m){
+            font-size: 13px;
+          }
+
+
         }
         .clientsMail{
           color: #6A7183;
@@ -104,6 +192,17 @@
           @include screen($wide){
             font-size: 15px;
           }
+          @include screen($tablet){
+            font-size: 14px;
+          }
+          @include screen($tablet-m){
+            font-size: 13px;
+          }
+          @include screen($mobile-m){
+            font-size: 11px;
+          }
+
+
           img{
             margin-right: 5px;
           }
@@ -117,6 +216,14 @@
             @include screen($wide){
               width: 30px;
             }
+            @include screen($tablet){
+              width: 20px;
+            }
+            @include screen($mobile-m){
+              width: 15px;
+            }
+
+
           }
           .Value{
             font-size: 21px;
@@ -126,6 +233,18 @@
             @include screen($wide){
               font-size: 18px;
             }
+            @include screen($tablet){
+              font-size: 16px;
+            }
+            @include screen($tablet-m){
+              font-size: 14px;
+            }
+            @include screen($mobile-m){
+              font-size: 13px;
+            }
+
+
+
           }
           .description{
             font-size: 16px;
@@ -135,6 +254,18 @@
             @include screen($wide){
               font-size: 15px;
             }
+            @include screen($tablet){
+              font-size: 14px;
+            }
+            @include screen($tablet-m){
+              font-size: 12px;
+            }
+            @include screen($mobile-m){
+              font-size: 11px;
+            }
+
+
+
           }
         }
         .headClients{
@@ -144,6 +275,18 @@
           @include screen($wide){
             font-size: 18px;
           }
+          @include screen($tablet){
+            font-size: 16px;
+          }
+          @include screen($tablet-m){
+            font-size: 14px;
+          }
+          @include screen($mobile-m){
+            font-size: 13px;
+          }
+
+
+
         }
         .addClientButton{
           cursor: pointer;
@@ -159,6 +302,17 @@
             padding: 10px 25px;
             font-size: 15px;
           }
+          @include screen($tablet){
+            padding: 8px 15px;
+            font-size: 14px;
+          }
+          @include screen($tablet-m){
+            padding: 6px 12px;
+            font-size: 12px;
+          }
+
+
+
         }
       }
 
@@ -166,6 +320,10 @@
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+
+        @include screen($tablet){
+          justify-content: space-around;
+        }
 
       }
 
@@ -179,10 +337,31 @@
     @include screen($wide){
 padding: 30px;
     }
+    @include screen($desktop){
+      padding: 20px;
+    }
+    @include screen($tablet-w){
+      margin: 40px auto;
+      width: 80%;
+      text-align: center;
+    }
+    @include screen($tablet){
+      padding: 20px;
+    }
+    @include screen($tablet-m){
+      width: 95%;
+    }
+
+
+
 
     .textHeaderBlock{
       height: 150px;
       overflow: hidden;
+      @include screen($desktop){
+        height: 100px;
+      }
+
       .clientsTextHeader{
         transition: 0.5s ease-in-out;
         font-family: 'Inter-Medium', sans-serif;
@@ -193,6 +372,21 @@ padding: 30px;
         @include screen($wide){
           font-size: 32px;
         }
+        @include screen($desktop){
+          font-size: 28px;
+        }
+        @include screen($tablet-w){
+          margin: 0 auto;
+        }
+        @include screen($tablet-m){
+          font-size: 24px;
+        }
+        @include screen($mobile-m){
+          font-size: 20px;
+        }
+
+
+
       }
     }
 
@@ -201,6 +395,21 @@ padding: 30px;
       @include screen($wide){
         margin-top: 35px;
       }
+      @include screen($desktop){
+        margin-top: 25px;
+      }
+      @include screen($tablet-w){
+        margin-top: 20px;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+      }
+      @include screen($tablet-m){
+        margin-top: 15px;
+      }
+
+
+
 
       .ideaLine{
         display: flex;
@@ -212,6 +421,12 @@ padding: 30px;
         @include screen($wide){
 height: 50px;
         }
+        @include screen($tablet-m){
+          height: 40px;
+        }
+
+
+
         .ideaText{
           color: #7E8597;
           font-size: 18px;
@@ -220,6 +435,21 @@ height: 50px;
           @include screen($wide){
             font-size: 16px;
           }
+          @include screen($desktop){
+            font-size: 15px;
+          }
+          @include screen($tablet){
+            font-size: 14px;
+          }
+          @include screen($tablet-m){
+            font-size: 13px;
+          }
+          @include screen($mobile-m){
+            font-size: 12px;
+          }
+
+
+
         }
         .circle{
           transition: 0.5s ease-in-out;
@@ -234,12 +464,44 @@ height: 50px;
           @include screen($wide){
             margin-right: 12px;
           }
+          @include screen($desktop){
+            width: 40px;
+            height: 40px;
+            img{
+              width: 20px;
+            }
+          }
+          @include screen($mobile-m){
+            width: 30px;
+            height: 30px;
+            img{
+              width: 15px;
+            }
+          }
+
+
         }
       }
     }
     .letsTalkUsButton{
       margin-top: 24px;
       padding: 10px 80px;
+      @include screen($desktop){
+        padding: 10px 50px;
+        font-size: 18px;
+      }
+      @include screen($tablet-w){
+        padding: 8px 30px;
+        font-size: 16px;
+        margin: 0 auto;
+      }
+      @include screen($mobile-m){
+        padding: 5px 20px;
+        font-size: 14px;
+      }
+
+
+
     }
 
   }

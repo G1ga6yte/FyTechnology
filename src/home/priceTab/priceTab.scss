@@ -6,6 +6,9 @@
   z-index: 55;
   border-radius: 70px 70px 0 0;
   overflow: hidden;
+  @include screen($tablet-l){
+    border-radius: 50px 50px 0 0;
+  }
 
   .priceContBck {
     background-color: rgba(0, 0, 0, 0.25);
@@ -56,6 +59,13 @@
       @include screen($wide){
         font-size: 15px;
       }
+      @include screen($tablet-l){
+        font-size: 14px;
+      }
+      @include screen($tablet){
+        font-size: 13px;
+      }
+
     }
 
     .priceHeader {
@@ -71,6 +81,13 @@
       @include screen($wide){
         font-size: 36px;
       }
+      @include screen($tablet-l){
+        font-size: 32px;
+      }
+      @include screen($tablet){
+        font-size: 26px;
+      }
+
 
     }
 
@@ -81,6 +98,13 @@
       @include screen($wide){
         margin-top: 80px;
       }
+      @include screen($tablet-l){
+        margin-top: 50px;
+      }
+      @include screen($tablet){
+        flex-wrap: wrap;
+      }
+
 
 
       .priceItem {
@@ -97,6 +121,20 @@
         @include screen($wide){
           width: 300px;
         }
+        @include screen($tablet-l){
+          width: 250px;
+          padding: 5px;
+        }
+        @include screen($tablet){
+          width: 42%;
+        }
+        @include screen($tablet){
+width: 70%;
+        }
+        @include screen($mobile-m){
+          width: 80%;
+        }
+
 
 
         &:hover {
@@ -117,6 +155,12 @@
           font-family: Inter-Bold, sans-serif;
           font-size: 14px;
           text-shadow: 0 2px 19.799999237060547px rgba(249, 251, 108, 0.15);
+          @include screen($tablet-l){
+            right: 10px;
+            top: 10px;
+            font-size: 12px;
+          }
+
         }
 
         .itemClassBlock{
@@ -136,6 +180,10 @@
           @include screen($wide){
             font-size: 16px;
           }
+          @include screen($tablet-l){
+            font-size: 15px;
+          }
+
 
         }
 
@@ -146,6 +194,11 @@
           @include screen($wide){
             margin: 15px auto;
           }
+          @include screen($tablet-l){
+            margin: 10px auto;
+            height: 40px;
+          }
+
 
         }
         .price {
@@ -156,6 +209,9 @@
           @include screen($wide){
             font-size: 36px;
           }
+          @include screen($tablet-l){
+            font-size: 28px;
+          }
 
 
           .month {
@@ -163,6 +219,10 @@
             @include screen($wide){
               font-size: 16px;
             }
+            @include screen($tablet-l){
+              font-size: 14px;
+            }
+
 
           }
         }
@@ -187,6 +247,10 @@
             @include screen($wide){
               font-size: 15px;
             }
+            @include screen($tablet-l){
+              font-size: 13px;
+            }
+
 
 
           }
@@ -199,6 +263,12 @@
             padding: 15px 25px !important;
             font-size: 14px;
           }
+          @include screen($tablet-l){
+            margin: 20px auto;
+            font-size: 13px;
+            padding: 10px 20px;
+          }
+
 
         }
 

@@ -17,7 +17,7 @@ export const CartProvider = ({children}) => {
     prg      : "100px",
   });
   const [line1P, setLine1P] = useState(false);
-  const [service, setService] = useState(800)
+  const [service, setService] = useState(400)
   
   window.addEventListener("scroll", function () {
     if (this.scrollY >= service) {

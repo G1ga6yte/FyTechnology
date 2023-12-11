@@ -1,17 +1,20 @@
 @import "../../styles/mixin.scss";
 .CollabPartnershipBlock{
   position: relative;
-  min-height: 200vh;
+  min-height: 230vh;
 
   @include screen($wide-l){
-    min-height: 210vh;
+    min-height: 250vh;
   }
 
   @include screen($wide){
     min-height: 180vh;
   }
+  @include screen($wide-s){
+    min-height: 200vh;
+  }
   @include screen($desktop){
-    min-height: 215vh;
+    min-height: 230vh;
   }
   @include screen($tablet-l){
     min-height: 170vh;
@@ -26,7 +29,7 @@
     min-height: 180vh;
   }
   @include screen($tablet-m){
-    min-height: 290vh;
+    min-height: 270vh;
   }
   @include screen($mobile-m){
     min-height: 295vh;

@@ -5,16 +5,31 @@
   z-index: 56;
   .ourTeamContBck{
     background-color: rgba(0, 0, 0, 0.25);
+
+
   }
   .mapImg{
     position: absolute;
     top: -120px;
     z-index: 1;
+    @include screen($desktop){
+      top: -50px;
+    }
+    @include screen($tablet-w){
+      top: 0;
+    }
+    @include screen($tablet-m){
+      top: 50px;
+    }
   }
   .mapLine{
     position: absolute;
     top: 100px;
     z-index: 1;
+    @include screen($desktop){
+      top: 0;
+    }
+
   }
 
   .ourTeamContent{
@@ -28,10 +43,19 @@
     @include screen($wide){
       padding: 20px;
     }
+    @include screen($tablet){
+      display: flex;
+      flex-wrap: wrap;
+
+    }
 
 
     .contentTextBlock{
       width: 30%;
+      @include screen($tablet){
+        width: 90%;
+        margin: 0 auto;
+      }
 
       .ourTeamHeaderBlock{
         overflow: hidden;
@@ -42,6 +66,14 @@
         @include screen($wide){
           height: 80px;
         }
+        @include screen($tablet){
+          height: 30px;
+        }
+        @include screen($tablet-m){
+          height: 50px;
+        }
+
+
 
 
         .ourTeamHeader{
@@ -60,9 +92,21 @@
           @include screen($wide-s){
             font-size: 32px;
           }
-
-
-
+          @include screen($tablet-l){
+            font-size: 28px;
+          }
+          @include screen($tablet-w){
+            font-size: 22px;
+          }
+          @include screen($tablet){
+            font-size: 26px;
+          }
+          @include screen($tablet-m){
+            font-size: 22px;
+          }
+          @include screen($mobile-m){
+            font-size: 18px;
+          }
         }
       }
 
@@ -74,6 +118,17 @@
           height: 150px;
           margin-top: 15px;
         }
+        @include screen($tablet-w){
+          height: 180px;
+        }
+        @include screen($tablet){
+          height: 120px;
+        }
+        @include screen($tablet-m){
+          height: 130px;
+        }
+
+
 
         .ourTeamPrg{
           color: #9B9B9B;
@@ -83,6 +138,22 @@
           @include screen($wide){
             font-size: 15px;
           }
+          @include screen($tablet-l){
+            font-size: 14px;
+          }
+          @include screen($tablet-w){
+            font-size: 13px;
+          }
+          @include screen($tablet){
+            font-size: 14px;
+          }
+          @include screen($tablet-m){
+            font-size: 13px;
+          }
+          @include screen($mobile-m){
+            font-size: 12px;
+          }
+
 
 
 
@@ -93,6 +164,11 @@
 
     .leadersBlock{
       width: 65%;
+      @include screen($tablet){
+        width: 90%;
+        margin: 0 auto;
+      }
+
       .overHeaderBlock{
         overflow: hidden;
         height: 20px;
@@ -105,6 +181,21 @@
           @include screen($wide){
             font-size: 15px;
           }
+          @include screen($tablet-l){
+            font-size: 14px;
+          }
+          @include screen($tablet){
+            font-size: 15px;
+          }
+          @include screen($tablet-m){
+            font-size: 13px;
+          }
+          @include screen($mobile-m){
+            font-size: 12px;
+          }
+
+
+
 
         }
       }
@@ -117,6 +208,13 @@
         @include screen($wide){
           margin-top: 30px;
         }
+
+        @include screen($tablet){
+          margin-top: 10px;
+        }
+
+
+
 
         .peopleImg{
           &:nth-child(1){
@@ -135,6 +233,27 @@
           @include screen($wide){
             height: 200px;
           }
+          @include screen($tablet-l){
+            height: 180px;
+          }
+          @include screen($tablet-w){
+            height: 150px;
+          }
+          @include screen($tablet){
+            height: 180px;
+          }
+          @include screen($tablet-m){
+            height: 120px;
+          }
+          @include screen($mobile-m){
+            height: 100px;
+          }
+
+
+
+
+
+
 
         }
       }

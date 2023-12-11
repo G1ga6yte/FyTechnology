@@ -4,11 +4,23 @@ import "./portfolio.scss"
 import {PortfolioImgData} from "./img-svg/portfolioImgData";
 
 function Portfolio (){
+  let y = 4
+  if (window.innerWidth <= 1024){
+    y = 3
+  }
+  if (window.innerWidth <= 665){
+    y=2
+  }
+  if (window.innerWidth <= 440){
+    y=1
+  }
+  
+  
   var settings = {
     dots: false,
     infinite: true,
     speed: 5000,
-    slidesToShow: 4,
+    slidesToShow: y,
     slidesToScroll: 1,
     arrows        : true,
     autoplay      : true,

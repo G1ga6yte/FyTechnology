@@ -10,6 +10,9 @@
     @include screen($wide){
       padding: 80px 0;
     }
+    @include screen($desktop){
+      padding: 60px 0;
+    }
   }
   .Review1{
     max-width: 1160px;
@@ -19,6 +22,14 @@
     @include screen($wide){
         padding: 20px;
     }
+    @include screen($desktop){
+      padding: 10px;
+    }
+    @include screen($tablet-m){
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
 
     .imageBlock{
       .img{
@@ -29,11 +40,32 @@
         @include screen($wide-s){
 width: 300px;
         }
+        @include screen($desktop){
+          width: 250px;
+        }
+        @include screen($tablet){
+          width: 200px;
+        }
+
+
       }
     }
     .reviewTextBlock{
       padding: 30px 70px;
       width: 70%;
+      @include screen($desktop){
+        width: 75%;
+        padding: 20px 40px;
+      }
+      @include screen($tablet-w){
+        padding: 10px 20px;
+      }
+      @include screen($tablet-m){
+        width: 90%;
+      }
+
+
+
       .quotes{
         font-family: 'Inter-Medium', sans-serif;
         font-size: 152px;
@@ -47,6 +79,16 @@ width: 300px;
           font-size: 80px;
           line-height: 80px;
         }
+        @include screen($desktop){
+          font-size: 60px;
+          line-height: 60px;
+        }
+        @include screen($tablet-m){
+          font-size: 50px;
+          line-height: 50px;
+        }
+
+
       }
       .reviewPrgBlock{
         overflow: hidden;
@@ -57,6 +99,13 @@ height: 180px;
         @include screen($wide-s){
 height: 200px;
         }
+        @include screen($tablet-w){
+          height: 180px;
+        }
+        @include screen($mobile-m){
+          height: 140px;
+        }
+
         .reviewPrg{
           transition: 1s ease-in-out;
           color: white;
@@ -67,6 +116,24 @@ height: 200px;
             font-size: 32px;
             line-height: 40px;
           }
+          @include screen($desktop){
+            font-size: 28px;
+            line-height: 32px;
+          }
+          @include screen($tablet-w){
+            font-size: 24px;
+            line-height: 26px;
+          }
+          @include screen($tablet-m){
+            font-size: 22px;
+            line-height: 24px;
+          }
+          @include screen($mobile-m){
+            font-size: 18px;
+            line-height: 20px;
+          }
+
+
         }
       }
 
@@ -75,6 +142,14 @@ height: 200px;
         display: flex;
         justify-content: space-between;
         align-items: center;
+        @include screen($desktop){
+          margin-top: 30px;
+        }
+        @include screen($tablet-m){
+          margin-top: 15px;
+        }
+
+
         .name-work{
           height: 60px;
           overflow: hidden;
@@ -91,6 +166,16 @@ height: 50px;
               font-size: 20px;
               line-height: 26px;
             }
+            @include screen($desktop){
+              font-size: 18px;
+              line-height: 22px;
+            }
+            @include screen($tablet-m){
+              font-size: 16px;
+              line-height: 18px;
+            }
+
+
           }
           .work{
             transition: 1.2s ease-in-out;
@@ -102,6 +187,16 @@ height: 50px;
               font-size: 16px;
               line-height: 26px;
             }
+            @include screen($desktop){
+              font-size: 14px;
+              line-height: 22px;
+            }
+            @include screen($tablet-m){
+              font-size: 12px;
+              line-height: 16px;
+            }
+
+
           }
         }
         .buttons{
@@ -112,6 +207,14 @@ height: 50px;
             @include screen($wide){
 margin: 15px;
             }
+            @include screen($desktop){
+              margin: 10px;
+            }
+            @include screen($tablet-m){
+              margin: 5px;
+            }
+
+
           }
         }
       }

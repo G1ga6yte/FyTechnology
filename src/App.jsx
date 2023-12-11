@@ -22,10 +22,15 @@ function App() {
   
   window.addEventListener("scroll", function () {
     if(this.scrollY >= 1000){
-      setBottom("50px")
+      if (window.innerWidth <= 665){
+        setBottom("110px")
+      }else{
+        setBottom("50px")
+      }
     } else {
       setBottom("-150px")
     }
+    console.log(this.scrollY);
   });
 
   return (
