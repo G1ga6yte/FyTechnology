@@ -6,6 +6,9 @@ import Navigation from "./navigation/nav";
 import AllExperiences from "./home/experiences-main/All-experiences/allExperiences";
 import Footer from "./footer/footer";
 import Pricing from "./pricing/Pricing";
+import Contacts from "./contacts/contacts";
+import Works from "./works/works";
+import LinkToItem from "./works/itemBlock/linkToItem/linkToItem";
 
 
 
@@ -40,7 +43,10 @@ function App() {
         <Route path="/" element={<Home />}/>  // home
         <Route path="/home" element={<Home />}/> // home
         <Route path="/brand_experiences" element={<AllExperiences/>}/> // services
+        <Route path="/works" element={<Works/>}/>
         <Route path="/pricing" element={<Pricing/>}/>
+        <Route path="/contact" element={<Contacts/>}/>
+        <Route path="/project/:id" element={<LinkToItem/>}/> // each Project Link
       </Routes>
       <Footer/>
       
