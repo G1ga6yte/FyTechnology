@@ -3,10 +3,12 @@ import "./allBlock.scss";
 import {BlockData} from "../../block/blockData.js";
 import {BlockSVGData} from "../../block/blockSVG/blockSVGData.js";
 import EachBlock from "./eachBlock/eachBlock";
+import {useCartContext} from "../../../../CartContext";
 
 
 
 function AllBlock() {
+  const {handleDialog} = useCartContext()
   const settings1 = {
     widthB: "0",
     paddingB: "15px 0",
@@ -36,7 +38,7 @@ function AllBlock() {
        
   
        <div className="talkUsBlock">
-          <button style={{width: settings.widthB, padding: settings.paddingB}} className="letsTalkUsButton G-square-button">Let’s Talk Us</button>
+          <button onClick={handleDialog} style={{width: settings.widthB, padding: settings.paddingB}} className="letsTalkUsButton G-square-button">Let’s Talk Us</button>
          <div className="prgBlock">
            <p style={{marginTop: settings.marginP}} className="letsTalkUsText">Whether you're looking for advice, inspiration, or simply want to connect with like-minded individuals</p>
 

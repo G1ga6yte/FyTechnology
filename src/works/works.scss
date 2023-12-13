@@ -1,0 +1,209 @@
+@import "../styles/mixin.scss";
+
+.worksBlock{
+  overflow: hidden;
+  .LineBck{
+    position: absolute;
+    top: 70%;
+  }
+  .vectors{
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    .vector{
+      position: absolute;
+      top: 0;
+      width: 100px;
+      z-index: 1;
+      @include screen($desktop){
+        width: 70px;
+      }
+      @include screen($tablet){
+        width: 40px;
+      }
+      &:nth-child(1){
+        left: 2%;
+        top: 1100px;
+      }
+      &:nth-child(2){
+        left: 25%;
+        top: 1000px;
+      }
+      &:nth-child(3){
+        right: 15%;
+        top: 1000px;
+      }
+
+    }
+  }
+  .worksCont{
+    padding: 200px 20px 100px 20px;
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+    z-index: 50;
+    @include screen($desktop){
+      padding: 150px 15px 80px 15px;
+    }
+    @include screen($tablet){
+      padding: 100px 10px 50px 10px;
+    }
+
+
+
+    .projectsNav{
+      width: 90%;
+      margin-left: 5%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      @include screen($tablet){
+        width: 100%;
+        margin-left: 0;
+      }
+      .Header{
+        font-size: 56px;
+        width: 100%;
+        background: linear-gradient(180deg, #FFF 0%, rgba(255, 255, 255, 0.60) 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-family: 'Inter-SemiBold', sans-serif;
+        @include screen($wide) {
+          font-size: 52px;
+        }
+        @include screen($desktop) {
+          font-size: 46px;
+        }
+        @include screen($tablet-w) {
+          font-size: 38px;
+        }
+        @include screen($tablet-m) {
+          font-size: 32px;
+        }
+      }
+      .sortButtons{
+        display: flex;
+        margin: 30px 0;
+        @include screen($tablet-m){
+          margin: 15px 0;
+          flex-wrap: wrap;
+          width: 200px;
+          justify-content: space-between;
+        }
+        @include screen($mobile-m){
+          width: 150px;
+        }
+
+        .sortBtn{
+          border: 1px solid rgba(255, 255, 255, 0.30);
+          padding: 6px 24px;
+          background-color: transparent;
+          border-radius: 50px;
+          margin: 0 10px;
+          font-size: 28px;
+          color: white;
+          font-family: 'Inter-Regular', sans-serif;
+          cursor: pointer;
+          transition: 0.3s ease-in-out;
+          display: flex;
+          align-items: center;
+          @include screen($wide-m){
+            font-size: 26px;
+            padding: 6px 18px;
+          }
+          @include screen($wide){
+            font-size: 24px;
+            padding: 4px 16px;
+          }
+          @include screen($desktop){
+            font-size: 20px;
+            padding: 2px 15px;
+          }
+          @include screen($tablet-w){
+            font-size: 16px;
+            padding: 0 12px;
+            margin: 0 3px;
+          }
+          @include screen($tablet){
+            font-size: 15px;
+            padding: 0 8px;
+          }
+          @include screen($tablet-m){
+            margin: 5px 3px;
+            font-size: 15px;
+          }
+          @include screen($mobile-m){
+            font-size: 13px;
+            margin: 3px;
+          }
+
+
+
+
+          &:hover{
+            transition: 0.3s ease-in-out;
+            box-shadow: 0 0 2.8px 0 rgba(255, 255, 255, 0.90);
+          }
+        }
+        .line{
+          width: 2px;
+          height: 50px;
+          background-color: white;
+          margin: 0 15px;
+          @include screen($desktop){
+            height: 40px;
+          }
+          @include screen($tablet-w){
+            height: 25px;
+            margin: 0 5px;
+          }
+          @include screen($tablet){
+            height: 20px;
+            margin: 0 3px;
+          }
+          @include screen($tablet-m){
+            display: none;
+          }
+
+        }
+      }
+      .G-square-button{
+        margin: 0 !important;
+        @include screen($wide-m){
+          padding: 10px 60px;
+        }
+        @include screen($wide){
+          font-size: 15px;
+          padding: 10px 55px;
+        }
+        @include screen($tablet-w){
+          font-size: 14px;
+          padding: 8px 45px;
+        }
+        @include screen($tablet){
+          font-size: 13px;
+          padding: 6px 35px;
+        }
+        @include screen($mobile-m){
+          font-size: 12px;
+          padding: 6px 25px;
+        }
+
+
+      }
+    }
+    .projectsBlock{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+    }
+    .G-square-button{
+      margin: 40px auto;
+    }
+  }
+}

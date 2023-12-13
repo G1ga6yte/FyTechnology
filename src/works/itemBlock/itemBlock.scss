@@ -1,0 +1,203 @@
+@import "../../styles/mixin.scss";
+.itemBlock {
+  width: 300px;
+  height: 600px;
+  margin: 20px 12px;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+  z-index: 60;
+  text-decoration: none;
+  display: block;
+  @include screen($wide-m){
+    margin: 15px 10px;
+    width: 280px;
+  }
+  @include screen($wide){
+    width: 240px;
+    height: 500px;
+  }
+  @include screen($wide-s){
+    width: 260px;
+  }
+  @include screen($tablet-w){
+    width: 200px;
+    height: 400px;
+    margin: 15px 5px;
+  }
+  @include screen($tablet){
+    width: 250px;
+    height: 500px;
+  }
+  @include screen($tablet-m){
+    width: 165px;
+    height: 300px;
+  }
+  @include screen($mobile-m){
+    width: 280px;
+    height: 350px;
+  }
+
+  .backSide {
+    background: rgba(255, 255, 255, 0.03);
+    width: 100%;
+    height: 600px;
+    padding: 16px;
+    justify-content: space-between;
+    @include screen($wide){
+      height: 500px;
+      padding: 14px;
+    }
+    @include screen($tablet-w){
+      height: 400px;
+    }
+    @include screen($tablet){
+      height: 500px;
+    }
+    @include screen($tablet-m){
+      height: 300px;
+    }
+    @include screen($mobile-m){
+      height: 350px;
+    }
+
+
+  }
+
+  .cardSide {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border-radius: 16px;
+    overflow: hidden;
+    @include screen($tablet-w){
+      border-radius: 12px;
+    }
+
+
+    .cardImg {
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      height: 390px;
+      width: 100%;
+      border-radius: 16px;
+      @include screen($wide){
+        height: 300px;
+      }
+      @include screen($tablet-w){
+        height: 220px;
+        border-radius: 12px;
+      }
+      @include screen($tablet){
+        height: 300px;
+      }
+      @include screen($tablet-m){
+        height: 120px;
+      }
+      @include screen($mobile-m){
+        height: 200px;
+      }
+
+
+
+    }
+
+    .ItemFrontTextBlock {
+      display: flex;
+      flex-direction: column;
+      padding-top: 10px;
+      @include screen($wide){
+        height: 200px;
+      }
+      @include screen($tablet-w){
+        height: 180px;
+      }
+      @include screen($tablet){
+        height: 200px;
+      }
+      @include screen($tablet-m){
+        height: 230px;
+      }
+      @include screen($mobile-m){
+        height: 250px;
+      }
+
+
+
+    }
+    .nameHeader{
+      font-size: 32px;
+      font-family: 'Inter-Regular', sans-serif;
+      color: white;
+      @include screen($wide){
+        font-size: 28px;
+      }
+      @include screen($desktop){
+        font-size: 26px;
+      }
+      @include screen($tablet-w){
+        font-size: 22px;
+      }
+      @include screen($tablet-m){
+        font-size: 18px;
+      }
+
+    }
+    .prg{
+      margin: 10px 0;
+      font-size: 14px;
+      font-family: 'Inter-Light', sans-serif;
+      line-height: 24px;
+      color: white;
+      @include screen($wide){
+        line-height: 22px;
+      }
+      @include screen($desktop){
+        font-size: 13px;
+        line-height: 20px;
+      }
+      @include screen($tablet-w){
+        font-size: 12px;
+        line-height: 18px;
+      }
+      @include screen($tablet-m){
+        font-size: 11px;
+        line-height: 16px;
+      }
+
+
+    }
+    .usedSkills{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: start;
+      .skill{
+        padding: 6px 20px;
+        border-radius: 35px;
+        border: 1px solid rgba(255, 255, 255, 0.30);
+        color: white;
+        font-size: 14px;
+        font-family: 'Inter-Light', sans-serif;
+        margin-right: 8px;
+        margin-bottom: 4px;
+        @include screen($wide){
+          padding: 5px 15px;
+          font-size: 13px;
+        }
+        @include screen($tablet-w){
+          font-size: 12px;
+          padding: 5px 10px;
+        }
+        @include screen($tablet-m){
+          font-size: 11px;
+          padding: 3px 8px;
+        }
+
+
+      }
+    }
+
+
+  }
+}

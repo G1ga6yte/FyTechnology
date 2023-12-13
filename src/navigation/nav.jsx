@@ -41,9 +41,9 @@ function Navigation(){
              <Link onClick={homeLink} to="/home" className={`${Call("/") ? "nav-link lighting" : "nav-link"} ${Call("/home") ? "nav-link lighting" : "nav-link"}`}><span className="icon-home"></span>Home</Link>
              <Link onClick ={servicesLink} to="/brand_experiences" className={`${Call("/brand_experiences") ? "nav-link lighting" : "nav-link"}`}><span className="icon-shopping-bag"></span>Services</Link>
              <Link to="/home" className={`${Call("/About") ? "nav-link lighting" : "nav-link"}`}><span className="icon-message-circle"></span> About</Link>
-             <Link to="/home" className={`${Call("/Work") ? "nav-link lighting" : "nav-link"}`}><span className="icon-code1"></span> Work</Link>
+             <Link to="/works" className={`nav-link ${Call("/works") ? " lighting" : " "}`}><span className="icon-code1"></span> Works</Link>
              <Link to="/pricing" className={`${Call("/pricing") ? "nav-link lighting" : "nav-link"}`}><span className="icon-tag"></span> Pricing</Link>
-             <Link to="/home" className={`${Call("/Contact") ? "nav-link lighting" : "nav-link"}`}><span className="icon-contacts"></span> Contact</Link>
+             <Link to="/contact" className={`${Call("/contact") ? "nav-link lighting" : "nav-link"}`}><span className="icon-contacts"></span>Contact</Link>
   
            </div>
            <Link to="/home" className="G-link-button">

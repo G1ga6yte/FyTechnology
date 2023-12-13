@@ -1,0 +1,537 @@
+@import "../styles/mixin.scss";
+
+.ContactsBlock {
+  padding: 200px 0 100px 0;
+  overflow: hidden !important;
+  max-width: 1920px;
+  position: relative;
+  margin: 0 auto;
+  @include screen($desktop) {
+    padding: 150px 0 80px 0;
+  }
+  @include screen($tablet) {
+    padding: 100px 0 50px 0;
+  }
+
+  .overHeader {
+    font-size: 16px;
+    color: #F9FB6C;
+    font-family: 'Inter-Medium', sans-serif;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include screen($wide) {
+      font-size: 15px;
+      line-height: 22px;
+    }
+    @include screen($desktop) {
+      font-size: 14px;
+      line-height: 20px;
+    }
+    @include screen($tablet-w) {
+      font-size: 13px;
+      line-height: 18px;
+    }
+    @include screen($tablet-m) {
+      font-size: 12px;
+      line-height: 16px;
+    }
+
+    img {
+      margin-right: 5px;
+    }
+  }
+
+  .Header {
+    background: linear-gradient(180deg, #FFF 0%, rgba(255, 255, 255, 0.60) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 56px;
+    font-family: 'Inter-SemiBold', sans-serif;
+    text-align: center;
+    margin-top: 15px;
+    @include screen($wide) {
+      font-size: 52px;
+    }
+    @include screen($desktop) {
+      font-size: 46px;
+    }
+    @include screen($tablet-w) {
+      font-size: 38px;
+      margin-top: 10px;
+    }
+    @include screen($tablet-m) {
+      font-size: 32px;
+    }
+  }
+
+  .LinesBck {
+    position: absolute;
+    top: 50%;
+  }
+
+  .contactChatBlock {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 30px 50px;
+    border-radius: 20px;
+    border: 1px solid rgba(57, 51, 74, 0.50);
+    background: rgba(255, 255, 255, 0.03);
+    position: relative;
+    z-index: 60;
+    @include screen($wide) {
+      margin: 40px 20px;
+    }
+    @include screen($tablet-w) {
+      padding: 20px 30px;
+      margin: 30px 10px;
+    }
+    @include screen($mobile-m) {
+      padding: 15px;
+    }
+
+
+    .chatBlockHeader {
+      color: white;
+      font-family: 'Inter-Regular', sans-serif;
+      font-size: 32px;
+      text-align: center;
+      @include screen($wide) {
+        font-size: 28px;
+      }
+      @include screen($desktop) {
+        font-size: 24px;
+      }
+      @include screen($tablet-w) {
+        font-size: 20px;
+      }
+      @include screen($tablet-m) {
+        font-size: 16px;
+      }
+    }
+
+    .InputsCont {
+      display: flex;
+      justify-content: space-between;
+      margin: 40px 0 20px 0;
+      @include screen($tablet) {
+        flex-direction: column;
+        align-items: center;
+        margin: 30px 0 15px 0;
+      }
+
+
+      .InputsLine {
+        width: 45%;
+        display: flex;
+        flex-direction: column;
+        @include screen($desktop) {
+          width: 48%;
+        }
+        @include screen($tablet) {
+          width: 95%;
+        }
+        @include screen($tablet-m) {
+          width: 100%;
+        }
+
+        .inputHeader {
+          font-size: 16px;
+          color: white;
+          line-height: 24px;
+          font-family: 'Inter-Regular', sans-serif;
+          margin-bottom: 8px;
+          @include screen($wide) {
+            font-size: 15px;
+            line-height: 22px;
+          }
+          @include screen($desktop) {
+            font-size: 14px;
+            line-height: 20px;
+            margin-bottom: 7px;
+          }
+          @include screen($tablet-w) {
+            font-size: 13px;
+            line-height: 18px;
+            margin-bottom: 6px;
+          }
+          @include screen($tablet-m) {
+            font-size: 12px;
+            line-height: 16px;
+            margin-bottom: 5px;
+          }
+        }
+
+        .itemInput {
+          width: 100%;
+          border-radius: 6px;
+          border: 1px solid var(--grayscale-500, #D9D9D9);
+          background: #1F252B;
+          padding: 12px 16px;
+          font-family: 'Inter-Regular', sans-serif;
+          font-size: 16px;
+          color: white;
+          margin-bottom: 25px;
+          @include screen($desktop) {
+            padding: 8px 12px;
+            margin-bottom: 20px;
+            font-size: 14px;
+          }
+          @include screen($tablet-w) {
+            padding: 6px 10px;
+            font-size: 13px;
+          }
+          @include screen($tablet-m) {
+            padding: 5px 8px;
+            font-size: 12px;
+          }
+
+          &:focus-visible {
+            outline: 1px solid #F9FB6C !important;
+            border: 1px solid #F9FB6C !important;
+          }
+        }
+
+        .textArea {
+          height: 250px;
+          @include screen($desktop) {
+            height: 200px;
+          }
+          @include screen($tablet-w) {
+            height: 180px;
+          }
+          @include screen($tablet-m) {
+            height: 150px;
+          }
+
+        }
+      }
+
+    }
+
+    .checkAcceptBlock {
+      display: flex;
+      justify-content: start;
+      align-items: center;
+      width: 45%;
+      @include screen($tablet) {
+        width: 90%;
+        margin-left: 5%;
+      }
+      @include screen($tablet-m) {
+        width: 100%;
+        margin-left: 0;
+      }
+
+      .inputCheckbox {
+        display: none;
+      }
+
+      input[type="checkbox"]:checked + label {
+        background-color: rgba(249, 251, 108, 1);
+        padding: 0;
+
+        &:hover {
+          background-color: rgba(252, 255, 53, 1);
+          box-shadow: 0 4px 11.8px 0 rgba(249, 251, 108, 0.25);
+        }
+
+        img {
+          display: block;
+
+        }
+      }
+
+      .inputLabel {
+        padding: 8px;
+        border: 1px solid rgba(249, 251, 108, 1);
+        border-radius: 4px;
+        display: block;
+        margin-right: 10px;
+        cursor: pointer;
+
+        &:hover {
+          border-color: rgba(252, 255, 53, 1);
+          box-shadow: 0 4px 11.8px 0 rgba(249, 251, 108, 0.25);
+        }
+
+        img {
+          display: none;
+        }
+      }
+
+      .checkboxText {
+        font-size: 12px;
+        font-family: 'Inter-Regular', sans-serif;
+        line-height: 20px;
+        color: white;
+        @include screen($tablet-m) {
+          font-size: 11px;
+          line-height: 18px;
+        }
+      }
+    }
+
+    .G-link-button {
+      margin: 20px 0;
+      @include screen($desktop) {
+        padding: 10px 25px !important;
+        font-size: 15px;
+      }
+      @include screen($tablet) {
+        padding: 8px 25px !important;
+        font-size: 14px;
+        margin-left: 5%;
+      }
+      @include screen($tablet-m) {
+        margin-left: 0;
+        font-size: 13px;
+      }
+    }
+  }
+
+  .faqBlock {
+    position: relative;
+    z-index: 100;
+    margin: 100px auto;
+    max-width: 1200px;
+    @include screen($wide) {
+      margin: 80px 20px;
+    }
+    @include screen($tablet-w) {
+      margin: 60px 15px;
+    }
+    @include screen($tablet-m) {
+      margin: 40px 10px;
+    }
+
+    .faqHeader {
+      margin: 40px auto;
+      font-size: 56px;
+      font-family: 'Inter-SemiBold', sans-serif;
+      text-align: center;
+      background: linear-gradient(180deg, #FFF 0%, rgba(255, 255, 255, 0.60) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      @include screen($wide) {
+        font-size: 50px;
+      }
+      @include screen($desktop) {
+        margin: 30px auto;
+        font-size: 42px;
+      }
+      @include screen($tablet-w) {
+        font-size: 36px;
+      }
+      @include screen($tablet-m) {
+        font-size: 28px;
+        margin: 20px auto;
+      }
+    }
+
+    .questionBlock {
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      margin: 20px auto;
+      @include screen($desktop) {
+        margin: 15px auto;
+      }
+      @include screen($tablet) {
+        margin: 10px auto;
+      }
+
+      .questionToggle {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+
+        @include screen($desktop) {
+          margin-bottom: 15px;
+        }
+        @include screen($tablet-w) {
+          margin-bottom: 10px;
+        }
+
+        .question {
+          font-size: 28px;
+          font-family: 'Inter-Medium', sans-serif;
+          color: white;
+          @include screen($wide) {
+            font-size: 26px;
+          }
+          @include screen($desktop) {
+            font-size: 24px;
+          }
+          @include screen($tablet-w) {
+            font-size: 22px;
+          }
+          @include screen($tablet-m) {
+            font-size: 20px;
+          }
+          @include screen($mobile-m) {
+            font-size: 18px;
+          }
+        }
+
+        .toggleButton {
+          padding: 5px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border: none;
+          background: rgba(255, 255, 255, 0.10);
+          border-radius: 50%;
+          cursor: pointer;
+
+          &:hover {
+            background: rgba(255, 255, 255, 0.20);
+          }
+
+          img {
+            width: 45px;
+            @include screen($desktop) {
+              width: 40px;
+            }
+            @include screen($tablet) {
+              width: 30px;
+            }
+          }
+        }
+      }
+
+      .answerPrg {
+        font-size: 16px;
+        color: white;
+        font-family: 'Inter-Regular', sans-serif;
+        display: block;
+        overflow: hidden;
+        transition: 0.5s ease-in-out;
+        @include screen($wide) {
+          font-size: 15px;
+        }
+        @include screen($desktop) {
+          font-size: 14px;
+        }
+        @include screen($tablet-w) {
+          font-size: 13px;
+        }
+        @include screen($tablet-m) {
+          font-size: 12px;
+        }
+
+      }
+    }
+  }
+
+  .vectorsBlock {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    .vector {
+      position: absolute;
+      @include screen($desktop) {
+        width: 70px;
+      }
+      @include screen($tablet) {
+        width: 40px;
+      }
+
+      &:nth-child(1) {
+        left: 50%;
+        top: 750px;
+      }
+
+      &:nth-child(2) {
+        left: 5%;
+        top: 1000px;
+      }
+
+      &:nth-child(3) {
+        left: 20%;
+        top: 980px;
+      }
+
+      &:nth-child(4) {
+        left: 10%;
+        top: 1400px;
+      }
+
+      &:nth-child(5) {
+        right: 5%;
+        top: 1500px;
+      }
+
+      &:nth-child(6) {
+        left: 10%;
+        top: 1800px;
+      }
+
+      &:nth-child(7) {
+        left: 25%;
+        top: 2000px;
+      }
+
+      &:nth-child(8) {
+        right: 30%;
+        top: 1900px;
+      }
+
+      &:nth-child(9) {
+        top: 2000px;
+        right: 10%;
+        transform: rotate(180deg);
+      }
+
+
+    }
+  }
+
+  .imgBallBlock {
+    position: absolute;
+    z-index: 99;
+    right: -250px;
+    top: 450px;
+    @include screen($desktop) {
+      right: -200px;
+    }
+    @include screen($tablet-w) {
+      top: 350px;
+    }
+    @include screen($tablet) {
+      top: 600px;
+      right: -150px;
+    }
+    @include screen($tablet-m) {
+      right: -100px;
+      top: 630px;
+    }
+
+    .imgBall {
+      animation: rotate 30s linear infinite;
+      @include screen($desktop) {
+        width: 400px;
+      }
+      @include screen($tablet) {
+        width: 300px;
+      }
+      @include screen($tablet-m) {
+        width: 200px;
+      }
+    }
+  }
+
+  @keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+}

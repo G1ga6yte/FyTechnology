@@ -1,0 +1,540 @@
+@import "../../../styles/mixin.scss";
+
+.LinkToItemBlock {
+  width: 100%;
+
+  .ItemCont {
+    width: 100%;
+    .LineBck{
+      position: absolute;
+      top: 1000px;
+    }
+    .vectors{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      .vector{
+        position: absolute;
+        width: 100px;
+        @include screen($desktop){
+          width: 70px;
+        }
+        @include screen($tablet){
+          width: 40px;
+        }
+
+        &:nth-child(1){
+          left: 45%;
+          top: 800px;
+        }
+        &:nth-child(2){
+          left: 20%;
+          top: 1000px;
+        }
+        &:nth-child(3){
+          left: 5%;
+          top: 1100px;
+        }
+        &:nth-child(4){
+          top: 1000px;
+          right: 5%;
+        }
+        &:nth-child(5){
+          left: 10%;
+          top: 1300px;
+        }
+        &:nth-child(6){
+          right: 20px;
+          top: 1500px;
+        }
+        &:nth-child(7){
+          left: 5%;
+          top: 1800px;
+        }
+        &:nth-child(8){
+          right: 20%;
+          top: 1800px;
+        }
+        &:nth-child(9){
+          left: 20%;
+          top: 1900px;
+        }
+        &:nth-child(10){
+          right: 5%;
+          top: 2000px;
+          transform: rotate(180deg);
+        }
+        &:nth-child(11){
+
+        }
+      }
+    }
+
+
+    .headerImage {
+      margin-top: -100px;
+      width: 100%;
+      height: 700px;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center -100px;
+      border-radius: 0 0 50px 50px;
+      background-attachment: fixed;
+      @include screen($wide){
+        height: 500px;
+        background-position: center -100px;
+      }
+      @include screen($desktop){
+        height: 400px
+      }
+      @include screen($tablet-w){
+        border-radius: 0 0 35px 35px;
+
+      }
+      @include screen($tablet-m){
+        height: 300px;
+        background-position: center -50px;
+        background-attachment: fixed;
+        border-radius: 0 0 20px 20px;
+
+      }
+    }
+
+    .miniInfoBlock {
+      width: 400px;
+      display: flex;
+      flex-direction: column;
+      margin: 25px 0 120px 15%;
+      position: relative;
+z-index: 40;
+      @include screen($desktop){
+        width: 350px;
+        margin: 20px 0 100px 10%;
+
+      }
+      @include screen($tablet-w){
+        width: 300px;
+        margin: 20px 0 80px 10%;
+
+      }
+      @include screen($tablet-m){
+        width: 250px;
+        margin: 20px 0 60px 5%;
+
+      }
+    }
+
+    .projectName {
+      font-size: 56px;
+      background: linear-gradient(180deg, #FFF 0%, rgba(255, 255, 255, 0.60) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-family: 'Inter-SemiBold', sans-serif;
+      letter-spacing: -0.5px;
+      @include screen($wide) {
+        font-size: 52px;
+      }
+      @include screen($desktop) {
+        font-size: 46px;
+      }
+      @include screen($tablet-w) {
+        font-size: 38px;
+      }
+      @include screen($tablet-m) {
+        font-size: 32px;
+      }
+    }
+    .prg {
+      margin: 15px 0;
+      font-size: 14px;
+      font-family: 'Inter-Light', sans-serif;
+      line-height: 24px;
+      color: white;
+      @include screen($wide) {
+        line-height: 22px;
+      }
+      @include screen($desktop) {
+        font-size: 13px;
+        line-height: 20px;
+      }
+      @include screen($tablet-w) {
+        margin: 10px 0;
+        font-size: 12px;
+        line-height: 18px;
+      }
+      @include screen($tablet-m) {
+        font-size: 11px;
+        line-height: 16px;
+      }
+    }
+    .usedSkills {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: start;
+
+      .skill {
+        padding: 6px 20px;
+        border-radius: 35px;
+        border: 1px solid rgba(255, 255, 255, 0.30);
+        color: white;
+        font-size: 14px;
+        font-family: 'Inter-Light', sans-serif;
+        margin-right: 8px;
+        margin-bottom: 4px;
+        @include screen($wide) {
+          padding: 5px 15px;
+          font-size: 13px;
+        }
+        @include screen($tablet-w) {
+          font-size: 12px;
+          padding: 5px 10px;
+        }
+        @include screen($tablet-m) {
+          font-size: 11px;
+          padding: 3px 8px;
+        }
+
+
+      }
+    }
+
+    .infoBlock {
+      max-width: 950px;
+      margin: 72px auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding: 0 20px;
+      position: relative;
+      z-index: 40;
+      @include screen($wide){
+        margin: 65px auto;
+      }
+      @include screen($tablet){
+        margin: 50px auto;
+        padding: 0 15px;
+        flex-direction: column;
+        align-items: center;
+      }
+
+
+      .infoHeader {
+        font-family: 'Inter-Medium', sans-serif;
+        font-size: 40px;
+        color: white;
+        @include screen($wide){
+          font-size: 36px;
+        }
+        @include screen($desktop){
+          font-size: 32px;
+        }
+        @include screen($tablet-w){
+          font-size: 28px;
+        }
+        @include screen($tablet-m){
+          font-size: 24px;
+        }
+
+      }
+
+      .infoPrg {
+        width: 70%;
+        font-size: 16px;
+        line-height: 24px;
+        color: white;
+        font-family: 'Inter-Regular', sans-serif;
+        @include screen($wide){
+          font-size: 15px;
+          line-height: 22px;
+        }
+        @include screen($desktop){
+          font-size: 14px;
+        }
+        @include screen($tablet-w){
+          font-size: 13px;
+        }
+        @include screen($tablet){
+          width: 90%;
+          margin: 15px 0;
+        }
+        @include screen($tablet-w){
+          width: 95%;
+          margin: 10px 0;
+          font-size: 12px;
+        }
+
+      }
+
+      .infoBlockImg {
+        background-position: 0 -100px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 500px;
+        margin-top: 40px;
+        border-radius: 16px;
+        @include screen($desktop){
+          height: 450px;
+        }
+        @include screen($tablet-w){
+          height: 400px;
+          margin-top: 30px;
+
+        }
+        @include screen($tablet-m){
+          height: 280px;
+          margin-top: 20px;
+
+        }
+      }
+
+    }
+
+    .moreProjects {
+      margin-top: 120px;
+      width: 100%;
+      position: relative;
+      z-index: 40;
+
+
+      .moreProjectsHeader {
+        color: white;
+        font-size: 40px;
+        font-family: 'Inter-Medium', sans-serif;
+        margin-left: 10%;
+        @include screen($wide){
+          font-size: 36px;
+        }
+        @include screen($desktop){
+          font-size: 32px;
+        }
+        @include screen($tablet-w){
+          font-size: 28px;
+          margin-bottom: 30px;
+        }
+        @include screen($tablet-m){
+          font-size: 24px;
+        }
+      }
+
+      .projectsCont {
+        display: flex;
+        justify-content: center;
+        align-items: start;
+        @include screen($tablet-w){
+          flex-wrap: wrap;
+          align-items: center;
+        }
+
+
+        .project{
+          padding: 24px;
+          display: flex;
+          width: 600px;
+          justify-content: space-between;
+          border-radius: 16px;
+          border: 1px solid rgba(57, 51, 74, 0.50);
+          background: rgba(255, 255, 255, 0.03);
+          margin: 40px 5px;
+          @include screen($wide){
+            width: 480px;
+          }
+          @include screen($tablet-l){
+            width: 400px;
+          }
+          @include screen($tablet-w){
+            width: 500px;
+            margin: 10px 5px;
+          }
+          @include screen($tablet-m){
+            width: 350px;
+          }
+          @include screen($mobile-m){
+            flex-direction: column;
+            align-items: center;
+            width: 280px;
+          }
+          .projectImg{
+            width: 170px;
+            height: 170px;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            @include screen($wide){
+              height: 150px;
+              width: 150px;
+            }
+            @include screen($tablet-l){
+              height: 130px;
+              width: 130px;
+            }
+            @include screen($tablet-m){
+              height: 100px;
+              width: 100px;
+            }
+            @include screen($mobile-m){
+              height: 220px;
+              width: 220px;
+              margin-bottom: 15px;
+            }
+
+          }
+          .projectTextCont{
+            width: 350px;
+            display: flex;
+            flex-direction: column;
+            @include screen($wide){
+              width: 250px;
+            }
+            @include screen($tablet-l){
+              width: 210px;
+            }
+            @include screen($tablet-m){
+              width: 180px;
+            }
+            .nameHeader{
+              font-size: 32px;
+              font-family: 'Inter-Regular', sans-serif;
+              color: white;
+              @include screen($wide){
+                font-size: 28px;
+              }
+              @include screen($desktop){
+                font-size: 26px;
+              }
+              @include screen($tablet-w){
+                font-size: 22px;
+              }
+              @include screen($tablet-m){
+                font-size: 18px;
+              }
+
+            }
+          }
+
+        }
+      }
+
+
+    }
+
+    .chipsCardBlock{
+      width: 100%;
+      margin: 100px auto;
+      position: relative;
+      z-index: 40;
+      .vector1{
+        position: absolute;
+        &:nth-child(3){
+          left: 15%;
+          top: -200px;
+          transform: rotate(90deg);
+        }
+        &:nth-child(4){
+          left: 10%;
+          top: 10%;
+        }
+        &:nth-child(5){
+          right: 15%;
+          top: 10%;
+        }
+        &:nth-child(6){
+          right: 25%;
+          top: 40%;
+        }
+      }
+      .chipsCardCont{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        @include screen($tablet){
+          flex-direction: column;
+          align-items: center;
+        }
+        .chipsImg{
+          margin-right: -30px;
+          position: relative;
+          z-index: 20;
+          @include screen($wide-l){
+            width: 600px;
+          }
+          @include screen($wide){
+            width: 500px;
+          }
+          @include screen($tablet-l){
+            width: 350px;
+          }
+          @include screen($tablet){
+            width: 80%;
+            margin: 0;
+          }
+        }
+        .inputsBlock{
+          border-radius: 20px;
+          border: 1px solid rgba(57, 51, 74, 0.50);
+          background: rgba(255, 255, 255, 0.03);
+          padding: 30px 50px;
+          position: relative;
+          z-index: 30;
+          width: 600px;
+          @include screen($wide-l){
+            padding: 20px 40px;
+            width: 500px;
+          }
+          @include screen($wide){
+            width: 450px;
+          }
+          @include screen($tablet-l){
+            width: 350px;
+            margin-right: 20px;
+          }
+          @include screen($tablet){
+            margin: 20px auto;
+            padding: 15px 30px;
+          }
+          @include screen($mobile-m){
+            width: 95%;
+            padding: 10px 20px;
+          }
+
+        }
+        .header{
+          color: white;
+          font-size: 32px;
+          font-family: 'Inter-Regular', sans-serif;
+          margin-bottom: 15px;
+          @include screen($wide){
+            font-size: 30px;
+          }
+          @include screen($desktop){
+            font-size: 26px;
+          }
+          @include screen($tablet-w){
+            font-size: 22px;
+          }
+          @include screen($tablet-m){
+            font-size: 18px;
+          }
+          @include screen($mobile-m){
+            font-size: 15px;
+          }
+        }
+        .buttons{
+          margin-top: 30px;
+          @include screen($wide){
+            margin-top: 20px;
+          }
+
+        }
+
+      }
+      .Lines{
+        position: absolute;
+        left: 0;
+      }
+
+    }
+  }
+}

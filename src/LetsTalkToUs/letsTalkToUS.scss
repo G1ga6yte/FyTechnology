@@ -1,0 +1,206 @@
+@import "../styles/mixin.scss";
+
+.dialog-title{
+  color: white;
+  font-size: 32px;
+  font-family: 'Inter-Regular', sans-serif;
+  display: block !important;
+}
+.MuiDialog-paper{
+  border-radius: 20px !important;
+  border: 1px solid rgba(57, 51, 74, 0.50) !important;
+  background: #161C21 !important;
+  padding: 30px 40px !important;
+  @include screen($tablet-m){
+    padding: 20px 30px !important;
+  }
+  @include screen($mobile-m){
+    padding: 10px 20px !important;
+  }
+}
+.MuiDialogContent-root{
+  border: none !important;
+}
+
+.MuiDialogActions-root{
+  justify-content: start !important;
+}
+
+.inputBlock{
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  margin-bottom: 25px;
+  @include screen($wide-l){
+    width: 400px;
+  }
+  @include screen($wide){
+    margin-bottom: 20px;
+    width: 350px;
+  }
+  @include screen($tablet-l){
+    margin-bottom: 15px;
+    width: 250px;
+  }
+  @include screen($tablet-m){
+    width: 220px;
+  }
+  @include screen($mobile-m){
+    width: 180px;
+  }
+
+
+
+  .overInput{
+    color: white;
+    font-size: 16px;
+    font-family: 'Inter-Regular', sans-serif;
+    margin-bottom: 8px;
+    @include screen($wide){
+      font-size: 15px;
+    }
+    @include screen($desktop){
+      font-size: 14px;
+    }
+    @include screen($tablet-w){
+      font-size: 13px;
+    }
+    @include screen($tablet-m){
+      font-size: 12px;
+    }
+
+  }
+  .input{
+    border-radius: 6px;
+    border: 1px solid var(--grayscale-500, #D9D9D9);
+    background: #1F252B;
+    padding: 12px 16px;
+    color: white;
+    font-size: 16px;
+    font-family: 'Inter-Regular', sans-serif;
+    @include screen($desktop){
+      padding: 10px 14px;
+    }
+    @include screen($tablet-w){
+      padding: 8px 12px;
+      font-size: 14px;
+    }
+    @include screen($tablet-m){
+      font-size: 13px;
+      padding: 6px 10px;
+    }
+
+    &:focus-visible{
+      border: 1px solid #F9FB6C !important;
+      outline: none;
+    }
+  }
+}
+
+.checking{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  .inputCheckbox {
+    display: none;
+  }
+
+  input[type="checkbox"]:checked + label {
+    background-color: rgba(249, 251, 108, 1);
+    padding: 0;
+
+    &:hover {
+      background-color: rgba(252, 255, 53, 1);
+      box-shadow: 0 4px 11.8px 0 rgba(249, 251, 108, 0.25);
+    }
+
+    img {
+      display: block;
+
+    }
+  }
+
+  .inputLabel {
+    width: 18px;
+    height: 18px;
+    padding: 8px;
+    border: 1px solid rgba(249, 251, 108, 1);
+    border-radius: 4px;
+    display: block;
+    margin-right: 10px;
+    cursor: pointer;
+
+    &:hover {
+      border-color: rgba(252, 255, 53, 1);
+      box-shadow: 0 4px 11.8px 0 rgba(249, 251, 108, 0.25);
+    }
+
+    img {
+      display: none;
+    }
+  }
+  .checkboxText{
+    font-size: 12px;
+    font-family: 'Inter-Regular', sans-serif;
+    color: white;
+    line-height: 20px;
+    @include screen($tablet){
+      font-size: 11px;
+    }
+  }
+}
+
+.buttons{
+  display: flex;
+  align-items: center;
+  .G-link-button{
+    @include screen($desktop){
+      font-size: 14px;
+      padding: 10px 25px;
+    }
+    @include screen($tablet){
+      font-size: 13px;
+      padding: 8px 20px;
+    }
+  }
+  .redText{
+    font-size: 13px;
+    margin-left: 25px;
+    color: #FF3D33;
+    font-family: 'Inter-Regular', sans-serif;
+    @include screen($desktop){
+      font-size: 12px;
+    }
+    @include screen($tablet){
+      font-size: 11px;
+    }
+  }
+}
+
+.sendingBlock{
+  display: flex;
+  align-items: center;
+  img{
+    width: 100px;
+    @include screen($tablet-m){
+      width: 60px;
+    }
+  }
+  .sendText{
+    color: white;
+    font-size: 24px;
+    font-family: 'Inter-Regular', sans-serif;
+    text-align: center;
+    @include screen($desktop){
+      font-size: 22px;
+    }
+    @include screen($tablet-w){
+      font-size: 18px;
+    }
+    @include screen($tablet-m){
+      font-size: 15px;
+    }
+  }
+}
+
+

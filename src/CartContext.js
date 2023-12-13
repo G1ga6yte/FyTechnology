@@ -25,7 +25,11 @@ export const CartProvider = ({children}) => {
     }
   });
   
-  
+  const [dialog, setDialog] = useState(false)
+  const handleDialog = () => {
+    setDialog(!dialog)
+  }
+  const [switchBlock, setSwitchBlock] = useState(false)
   
   
   
@@ -37,7 +41,12 @@ export const CartProvider = ({children}) => {
     setLine1P,
     service,
     setService,
-    Call
+    Call,
+    dialog,
+    setDialog,
+    handleDialog,
+    switchBlock,
+    setSwitchBlock
   }}>
     {children}
   </CartContext.Provider>);

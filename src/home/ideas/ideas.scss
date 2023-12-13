@@ -6,11 +6,11 @@
   .bigBall{
     position: absolute;
     right: 0;
-    bottom: -70%;
+    bottom: -55%;
     z-index: 58;
     @include screen($desktop){
       width: 50%;
-      bottom: -40%;
+      bottom: -35%;
     }
     @include screen($tablet-m){
       bottom: -20%;

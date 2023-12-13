@@ -1,9 +1,11 @@
 import React, {useState} from "react";
 import "./pricing.scss";
 import {SvgImgData} from "./svgs/svg-imgData";
+import {useCartContext} from "../CartContext";
 
 
 function PricingCont() {
+  const {handleDialog} = useCartContext()
   const [settings, setSettings] = useState({
     marginTopOH : "30px",
     marginTopH  : "70px",
@@ -866,7 +868,7 @@ function PricingCont() {
            <div className="underLine"></div>
            
            <span className="questionPrg">Any questions?</span>
-           <button className="G-square-button">Let’s Talk Us</button>
+           <button onClick={handleDialog} className="G-square-button">Let’s Talk Us</button>
          </div>
        </div>
        

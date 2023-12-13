@@ -2,8 +2,10 @@ import React, {useState} from "react";
 import "./clientsBlock.scss";
 import {ClientsImgSvgData} from "./img-svg/clientsImgSvgData";
 import {ClientsData} from "./clientsData";
+import {useCartContext} from "../../CartContext";
 
 function ClientsBlock() {
+  const {handleDialog} = useCartContext()
   const [header, setHeader] = useState({
     translate1 : "translateY(450px)",
     translate2 : "translateY(450px)",
@@ -118,7 +120,7 @@ function ClientsBlock() {
                  <span style={{marginTop: line.marginTopL, opacity: line.opacity}} className="ideaText">Close with killer testimonials.</span>
                </div>
              </div>
-             <button className="letsTalkUsButton G-square-button">Let’s Talk Us</button>
+             <button onClick={handleDialog} className="letsTalkUsButton G-square-button">Let’s Talk Us</button>
            </div>
          </div>
          <div className="overline"></div>

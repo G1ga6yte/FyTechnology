@@ -12,7 +12,7 @@
   box-shadow: 0 4px 11.8px 0 rgba(249, 251, 108, 0.25);
   border-radius: 6px;
   background: #F9FB6C;
-  z-index: 111;
+  z-index: 1111;
   display: block;
   padding: 15px 100px;
   transition: 0.3s ease-in-out;
@@ -25,7 +25,7 @@
 .G-link-button{
   cursor: pointer;
   position: relative;
-  z-index: 111;
+  z-index: 1111;
   display: block;
   text-decoration: none;
   padding: 15px 35px;
@@ -47,7 +47,7 @@
 }
 .G-round-button{
   position: relative;
-  z-index: 111;
+  z-index: 1111;
   display: block;
   color: black;
   padding: 5px 85px;

@@ -17,6 +17,7 @@ import BeInTouch from "./beInTouch/beInTouch";
 function Home(){
   return(
      <div className="home-cont">
+       
        <HomeMain/>
        <ExperiencesMain/>
        <Photos/>
