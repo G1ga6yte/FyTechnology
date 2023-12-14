@@ -18,7 +18,7 @@ const BootstrapDialog = styled(Dialog)(({ theme }) => ({
 
 
 
-function LetsTalkToUsDialog (props){
+function LetsTalkToUsDialog (){
   const {setDialog, dialog, handleDialog, switchBlock, setSwitchBlock} = useCartContext()
   
   const [check, setChecked] = useState(false)
