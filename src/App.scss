@@ -41,3 +41,26 @@
     background: rgba(255, 255, 255, 0.20);
   }
 }
+
+.G-square-button{
+  white-space: nowrap;
+  font-family: 'Inter-Medium', sans-serif;
+  font-size: 18px;
+  text-decoration: none;
+  text-align: center;
+  border: none;
+  position: relative;
+  cursor: pointer;
+  box-shadow: 0 4px 11.8px 0 rgba(249, 251, 108, 0.25);
+  border-radius: 6px;
+  background: #F9FB6C;
+  z-index: 1111;
+  display: block;
+  padding: 15px 100px;
+  transition: 0.3s ease-in-out;
+  &:hover{
+    transition: 0.3s ease-in-out;
+    background-color: white !important;
+    box-shadow: 0 4px 11.8px 0 rgba(255, 255, 255, 0.25);
+  }
+}
